@@ -1,0 +1,20 @@
+# Stub: listed because a small part of the City of Raleigh lies in Durham County.
+# No Durham County services are catalogued yet. Contributions welcome!
+name: Durham County
+kind: county
+aliases: [durham county]
+websites:
+  - label: Durham County Government
+    url: https://www.dconc.gov/
+  - label: Durham County Tax Administration
+    url: https://dconc.gov/Tax-Administration
+key_contacts:
+  - type: phone
+    label: Durham County Tax Administration (main office)
+    phone: 919-560-0300
+    hours: 8:30 AM to 5:00 PM
+    purpose: Property tax for homes in the Durham County part of Raleigh.
+provenance:
+  source_urls:
+    - https://dconc.gov/Tax-Administration
+  last_checked: 2026-11-04

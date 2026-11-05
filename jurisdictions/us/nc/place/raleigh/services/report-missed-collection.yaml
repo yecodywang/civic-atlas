@@ -1,0 +1,39 @@
+id: report-missed-collection
+title: Report a missed garbage, recycling or yard waste pickup
+summary: >-
+  If your cart was at the curb on time but wasn't emptied, report it to the City's Solid Waste
+  Services so a truck can come back.
+provider: City of Raleigh Solid Waste Services
+category: fix-report
+core_skill: report-request
+aliases: [trash, garbage, missed pickup, missed collection, recycling, yard waste, cart not emptied, bin not picked up, trash not picked up]
+channels:
+  - type: web
+    label: Missed Collection online form (Ask Raleigh)
+    url: https://ask.raleighnc.gov/ask?id=sc_category&sys_id=37effd48477e4b905ad1c603e16d43b7
+    hours: Available 24 hours
+  - type: phone
+    label: Customer Support
+    phone: 919-996-3245
+    hours: Mon, Tue, Wed and Fri 8:30 a.m. to 5 p.m.; Thu 9 a.m. to 5 p.m.
+what_you_need:
+  - Your street address
+  - A phone number
+steps:
+  online:
+    - Wait until after 5 p.m. on your collection day.
+    - Open the Missed Collection online form.
+    - Enter your street address and phone number, choose what was missed, and submit.
+    - Leave your cart at the curb until it is collected.
+  call:
+    - Call Customer Support at 919-996-3245 during business hours.
+    - Give your address and say which cart was missed.
+notes:
+  - Carts should be at the curb from 6 a.m. to 5 p.m. on your collection day.
+  - Report between 5 p.m. on your collection day and noon the next day.
+  - Use the form or call, not both. Doing both creates a duplicate work order.
+related: [schedule-bulky-item-pickup, ask-raleigh]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/services/trash-recycling-and-clean/report-missed-collection
+  last_checked: 2026-11-04

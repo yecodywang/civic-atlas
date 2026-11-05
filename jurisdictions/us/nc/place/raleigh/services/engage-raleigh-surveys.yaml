@@ -1,0 +1,24 @@
+id: engage-raleigh-surveys
+title: Take a City survey or give feedback on Engage Raleigh
+summary: >-
+  Engage Raleigh is the City's online engagement site. You can learn about active City projects
+  and share your opinion in surveys and comment forms.
+provider: City of Raleigh
+category: have-a-say
+aliases: [engage raleigh, survey, feedback, public input, comment on a project, give my opinion]
+channels:
+  - type: web
+    label: Engage Raleigh
+    url: https://engage.raleighnc.gov/
+steps:
+  online:
+    - Go to Engage Raleigh.
+    - Browse the active projects and pick one that interests you.
+    - Read the project summary, then answer the survey or leave a comment.
+notes:
+  - Surveys have closing dates, so check each project page.
+related: [watch-council-meetings, serve-on-board-or-commission, speak-at-city-council]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/engage-city/ways-participate-city-government
+  last_checked: 2026-11-04

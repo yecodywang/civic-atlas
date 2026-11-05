@@ -1,0 +1,35 @@
+id: find-park-greenway-center
+title: Find a park, greenway trail or community center near you
+summary: >-
+  Raleigh has over 200 parks plus greenway trails and community centers. The City's park locator
+  finds the closest ones to your address and filters by amenity.
+provider: City of Raleigh Parks, Recreation and Cultural Resources
+category: stay-informed
+aliases: [park, parks, greenway, trail, community center, playground, dog park, pool, nearest park]
+channels:
+  - type: web
+    label: Park Locator
+    url: https://maps.raleighnc.gov/parklocator/
+  - type: web
+    label: A to Z parks directory
+    url: https://raleighnc.gov/parks-directory
+  - type: web
+    label: Find a trail (greenways)
+    url: https://raleighnc.gov/find-a-trail
+  - type: web
+    label: Community centers
+    url: https://raleighnc.gov/parks/content/PRecRecreation/Articles/CommunityCenters.html
+  - type: phone
+    label: Parks, Recreation and Cultural Resources
+    phone: 919-996-3285
+steps:
+  online:
+    - Open the Park Locator.
+    - Type your address to see parks near you.
+    - Use the amenity filters (for example, playground or restrooms) to narrow the list.
+    - Open a park to see its address, hours and directions. Save it on your phone's map.
+related: [reclink-register-program, reserve-park-shelter]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/find-a-park
+  last_checked: 2026-11-04

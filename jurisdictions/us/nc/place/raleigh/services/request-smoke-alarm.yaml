@@ -1,0 +1,29 @@
+id: request-smoke-alarm
+title: Get a free smoke alarm installed
+summary: >-
+  The Raleigh Fire Department installs smoke alarms for residents. Ask at your local fire station
+  or email the fire prevention office to schedule one.
+provider: Raleigh Fire Department
+category: find-help
+aliases: [smoke alarm, smoke detector, free smoke alarm, fire alarm installation, home safety check]
+channels:
+  - type: email
+    label: Fire prevention office
+    email: fireprevention@raleighnc.gov
+  - type: in-person
+    label: Your local Raleigh fire station
+    url: https://raleighnc.gov/places?type=656&name=
+steps:
+  online:
+    - Email fireprevention@raleighnc.gov.
+    - Say you'd like a smoke alarm installed, and include your address and the best way to reach you.
+  call:
+    - Or stop by your local fire station (use the station finder) and ask in person.
+notes:
+  - The Fire Department also holds neighborhood installation events with the American Red Cross. Ask about upcoming ones.
+  - If you have a fire or smell smoke, get out and call 911.
+provenance:
+  source_urls:
+    - https://raleighnc.gov/fire/news/raleigh-fire-offers-free-smoke-alarm-installation
+  last_checked: 2026-11-04
+  notes: The source page is a news article with no publication date. Confirm the program is still running.

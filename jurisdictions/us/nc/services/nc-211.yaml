@@ -1,0 +1,31 @@
+id: nc-211
+title: Find help with food, housing, utilities and other needs (NC 211)
+summary: >-
+  NC 211 is a free, confidential information and referral line. A call specialist can connect you
+  to health and human services in your community.
+provider: United Way of North Carolina
+provider_type: nonprofit
+category: find-help
+aliases: [211, "2-1-1", food help, rent help, housing help, help paying bills, utility help, assistance, social services, shelter]
+referral_only: true
+channels:
+  - type: phone
+    label: NC 211
+    phone: "211"
+  - type: phone
+    label: NC 211 (toll-free)
+    phone: 1-888-892-1162
+  - type: web
+    label: NC211.org resource search
+    url: https://nc211.org/
+steps:
+  call:
+    - Dial 2-1-1 (or 1-888-892-1162).
+    - Tell the call specialist what kind of help you need and where you live.
+notes:
+  - NC 211 is run by United Way of North Carolina, a nonprofit. It is not a City, County or State government office.
+related: [home-repair-programs, property-tax-relief]
+provenance:
+  source_urls:
+    - https://nc211.org/
+  last_checked: 2026-11-04

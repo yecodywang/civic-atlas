@@ -1,0 +1,41 @@
+id: report-flooding-drainage
+title: Report flooding, a clogged storm drain or a drainage problem
+summary: >-
+  Report street flooding or a clogged storm drain to the City's stormwater team. Different numbers
+  handle problems on City streets, on private property, and water or sewer emergencies.
+provider: City of Raleigh Stormwater (Engineering Services) and Raleigh Water
+category: fix-report
+core_skill: report-request
+aliases: [flooding, flood, storm drain, clogged drain, drainage, standing water, catch basin, water in the street, culvert]
+channels:
+  - type: phone
+    label: Drainage problems on streets
+    phone: 919-996-6446
+  - type: web
+    label: Storm drainage problem form (streets)
+    url: https://survey123.arcgis.com/share/4f18a64993044b938dd9dec587a9c541
+  - type: phone
+    label: Drainage problems on private property
+    phone: 919-996-3779
+  - type: phone
+    label: Water or sewer emergencies (Raleigh Water, 24/7)
+    phone: 919-996-3245
+    purpose: Sewer backup, overflowing manhole, water main break.
+what_you_need:
+  - The location (address or nearest intersection)
+  - What you see (standing water, blocked drain, water coming up from a manhole)
+steps:
+  online:
+    - Open the storm drainage problem form.
+    - Mark the location and describe the problem, then submit.
+  call:
+    - For a City street, call 919-996-6446.
+    - For a problem on private property, call 919-996-3779.
+    - For a sewer backup or water main break, call Raleigh Water at 919-996-3245 at any time.
+notes:
+  - Never drive or walk through flooded roads. If anyone is trapped by water or in danger, call 911.
+related: [report-pothole, ask-raleigh]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
+  last_checked: 2026-11-04

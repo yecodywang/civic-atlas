@@ -1,0 +1,36 @@
+id: property-tax-bill
+title: Find and pay your property tax bill (including the City of Raleigh portion)
+summary: >-
+  The City of Raleigh sets its own property tax rate, but Wake County Tax Administration sends the
+  bill and collects it. Your one Wake County bill includes a separate line for the City of Raleigh.
+provider: Wake County Department of Tax Administration
+category: pay-manage
+core_skill: accounts-payments
+aliases: [property tax, tax bill, real estate tax, city tax, pay taxes, raleigh property tax, house taxes]
+channels:
+  - type: web
+    label: Search tax bills
+    url: https://services.wake.gov/ptax/main/billing/
+  - type: web
+    label: Pay a tax bill online
+    url: https://services.wake.gov/ptax/secure/default.aspx
+  - type: phone
+    label: Wake County Tax Administration
+    phone: 919-856-5400
+what_you_need:
+  - Your name, property address, or bill/account number
+  - A bank account, debit card or credit card to pay online
+steps:
+  online:
+    - Open Wake County's tax bill search.
+    - Search by owner name, address or account number, and open your bill.
+    - Look for the line for the City of Raleigh. That is the City's portion.
+    - To pay, use "Pay a tax bill online" and enter your payment details yourself.
+notes:
+  - If your home is in the small part of Raleigh that lies in Durham County, Durham County bills your property tax instead (919-560-0300).
+  - Questions about the City's tax rate are City budget questions. Questions about your bill, your home's value or payments go to Wake County.
+related: [property-tax-relief]
+provenance:
+  source_urls:
+    - https://www.wake.gov/departments-government/tax-administration
+  last_checked: 2026-11-04

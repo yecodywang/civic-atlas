@@ -1,0 +1,34 @@
+id: schedule-bulky-item-pickup
+title: Schedule a bulky item pickup (furniture, mattresses)
+summary: >-
+  Schedule a curbside pickup for household items that don't fit in your City garbage cart, such as
+  furniture and mattresses. There is a fee, added to your next utility bill.
+provider: City of Raleigh Solid Waste Services
+category: fix-report
+core_skill: report-request
+aliases: [bulky item, bulky load, furniture, mattress, couch, sofa, large item, big trash, junk pickup, appliance]
+channels:
+  - type: phone
+    label: Customer Support
+    phone: 919-996-3245
+cost: $35 per Bulky Load, starting April 1, 2026 (Special Load is $70). The charge appears on your next utility bill.
+eligibility: Residents who get City curbside garbage collection. Businesses are not eligible.
+what_you_need:
+  - Your name, property address and phone number
+  - A description of the items
+steps:
+  call:
+    - Call Customer Support at 919-996-3245 to schedule.
+    - Give your name, address, phone number and a list of the items.
+    - On your scheduled day, put the items at the curb on flat ground, not in the street.
+    - Keep them 5 feet away from mailboxes, light poles and cars, and don't block them in.
+notes:
+  - One load is up to 4 cubic yards, or 6 feet long by 3 feet wide by 4 feet high.
+  - Appliances, exercise equipment, extra yard waste and extra bags of garbage are a Special Load, not a Bulky Load.
+  - Items in alleys are not collected; use the main street in front of your home.
+  - The City page describes scheduling by phone only.
+related: [report-missed-collection]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/trash-recycling-and-clean/special-garbage-collection
+  last_checked: 2026-11-04

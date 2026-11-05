@@ -1,0 +1,32 @@
+id: report-sidewalk-damage
+title: Report a damaged sidewalk
+summary: Tell the City's sidewalk repair team about a broken, uneven or damaged sidewalk.
+provider: City of Raleigh Transportation (sidewalk repair)
+category: fix-report
+core_skill: report-request
+aliases: [sidewalk, broken sidewalk, uneven sidewalk, trip hazard, cracked sidewalk]
+channels:
+  - type: email
+    label: Sidewalk repair team
+    email: sidewalk@raleighnc.gov
+  - type: phone
+    label: Street maintenance
+    phone: 919-996-6446
+  - type: web
+    label: Ask Raleigh
+    url: https://ask.raleighnc.gov/ask
+what_you_need:
+  - The address or nearest intersection
+  - A photo of the damage, if you can
+steps:
+  online:
+    - Write an email to sidewalk@raleighnc.gov.
+    - Include the address or nearest intersection and a short description.
+    - Attach a photo if you have one, then send it.
+  call:
+    - Call 919-996-6446 and describe where the damage is.
+related: [report-pothole, ask-raleigh]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/fix-it-report-it-request-it/streets-maintenance-and-repairs
+  last_checked: 2026-11-04

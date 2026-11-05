@@ -1,0 +1,30 @@
+id: watch-council-meetings
+title: Watch a City Council meeting
+summary: >-
+  City Council meetings are shown live on RTN 11 and streamed online, and past meetings can be
+  watched on demand.
+provider: City of Raleigh Communications
+category: have-a-say
+aliases: [city council, council meeting, watch council, rtn, live stream, government meeting]
+channels:
+  - type: web
+    label: Watch City Council live
+    url: https://raleighnc.gov/alerts/watch-city-council-live
+  - type: web
+    label: Meeting videos (on demand)
+    url: https://raleigh.granicus.com/ViewPublisher.php?view_id=24
+  - type: web
+    label: Video services (RTN)
+    url: https://raleighnc.gov/services/communication-and-outreach/video-services
+steps:
+  online:
+    - During a meeting, open the "Watch City Council live" page.
+    - For past meetings, open the meeting videos page and choose a date.
+notes:
+  - Council meetings are also on RTN 11, the City's government TV channel.
+  - Meeting agendas are posted before each meeting.
+related: [speak-at-city-council, engage-raleigh-surveys]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/services/communication-and-outreach/video-services
+  last_checked: 2026-11-04

@@ -1,0 +1,51 @@
+id: pay-utility-bill
+title: Pay your City of Raleigh utility (water) bill
+summary: >-
+  Pay your Raleigh Water utility bill online through Raleigh Water Self-Service, by phone at any
+  hour, by mail, or in person.
+provider: Raleigh Water (City of Raleigh)
+category: pay-manage
+core_skill: accounts-payments
+aliases: [water bill, utility bill, pay bill, sewer bill, raleigh water, rwss, pay water]
+channels:
+  - type: web
+    label: Raleigh Water Self-Service
+    url: https://rwss.raleighnc.gov
+  - type: phone
+    label: Automated payment line
+    phone: 888-905-3169
+    hours: 24 hours a day, 7 days a week
+  - type: phone
+    label: Customer care and billing
+    phone: 919-996-3245
+  - type: in-person
+    label: Utility bill payment locations
+    url: https://raleighnc.gov/water-and-sewer/services/utilities-customer-service/utility-bill-payment-locations
+    notes: Raleigh Municipal Building Complex and the town halls of Garner, Knightdale, Rolesville, Wake Forest, Wendell and Zebulon.
+what_you_need:
+  - Your utility account number (on your bill)
+  - The ZIP code of the service address (for phone payments)
+  - A card, bank account (e-check), or digital wallet
+steps:
+  online:
+    - Go to Raleigh Water Self-Service.
+    - Sign in or register for an account, or choose the one-time payment option.
+    - Enter your payment method and the amount, then submit.
+    - Save or screenshot the confirmation.
+  call:
+    - Have your account number, service ZIP code and payment method ready.
+    - Call 888-905-3169 and follow the prompts.
+cost: >-
+  A 3% processing fee applies to payments made by credit card, debit card or digital wallet.
+  Paying by e-check (bank account) avoids that fee.
+notes:
+  - Online payments accept Visa, Mastercard, American Express, Discover, e-check, Venmo, PayPal and PayPal Credit.
+  - By mail, send a check or money order with your bill stub to City of Raleigh, PO Box 71081, Charlotte, NC 28272-1081. Don't mail cash, and allow extra time.
+  - Payments made somewhere other than the official locations can take days or weeks to arrive.
+  - You enter your own payment details. No one helping you should ever need your card number or password.
+related: [set-up-utility-autopay]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/make-payments/services/make-utility-payment
+    - https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
+  last_checked: 2026-11-04

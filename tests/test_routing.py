@@ -12,6 +12,8 @@ EMERGENCIES = [
     "I hear shots fired",
     "there's a power line down across the road",
     "I want to kill myself",
+    "I can't talk, someone is in my house",
+    "someone broke in and is hiding upstairs",
 ]
 
 NOT_EMERGENCIES = [
@@ -21,6 +23,7 @@ NOT_EMERGENCIES = [
     "what's the non-emergency number",
     "my trash wasn't picked up",
     "question about my tax bill",
+    "can you help me pay my water bill",
 ]
 
 

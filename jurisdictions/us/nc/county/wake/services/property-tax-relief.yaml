@@ -1,0 +1,38 @@
+id: property-tax-relief
+title: Property tax relief for seniors, people with disabilities and disabled veterans
+summary: >-
+  North Carolina law offers three property tax relief programs, run in Wake County by Tax
+  Administration, for income-qualified homeowners who are 65 or older or totally and permanently
+  disabled, and for disabled veterans.
+provider: Wake County Department of Tax Administration
+category: find-help
+aliases: [tax relief, senior tax break, elderly exclusion, homestead exclusion, circuit breaker, disabled veteran exclusion, help paying property tax]
+referral_only: true
+channels:
+  - type: web
+    label: Tax relief programs and online applications
+    url: https://www.wake.gov/departments-government/tax-administration/tax-bill-help/need-help-paying-your-property-tax-bill
+  - type: phone
+    label: Wake County Tax Administration
+    phone: 919-856-5400
+    purpose: Call if you're not sure which program to apply for.
+eligibility: >-
+  Elderly or Disabled Exclusion: 65 or older, or totally and permanently disabled, as of January 1,
+  with 2025 income of $38,800 or less. Circuit Breaker Deferment: same age or disability rule,
+  income of $58,200 or less, and owned and lived in the home for the previous five years.
+  Disabled Veteran Exclusion: no age or income limit.
+what_you_need:
+  - The first two pages of last year's federal tax return, or other proof of income (W-2, SSA-1099, 1099-R, and so on)
+  - A disability certification, if applying based on disability
+  - For veterans, an honorable discharge certificate and disability certification
+  - A valid email address to apply online
+notes:
+  - The application deadline is June 1.
+  - You can only choose one program, even if you qualify for more than one.
+  - The Circuit Breaker program needs a new application every year, and deferred taxes may have to be repaid later (for example, if you sell the home).
+  - Income limits change every year. These were the limits for 2025 income.
+related: [property-tax-bill, home-repair-programs]
+provenance:
+  source_urls:
+    - https://www.wake.gov/departments-government/tax-administration/tax-bill-help/need-help-paying-your-property-tax-bill
+  last_checked: 2026-11-04

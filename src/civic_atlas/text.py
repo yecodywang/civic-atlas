@@ -29,10 +29,15 @@ def singular(word: str) -> str:
 
 
 def tokens(text: str, *, drop_stopwords: bool = False) -> list[str]:
-    """Lowercase, split on non-alphanumerics, singularize. ``non-emergency`` → ``non emergency``."""
+    """Lowercase, split on non-alphanumerics, singularize. ``non-emergency`` → ``non emergency``.
+
+    With ``drop_stopwords``, common words and one-letter fragments are removed (for scoring).
+    Phrase matching uses the full token list so that phrases like "can t breathe" still match.
+    """
     words = [singular(w) for w in _NON_WORD.split(text.lower()) if w]
     if drop_stopwords:
-        words = [w for w in words if w not in STOPWORDS]
+        # Also drop one-letter fragments such as the "t" in "wasn't".
+        words = [w for w in words if w not in STOPWORDS and len(w) > 1]
     return words
 
 

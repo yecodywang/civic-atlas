@@ -1,0 +1,40 @@
+id: ask-raleigh
+title: Use Ask Raleigh to report a problem or request a City service
+summary: >-
+  Ask Raleigh is the City of Raleigh's online portal for reporting problems (like potholes or
+  graffiti), requesting services, and asking questions. You can follow the progress of your
+  request after you submit it.
+provider: City of Raleigh
+category: contact
+core_skill: report-request
+aliases: [ask raleigh, "311", report a problem, service request, request a service, seeclickfix, city request]
+channels:
+  - type: web
+    label: Ask Raleigh portal
+    url: https://ask.raleighnc.gov/ask
+  - type: phone
+    label: City of Raleigh general line
+    phone: 919-996-3000
+    purpose: If you can't use the website, call and staff can point you to the right department.
+what_you_need:
+  - The address or location of the problem (a nearby street corner works too)
+  - A photo, if you can safely take one
+  - An email address, so you can get updates on your request
+steps:
+  online:
+    - Go to the Ask Raleigh portal.
+    - Search for or choose the kind of problem or request (for example, pothole or missed collection).
+    - Enter the location. Add a short description and a photo if you have one.
+    - Submit the request. Write down or save the request number you are given.
+    - Come back to the portal to check its progress.
+notes:
+  - Ask Raleigh replaced the City's earlier SeeClickFix tool.
+  - Only report real problems. Practice or test requests create work for City staff.
+  - Ask Raleigh is not for emergencies. If anyone is in danger, call 911.
+related: [report-pothole, report-missed-collection, report-graffiti]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/government/news/ask-raleigh-launches-july-1
+    - https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
+  last_checked: 2026-11-04
+  notes: The portal itself (ask.raleighnc.gov) needs JavaScript, so facts were taken from the City pages that describe it.

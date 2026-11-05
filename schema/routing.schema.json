@@ -32,7 +32,6 @@
         "phone": {
           "anyOf": [
             {
-              "pattern": "^[0-9+() .\\-]+$",
               "type": "string"
             },
             {
@@ -41,6 +40,19 @@
           ],
           "default": null,
           "title": "Phone"
+        },
+        "email": {
+          "anyOf": [
+            {
+              "pattern": "^[^@\\s]+@[^@\\s]+\\.[a-zA-Z]{2,}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Email"
         },
         "hours": {
           "anyOf": [

@@ -1,0 +1,37 @@
+id: reserve-park-shelter
+title: Reserve a park picnic shelter
+summary: >-
+  Request a picnic shelter at a City park through RecLink. Requests are approved by staff, and you
+  pay to confirm the reservation.
+provider: City of Raleigh Parks, Recreation and Cultural Resources
+category: pay-manage
+core_skill: accounts-payments
+aliases: [picnic shelter, shelter rental, reserve a shelter, park rental, birthday party at the park, book a shelter]
+channels:
+  - type: web
+    label: Picnic shelters (list, fees and link to RecLink)
+    url: https://raleighnc.gov/services/parks/picnic-shelter
+  - type: web
+    label: RecLink
+    url: https://reclink.raleighnc.gov/
+what_you_need:
+  - A RecLink account
+  - Your preferred park, date and times (including setup and cleanup time)
+  - A payment method
+steps:
+  online:
+    - Look at the picnic shelter list to choose a park and check its hourly fee.
+    - Sign in to RecLink and request the shelter for your date and times.
+    - Wait for staff approval.
+    - After approval, pay to confirm your reservation.
+cost: >-
+  Hourly fees vary by shelter, with a 2-hour minimum. Non-residents pay 25% more on the hourly
+  rate. Going past your reserved time costs twice the hourly rate.
+notes:
+  - The time you request must include setup and breakdown.
+  - Check the City's refund policy before you book.
+related: [reclink-register-program, find-park-greenway-center]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/services/parks/picnic-shelter
+  last_checked: 2026-11-04

@@ -1,0 +1,176 @@
+# "Who do I contact?" for the City of Raleigh.
+# Emergencies are handled in code before these rules run (see src/civic_atlas/routing.py).
+# Rules are matched by keyword; more keyword hits rank higher. Keep keywords short and plain.
+rules:
+  - id: police-non-emergency
+    situation: Police help that isn't an emergency (a past crime with no danger now, suspicious activity, a question for police)
+    keywords: [police, non emergency, suspicious, stolen, theft, break in last night, police report, car broken into]
+    go_to: Raleigh Police non-emergency line
+    jurisdiction: us/nc/place/raleigh
+    channel:
+      type: phone
+      label: Raleigh Police non-emergency
+      phone: 919-829-1911
+    explanation: For police matters where no one is in danger right now. If it's happening now or anyone is at risk, call 911.
+  - id: noise
+    situation: Loud music, a party, or other noise
+    keywords: [noise, loud, music, party, barking, amplified sound]
+    go_to: Raleigh Police non-emergency line
+    jurisdiction: us/nc/place/raleigh
+    service: report-noise
+    explanation: Raleigh Police handle noise complaints through the non-emergency line.
+  - id: trash-recycling
+    situation: Missed garbage, recycling or yard waste pickup
+    keywords: [trash, garbage, recycling, yard waste, missed pickup, cart, bin, not picked up]
+    go_to: City of Raleigh Solid Waste Services
+    jurisdiction: us/nc/place/raleigh
+    service: report-missed-collection
+    explanation: The City collects household trash, recycling and yard waste.
+  - id: bulky-items
+    situation: Getting rid of furniture, a mattress or other large items
+    keywords: [bulky, furniture, mattress, couch, sofa, large item, appliance, junk]
+    go_to: City of Raleigh Solid Waste Services
+    jurisdiction: us/nc/place/raleigh
+    service: schedule-bulky-item-pickup
+    explanation: The City picks up bulky items by appointment for a fee.
+  - id: streets
+    situation: A pothole or damaged street
+    keywords: [pothole, street damage, road, pavement, damaged street]
+    go_to: City of Raleigh street maintenance
+    jurisdiction: us/nc/place/raleigh
+    service: report-pothole
+    explanation: The City repairs City-maintained streets. Some major roads are maintained by the State (NCDOT).
+  - id: sidewalks
+    situation: A broken or uneven sidewalk
+    keywords: [sidewalk, trip hazard, uneven]
+    go_to: City of Raleigh sidewalk repair
+    jurisdiction: us/nc/place/raleigh
+    service: report-sidewalk-damage
+    explanation: The City's sidewalk repair team handles damaged sidewalks.
+  - id: streetlights
+    situation: A streetlight is out or broken
+    keywords: [streetlight, street light, light out, dark street, lamp post]
+    go_to: The electric utility (usually Duke Energy)
+    service: report-streetlight-out
+    explanation: Most Raleigh streetlights are maintained by the power company, not the City.
+  - id: graffiti
+    situation: Graffiti on a wall, sign or building
+    keywords: [graffiti, spray paint, tagging, vandalism]
+    go_to: City of Raleigh street maintenance
+    jurisdiction: us/nc/place/raleigh
+    service: report-graffiti
+    explanation: The City removes graffiti and takes reports through Ask Raleigh.
+  - id: abandoned-vehicle
+    situation: A car that seems abandoned
+    keywords: [abandoned car, abandoned vehicle, junk car, car left]
+    go_to: Raleigh Police (City streets) or City Code Enforcement (private property)
+    jurisdiction: us/nc/place/raleigh
+    service: report-abandoned-vehicle
+    explanation: Who handles it depends on whether the car is on a public street or on private property.
+  - id: flooding
+    situation: Street flooding, a clogged storm drain or drainage problem
+    keywords: [flooding, flood, storm drain, drainage, standing water, clogged drain, catch basin]
+    go_to: City of Raleigh Stormwater
+    jurisdiction: us/nc/place/raleigh
+    service: report-flooding-drainage
+    explanation: The City's stormwater team handles storm drains and street drainage.
+  - id: water-sewer-emergency
+    situation: A water main break, leaking fire hydrant, sewer backup or no water
+    keywords: [water main, water leak, leaking, hydrant, sewer, sewage, manhole, no water, discolored water, low water pressure]
+    go_to: Raleigh Water (24/7)
+    jurisdiction: us/nc/place/raleigh
+    service: report-water-sewer-problem
+    channel:
+      type: phone
+      label: Raleigh Water, water or sewer emergencies (24/7)
+      phone: 919-996-3245
+    explanation: Raleigh Water handles water and sewer problems at any hour, including leaking fire hydrants.
+  - id: water-bill
+    situation: Paying or asking about a water or utility bill
+    keywords: [water bill, utility bill, pay bill, autopay, sewer bill, utility account]
+    go_to: Raleigh Water customer care and billing
+    jurisdiction: us/nc/place/raleigh
+    service: pay-utility-bill
+    explanation: The City of Raleigh bills water, sewer and some other utility services.
+  - id: property-tax
+    situation: A question about a property tax bill
+    keywords: [property tax, tax bill, real estate tax, home value, assessment, appraisal]
+    go_to: Wake County Tax Administration
+    jurisdiction: us/nc/county/wake
+    service: property-tax-bill
+    explanation: >-
+      Raleigh sets its own tax rate, but Wake County sends and collects the bill, with a line for
+      the City. (In the Durham County part of Raleigh, Durham County bills instead.)
+  - id: tax-relief
+    situation: Help paying property tax as a senior, a person with a disability, or a disabled veteran
+    keywords: [tax relief, senior, elderly, disabled veteran, can't afford property tax]
+    go_to: Wake County Tax Administration (tax relief programs)
+    jurisdiction: us/nc/county/wake
+    service: property-tax-relief
+    explanation: Wake County runs the State's property tax relief programs for qualifying homeowners.
+  - id: help-with-needs
+    situation: Help with food, rent, utilities or other basic needs
+    keywords: [food, rent, eviction, utility assistance, homeless shelter, place to stay, help paying, assistance, homeless]
+    go_to: NC 211 (United Way of North Carolina)
+    jurisdiction: us/nc
+    service: nc-211
+    explanation: NC 211 connects people with health and human services near them. It's free and confidential.
+  - id: home-repair
+    situation: Help paying for home repairs, or buying a first home
+    keywords: [home repair, roof, repair loan, homebuyer, down payment, buy a house]
+    go_to: City of Raleigh Housing and Neighborhoods
+    jurisdiction: us/nc/place/raleigh
+    service: home-repair-programs
+    explanation: The City has income-qualified repair and homebuyer programs that open and close during the year.
+  - id: smoke-alarm
+    situation: Getting a free smoke alarm
+    keywords: [smoke alarm, smoke detector]
+    go_to: Raleigh Fire Department
+    jurisdiction: us/nc/place/raleigh
+    service: request-smoke-alarm
+    explanation: Raleigh Fire installs smoke alarms for residents.
+  - id: alerts
+    situation: Getting news and emergency alerts
+    keywords: [alert, alerts, notification, news, newsletter, text me, sign up]
+    go_to: MyRaleigh Subscriptions (City news) and ReadyWake Alerts (emergencies)
+    jurisdiction: us/nc/place/raleigh
+    service: myraleigh-subscriptions
+    explanation: City news comes through MyRaleigh Subscriptions. Wake County's ReadyWake Alerts handles emergency alerts.
+  - id: parks-programs
+    situation: Parks, classes, camps, or reserving a shelter
+    keywords: [park, class, camp, reclink, picnic shelter, picnic, community center, greenway, program]
+    go_to: City of Raleigh Parks, Recreation and Cultural Resources
+    jurisdiction: us/nc/place/raleigh
+    service: reclink-register-program
+    explanation: Raleigh Parks runs programs and rentals through RecLink.
+  - id: have-a-say
+    situation: Having a say in City decisions
+    keywords: [council, survey, feedback, public comment, board, commission, have a say]
+    go_to: Engage Raleigh, City Council public comment, or boards and commissions
+    jurisdiction: us/nc/place/raleigh
+    service: engage-raleigh-surveys
+    explanation: You can comment on projects online, speak at Council meetings, or volunteer on a board.
+  - id: court-traffic
+    situation: Court dates, traffic tickets or questions for the District Attorney
+    keywords: [court, court date, traffic ticket, speeding ticket, district attorney]
+    go_to: Wake County court information line
+    jurisdiction: us/nc/county/wake
+    channel:
+      type: phone
+      label: Number the City lists for court dates, traffic violations and District Attorney questions
+      phone: 919-755-4117
+    explanation: The Raleigh Police information desk doesn't handle court dates or traffic tickets. These are handled by the courts in Wake County.
+fallback:
+  go_to: City of Raleigh general line ("who to call for everything else")
+  channel:
+    type: phone
+    label: City of Raleigh general line
+    phone: 919-996-3000
+    notes: TDD 919-996-3107
+  explanation: Not sure who handles it? The City's general line can point you to the right place, including County or State offices.
+provenance:
+  source_urls:
+    - https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
+    - https://raleighnc.gov/police
+    - https://www.wake.gov/departments-government/tax-administration
+  last_checked: 2026-11-04

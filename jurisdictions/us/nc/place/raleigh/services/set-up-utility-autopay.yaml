@@ -1,0 +1,36 @@
+id: set-up-utility-autopay
+title: Set up AutoPay for your utility bill
+summary: >-
+  Have your Raleigh Water bill paid automatically each month from your bank account or card,
+  through Raleigh Water Self-Service.
+provider: Raleigh Water (City of Raleigh)
+category: pay-manage
+core_skill: accounts-payments
+aliases: [autopay, auto pay, automatic payment, bank draft, recurring payment, water bill]
+channels:
+  - type: web
+    label: Raleigh Water Self-Service
+    url: https://rwss.raleighnc.gov
+  - type: phone
+    label: Customer care and billing
+    phone: 919-996-3245
+what_you_need:
+  - A Raleigh Water Self-Service account (you register with your utility account number)
+  - Your bank routing and account number, or a card
+steps:
+  online:
+    - Sign in to Raleigh Water Self-Service, or register if you don't have an account yet.
+    - Find the AutoPay or bank draft option.
+    - Choose bank draft or card, and enter your details yourself.
+    - Save, and look for a confirmation message or email.
+cost: >-
+  Bank draft has no processing fee. Paying by card adds a 3% processing fee each month.
+eligibility: Bank draft is only for accounts at U.S. financial institutions.
+notes:
+  - Check with your bank before drafting from a savings account.
+  - Keep reading your monthly bill so you notice any unusual charges.
+related: [pay-utility-bill]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/make-payments/services/make-utility-payment
+  last_checked: 2026-11-04

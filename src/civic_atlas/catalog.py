@@ -34,6 +34,10 @@ _RELATION_WEIGHT = {
 }
 
 
+MIN_SCORE = 2.0
+"""Hits scoring below this (e.g. one shared word in a summary) are noise and are dropped."""
+
+
 class CatalogError(Exception):
     """Raised when the catalog data has errors and cannot be served."""
 
@@ -138,8 +142,8 @@ class Catalog:
             data = svc.data
             if cat and data.category is not cat:
                 continue
-            score = _score(data, q_tokens, q_all) if q_tokens else 1.0
-            if score > 0:
+            score = _score(data, q_tokens, q_all) if q_tokens else MIN_SCORE
+            if score >= MIN_SCORE:
                 hits.append(
                     SearchHit(
                         service=svc,
@@ -168,7 +172,7 @@ def _score(data, q_tokens: list[str], q_all: list[str]) -> float:
     alias_tokens: set[str] = set()
     for alias in data.aliases:
         a = tokens(alias)
-        alias_tokens.update(a)
+        alias_tokens.update(tokens(alias, drop_stopwords=True))
         if len(a) > 1 and contains_phrase(q_all, a):
             score += 6
     title = set(tokens(data.title))

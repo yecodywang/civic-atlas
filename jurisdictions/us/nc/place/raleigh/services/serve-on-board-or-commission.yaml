@@ -1,0 +1,28 @@
+id: serve-on-board-or-commission
+title: Serve on a City board or commission
+summary: >-
+  Residents volunteer on City boards and commissions that advise City Council. Each board's page
+  lists its members, vacancies and how to apply.
+provider: City of Raleigh City Clerk's Office
+category: have-a-say
+aliases: [board, commission, volunteer, advisory board, appointed, serve the city]
+channels:
+  - type: web
+    label: Boards and commissions
+    url: https://raleighnc.gov/services/government/boards-and-commissions
+  - type: phone
+    label: City Clerk's Office
+    phone: 919-996-3040
+steps:
+  online:
+    - Open the boards and commissions page.
+    - Choose a board that interests you to see its members, terms and vacancies.
+    - Follow that board's "how to apply" instructions.
+eligibility: Requirements, including residency, vary by board. You can serve on at most two boards at a time.
+notes:
+  - City Council appoints members at its regular meetings. Terms are usually two years, up to six consecutive years on one board.
+related: [speak-at-city-council, engage-raleigh-surveys]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/services/government/boards-and-commissions
+  last_checked: 2026-11-04

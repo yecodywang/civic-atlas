@@ -1,0 +1,29 @@
+id: report-water-sewer-problem
+title: Report a water or sewer problem (leak, main break, sewer backup)
+summary: >-
+  Raleigh Water handles problems with public water and sewer lines at any hour, including water
+  main breaks, leaking fire hydrants, sewer backups and discolored drinking water.
+provider: Raleigh Water (City of Raleigh)
+category: fix-report
+core_skill: report-request
+aliases: [water leak, water main break, leaking hydrant, fire hydrant leaking, sewer backup, sewage, overflowing manhole, discolored water, brown water, no water, low water pressure]
+channels:
+  - type: phone
+    label: Raleigh Water, water or sewer emergencies
+    phone: 919-996-3245
+    hours: 24/7
+what_you_need:
+  - The location (address or nearest intersection)
+  - What you see, and when it started
+steps:
+  call:
+    - Call Raleigh Water at 919-996-3245 at any time of day.
+    - Give the location and describe what you see (water coming up, a sewer smell, a leaking hydrant).
+notes:
+  - Leaks inside your home, on your side of the water meter, are usually a job for a plumber.
+  - If water is near electrical equipment or anyone is in danger, call 911.
+related: [report-flooding-drainage, pay-utility-bill]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
+  last_checked: 2026-11-04

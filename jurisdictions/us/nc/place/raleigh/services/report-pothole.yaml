@@ -1,0 +1,40 @@
+id: report-pothole
+title: Report a pothole or damaged street
+summary: >-
+  Tell the City about a pothole or other damage on a City-maintained street. Some roads in
+  Raleigh are maintained by the State (NCDOT), not the City.
+provider: City of Raleigh Transportation (street maintenance)
+category: fix-report
+core_skill: report-request
+aliases: [pothole, potholes, hole in the road, street damage, damaged street, road repair, cracked pavement]
+channels:
+  - type: web
+    label: Ask Raleigh (Pothole Repair Request)
+    url: https://ask.raleighnc.gov/ask
+  - type: phone
+    label: Street maintenance
+    phone: 919-996-6446
+  - type: web
+    label: Map of who maintains each street
+    url: http://ral.maps.arcgis.com/apps/webappviewer/index.html?id=7f522ff4b033436b8b3fc2c7cf1f3f81
+    purpose: Check whether the City maintains the street.
+what_you_need:
+  - The street address or nearest intersection
+  - A photo, if it is safe to take one
+steps:
+  online:
+    - Open Ask Raleigh and choose the pothole repair request.
+    - Mark the location on the map or type the address.
+    - Describe the size and where it is in the road (for example, the right lane).
+    - Submit and save your request number.
+  call:
+    - Call 919-996-6446.
+    - Give the address or nearest intersection and describe the problem.
+notes:
+  - Don't stop in traffic to take a photo.
+related: [ask-raleigh, report-sidewalk-damage, report-flooding-drainage]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/fix-it-report-it-request-it/streets-maintenance-and-repairs
+    - https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
+  last_checked: 2026-11-04

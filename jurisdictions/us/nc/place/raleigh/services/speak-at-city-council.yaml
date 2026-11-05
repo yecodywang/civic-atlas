@@ -1,0 +1,22 @@
+id: speak-at-city-council
+title: Speak at a City Council meeting
+summary: >-
+  City Council sets aside time for public comment at its meetings. You need to sign up in advance
+  to speak.
+provider: City of Raleigh City Council
+category: have-a-say
+aliases: [public comment, speak to council, address council, petition council]
+channels:
+  - type: web
+    label: Petition or address City Council
+    url: https://raleighnc.gov/petition-address-city-council
+steps:
+  online:
+    - Open the "Petition or address City Council" page.
+    - Follow the sign-up instructions for the meeting you want, before the deadline.
+    - Prepare a short statement. Speakers usually have a time limit.
+related: [watch-council-meetings, serve-on-board-or-commission]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/engage-city/ways-participate-city-government
+  last_checked: 2026-11-04

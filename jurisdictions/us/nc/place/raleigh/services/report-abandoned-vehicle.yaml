@@ -1,0 +1,34 @@
+id: report-abandoned-vehicle
+title: Report an abandoned vehicle
+summary: >-
+  Report a vehicle that seems abandoned. Who handles it depends on where it is. Vehicles on City
+  streets go to the police; junked or abandoned vehicles on private property go to the City's
+  code enforcement team.
+provider: Raleigh Police Department (streets) and City of Raleigh Code Enforcement (private property)
+category: fix-report
+core_skill: report-request
+aliases: [abandoned car, abandoned vehicle, junk car, junked vehicle, car left on street, nuisance vehicle]
+channels:
+  - type: phone
+    label: Abandoned cars on City streets
+    phone: 919-831-6311
+    notes: The City also lists 919-996-3335 for this.
+  - type: phone
+    label: Public nuisances (including vehicles on private property)
+    phone: 919-996-2444
+what_you_need:
+  - The address or nearest intersection
+  - The vehicle's make, model, color and license plate, if you can see them
+  - How long it has been there, if you know
+steps:
+  call:
+    - Decide whether the vehicle is on a public street or on private property.
+    - For a City street, call 919-831-6311. For private property, call 919-996-2444.
+    - Describe the vehicle and its location.
+notes:
+  - If the vehicle is blocking traffic or is a hazard, call the police non-emergency line (919-829-1911), or 911 if anyone is in danger.
+related: [report-noise]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
+  last_checked: 2026-11-04

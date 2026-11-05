@@ -1,0 +1,35 @@
+id: reclink-register-program
+title: Create a RecLink account and sign up for a parks program
+summary: >-
+  RecLink is the City's online system for Parks, Recreation and Cultural Resources. Use it to
+  register for classes, camps and Active Adult programs and to book facilities.
+provider: City of Raleigh Parks, Recreation and Cultural Resources
+category: pay-manage
+core_skill: accounts-payments
+aliases: [reclink, parks program, register for class, recreation, camp, active adult, senior program, sign up for a class]
+channels:
+  - type: web
+    label: RecLink
+    url: https://reclink.raleighnc.gov/
+  - type: phone
+    label: RecLink Support
+    phone: 919-996-2153
+  - type: email
+    label: RecLink Support
+    email: RecLinkSupport@raleighnc.gov
+what_you_need:
+  - An email address (required to create an account)
+  - A payment method, for programs that cost money
+steps:
+  online:
+    - Go to RecLink.
+    - On a computer, choose "Create an Account" from the top menu. On a phone, open the menu (three lines at the top left) first.
+    - Fill in your information and finish creating the account.
+    - Search for a program, choose it, and follow the steps to register and pay.
+notes:
+  - No email address? Call RecLink Support at 919-996-2153 for help.
+related: [reserve-park-shelter, find-park-greenway-center]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/parks/create-reclink-account
+  last_checked: 2026-11-04

@@ -1,0 +1,33 @@
+id: readywake-alerts
+title: Sign up for ReadyWake emergency alerts
+summary: >-
+  ReadyWake Alerts is Wake County's free emergency alert service. After you register, you get
+  alerts by phone call, text or email for the addresses you choose, such as home and work.
+provider: Wake County Fire Services and Emergency Management
+category: stay-informed
+core_skill: stay-informed
+aliases: [readywake, ready wake, emergency alerts, severe weather alerts, emergency notification, wireless emergency alerts]
+channels:
+  - type: web
+    label: ReadyWake Alerts sign-up
+    url: https://readywake.com/readywake-alerts
+  - type: web
+    label: About Wake County alerts and warnings
+    url: https://www.wake.gov/departments-government/fire-services-emergency-management/emergency-management/alerts-notifications-and-warnings
+what_you_need:
+  - The address (or addresses) you want alerts for
+  - A phone number and/or email address
+steps:
+  online:
+    - Open the ReadyWake Alerts page and choose to sign up.
+    - Create your account and enter the addresses you care about.
+    - Choose how you want to be alerted (call, text and/or email).
+    - Finish registration. Use the alert dashboard later to update addresses or opt out.
+notes:
+  - Alerts are based on the addresses you register, not where your phone is.
+  - Wireless Emergency Alerts (like Amber Alerts) need no sign-up. Just make sure emergency alerts are turned on in your phone's settings.
+related: [myraleigh-subscriptions]
+provenance:
+  source_urls:
+    - https://www.wake.gov/departments-government/fire-services-emergency-management/emergency-management/alerts-notifications-and-warnings
+  last_checked: 2026-11-04

@@ -1,0 +1,35 @@
+id: home-repair-programs
+title: Learn about City home repair and homebuyer programs
+summary: >-
+  The City's Housing and Neighborhoods Department offers repair loans for income-qualified
+  homeowners and assistance for homebuyers. Programs open and close, so check current status.
+provider: City of Raleigh Housing and Neighborhoods (some programs run with Preserving Home)
+category: find-help
+aliases: [home repair, house repair, roof repair, rehab, homebuyer, down payment, first time homebuyer, housing help, limited repair]
+referral_only: true
+channels:
+  - type: web
+    label: Homeowner rehab and repair programs
+    url: https://raleighnc.gov/housing/homeowner-rehab-and-repair-programs
+  - type: phone
+    label: Housing and Neighborhoods (rehab programs)
+    phone: 919-996-4330
+  - type: email
+    label: Housing and Neighborhoods (rehab programs)
+    email: Rehabs@raleighnc.gov
+  - type: phone
+    label: Preserving Home (Limited Repair and Home Revitalization programs)
+    phone: 919-336-5200
+eligibility: >-
+  Income limits apply. As of the last check, the limit for a one-person household was $46,350
+  (Limited Repair) or $60,255 (Home Revitalization).
+notes:
+  - As of the last check, the Substantial Rehabilitation Program (for homeowners 62 or older or with a disability) was not taking new applications.
+  - The Limited Repair and Home Revitalization programs are run by Preserving Home, a partner organization.
+  - For homebuyer help, follow the "Apply for Homebuyer Assistance" link on the City's housing pages.
+related: [property-tax-relief, nc-211]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/housing/homeowner-rehab-and-repair-programs
+  last_checked: 2026-11-04
+  notes: Program status and income limits change. This entry points people to the program pages rather than teaching the application step by step.

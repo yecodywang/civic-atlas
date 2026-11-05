@@ -1,0 +1,45 @@
+id: report-streetlight-out
+title: Report a streetlight that is out or damaged
+summary: >-
+  Most streetlights along Raleigh's streets are maintained by the electric utility (usually Duke
+  Energy, sometimes Wake Electric), so outages are reported to the utility.
+provider: Duke Energy or Wake Electric (with the City of Raleigh Transportation Department)
+provider_type: other
+category: fix-report
+core_skill: report-request
+aliases: [streetlight, street light, light out, broken light, dark street, lamp post]
+channels:
+  - type: web
+    label: Duke Energy street and area light repair
+    url: https://www.duke-energy.com/customer-service/request-light-repair
+  - type: phone
+    label: Duke Energy (streetlight repair)
+    phone: 800-769-3766
+  - type: phone
+    label: Wake Electric Membership Corporation
+    phone: 855-280-1147
+  - type: phone
+    label: City of Raleigh streetlight program
+    phone: 919-996-4045
+    purpose: Requests for new streetlights and evaluations, or if you're not sure who to call.
+what_you_need:
+  - The address closest to the light
+  - The pole number (usually on a tag on the pole)
+steps:
+  online:
+    - Find the pole number on the light pole and note the nearest address.
+    - Open Duke Energy's street and area light repair page.
+    - Enter the location and pole number, then submit.
+  call:
+    - Call Duke Energy at 800-769-3766, or Wake Electric at 855-280-1147 if Wake Electric serves the area.
+    - Give the address and pole number.
+notes:
+  - The City's frequently called numbers page lists a different Duke Energy number (800-474-6300) and a Wake Electric number of 800-777-9898. The streetlight program page was used here. A volunteer should confirm which is current.
+  - The City's Transportation Department will also pass reports to the utility if you email them with the address and pole number.
+related: [report-pothole]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/transportation/services/streetlight-program
+    - https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
+  last_checked: 2026-11-04
+  notes: Two City pages list different utility phone numbers; see notes.

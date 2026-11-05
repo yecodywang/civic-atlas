@@ -18,11 +18,24 @@ from __future__ import annotations
 
 from datetime import date
 from enum import StrEnum
+from typing import Annotated, Any
 
-from pydantic import BaseModel, ConfigDict, Field, HttpUrl, model_validator
+from pydantic import BaseModel, BeforeValidator, ConfigDict, Field, HttpUrl, model_validator
 
 SLUG_PATTERN = r"^[a-z0-9]+(?:-[a-z0-9]+)*$"
 PHONE_PATTERN = r"^[0-9+() .\-]+$"
+EMAIL_PATTERN = r"^[^@\s]+@[^@\s]+\.[a-zA-Z]{2,}$"
+
+
+def _number_to_text(value: Any) -> Any:
+    """YAML reads bare 211, 311 or 911 as numbers; accept them wherever text is expected."""
+    if isinstance(value, int) and not isinstance(value, bool):
+        return str(value)
+    return value
+
+
+Text = Annotated[str, BeforeValidator(_number_to_text)]
+"""A string that also accepts a bare YAML number, such as ``911``."""
 
 
 class _Strict(BaseModel):
@@ -112,7 +125,8 @@ class Channel(_Strict):
     type: ChannelType
     label: str = Field(description="Short human label, e.g. 'Ask Raleigh website'.")
     url: HttpUrl | None = None
-    phone: str | None = Field(default=None, pattern=PHONE_PATTERN)
+    phone: Text | None = Field(default=None, pattern=PHONE_PATTERN)
+    email: str | None = Field(default=None, pattern=EMAIL_PATTERN)
     hours: str | None = None
     purpose: str | None = Field(default=None, description="When to use this channel.")
     notes: str | None = None
@@ -123,6 +137,8 @@ class Channel(_Strict):
             raise ValueError(f"a '{self.type}' channel needs a url")
         if self.type in (ChannelType.PHONE, ChannelType.TEXT) and self.phone is None:
             raise ValueError(f"a '{self.type}' channel needs a phone number")
+        if self.type is ChannelType.EMAIL and self.email is None:
+            raise ValueError("an 'email' channel needs an email address")
         return self
 
 
@@ -152,7 +168,7 @@ class Overlap(_Strict):
 class Emergency(_Strict):
     """Emergency facts that vary by place. The emergency number itself is also hard-coded."""
 
-    number: str = Field(default="911", pattern=PHONE_PATTERN)
+    number: Text = Field(default="911", pattern=PHONE_PATTERN)
     text_to_911: bool | None = Field(
         default=None, description="Whether texting 911 works here. Null means unknown."
     )
@@ -165,7 +181,7 @@ class Jurisdiction(_Strict):
 
     name: str = Field(description="Full name, e.g. 'City of Raleigh'.")
     kind: JurisdictionKind
-    aliases: list[str] = Field(
+    aliases: list[Text] = Field(
         default_factory=list, description="Short names accepted in lookups, e.g. 'raleigh'."
     )
     overlaps: list[Overlap] = Field(default_factory=list)
@@ -191,7 +207,7 @@ class Service(_Strict):
     provider_type: ProviderType = ProviderType.GOVERNMENT
     category: Category
     core_skill: CoreSkill | None = None
-    aliases: list[str] = Field(
+    aliases: list[Text] = Field(
         default_factory=list, description="Words people might use: 'trash', 'garbage', 'bin'."
     )
     channels: list[Channel] = Field(min_length=1)
@@ -213,7 +229,7 @@ class RoutingRule(_Strict):
 
     id: str = Field(pattern=SLUG_PATTERN)
     situation: str = Field(description="Plain description, e.g. 'Question about a tax bill'.")
-    keywords: list[str] = Field(
+    keywords: list[Text] = Field(
         min_length=1, description="Words or phrases that suggest this situation."
     )
     go_to: str = Field(description="Who to contact, e.g. 'Wake County Tax Administration'.")

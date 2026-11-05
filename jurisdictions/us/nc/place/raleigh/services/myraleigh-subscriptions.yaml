@@ -1,0 +1,32 @@
+id: myraleigh-subscriptions
+title: Sign up for City of Raleigh email and text alerts (MyRaleigh Subscriptions)
+summary: >-
+  MyRaleigh Subscriptions sends City news, service notices, meeting agendas and other updates by
+  email or text message. You choose the topics.
+provider: City of Raleigh Communications
+category: stay-informed
+core_skill: stay-informed
+aliases: [myraleigh, email alerts, text alerts, newsletter, city news, notifications, subscribe, govdelivery, service notices]
+channels:
+  - type: web
+    label: MyRaleigh Subscriptions sign-up
+    url: https://public.govdelivery.com/accounts/NCRALEIGH/subscriber/new
+  - type: web
+    label: About City email alerts and newsletters
+    url: https://raleighnc.gov/engage-city/sign-email-alerts-and-newsletters
+what_you_need:
+  - An email address, or a mobile phone number for text messages
+steps:
+  online:
+    - Open the MyRaleigh Subscriptions sign-up page.
+    - Enter your email address (or choose to sign up with a mobile number for texts).
+    - Check the boxes for the topics you want, such as service notices or your neighborhood's news.
+    - Save your choices. Look for a confirmation email or text.
+notes:
+  - There are more than 100 topics. You can change them or unsubscribe at any time.
+  - These are City updates. For emergency alerts, also sign up for ReadyWake Alerts (Wake County).
+related: [readywake-alerts]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/engage-city/sign-email-alerts-and-newsletters
+  last_checked: 2026-11-04

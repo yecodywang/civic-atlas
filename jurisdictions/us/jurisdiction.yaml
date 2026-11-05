@@ -1,0 +1,19 @@
+name: United States
+kind: country
+aliases: [usa, united states]
+emergency:
+  number: "911"
+  notes: Call 911 anywhere in the United States for police, fire or medical emergencies.
+key_contacts:
+  - type: phone
+    label: Emergency
+    phone: "911"
+    purpose: Police, fire or medical emergency. Someone is in danger.
+  - type: phone
+    label: 988 Suicide & Crisis Lifeline
+    phone: "988"
+    purpose: Call or text 988 for mental health or suicide crisis support, 24/7.
+provenance:
+  source_urls:
+    - https://988lifeline.org/
+  last_checked: 2026-11-04

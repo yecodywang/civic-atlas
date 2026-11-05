@@ -1,0 +1,33 @@
+id: report-noise
+title: Report a noise problem
+summary: >-
+  Noise complaints, such as a loud party or music, are handled by the Raleigh Police Department.
+  Use the non-emergency line unless someone is in danger.
+provider: Raleigh Police Department
+category: fix-report
+core_skill: know-who
+aliases: [noise, loud music, loud party, noise complaint, barking, loud neighbors, amplified sound]
+channels:
+  - type: phone
+    label: Raleigh Police non-emergency
+    phone: 919-829-1911
+  - type: phone
+    label: Emergency
+    phone: "911"
+    purpose: Only if someone is in danger or there is a threat of violence.
+what_you_need:
+  - The address the noise is coming from
+  - What kind of noise it is and how long it has been going on
+steps:
+  call:
+    - Call the police non-emergency line at 919-829-1911.
+    - Give the address and describe the noise.
+notes:
+  - Raleigh has a noise ordinance, and its rules for amplified sound at some businesses changed in 2026. Ask the police or check the City Code for details rather than relying on this entry.
+related: [report-abandoned-vehicle]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/police
+    - https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
+  last_checked: 2026-11-04
+  notes: The non-emergency number is from the Police page. Ordinance details were not verified against the City Code.

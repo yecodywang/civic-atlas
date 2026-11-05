@@ -1,0 +1,10 @@
+name: State of North Carolina
+kind: state
+aliases: [north carolina, nc]
+websites:
+  - label: NC 211 (statewide help line, run by United Way of North Carolina)
+    url: https://nc211.org/
+provenance:
+  source_urls:
+    - https://nc211.org/
+  last_checked: 2026-11-04
