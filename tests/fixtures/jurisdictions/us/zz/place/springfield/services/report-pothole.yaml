@@ -1,0 +1,14 @@
+id: report-pothole
+title: Report a pothole
+summary: Report a pothole on a city street.
+provider: City Transportation
+category: fix-report
+core_skill: report-request
+aliases: [pothole, hole in the road, street damage]
+channels:
+  - type: web
+    label: City request portal
+    url: https://example.org/springfield/request
+provenance:
+  source_urls: ["https://example.org/springfield/pothole"]
+  last_checked: 2026-11-01

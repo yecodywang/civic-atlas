@@ -1,0 +1,385 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/yecodywang/civic-atlas/schema/service.schema.json",
+  "$defs": {
+    "Category": {
+      "description": "Task-menu groups, from the \"Raleigh at Your Fingertips\" curriculum.",
+      "enum": [
+        "fix-report",
+        "pay-manage",
+        "stay-informed",
+        "find-help",
+        "have-a-say",
+        "contact"
+      ],
+      "title": "Category",
+      "type": "string"
+    },
+    "Channel": {
+      "additionalProperties": false,
+      "description": "One way to reach a service: a website, phone number, app, and so on.",
+      "properties": {
+        "type": {
+          "$ref": "#/$defs/ChannelType"
+        },
+        "label": {
+          "description": "Short human label, e.g. 'Ask Raleigh website'.",
+          "title": "Label",
+          "type": "string"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "format": "uri",
+              "maxLength": 2083,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        },
+        "phone": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9+() .\\-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Phone"
+        },
+        "hours": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Hours"
+        },
+        "purpose": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "When to use this channel.",
+          "title": "Purpose"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "type",
+        "label"
+      ],
+      "title": "Channel",
+      "type": "object"
+    },
+    "ChannelType": {
+      "enum": [
+        "web",
+        "phone",
+        "text",
+        "app",
+        "email",
+        "in-person"
+      ],
+      "title": "ChannelType",
+      "type": "string"
+    },
+    "CoreSkill": {
+      "description": "The four core skills that open the door to most services.",
+      "enum": [
+        "know-who",
+        "report-request",
+        "stay-informed",
+        "accounts-payments"
+      ],
+      "title": "CoreSkill",
+      "type": "string"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "description": "Where an entry's facts came from and how fresh they are. Required on every entry.",
+      "properties": {
+        "source_urls": {
+          "description": "Official pages the facts in this entry were taken from.",
+          "items": {
+            "format": "uri",
+            "maxLength": 2083,
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Urls",
+          "type": "array"
+        },
+        "last_checked": {
+          "description": "Date someone last compared this entry against its sources (YYYY-MM-DD).",
+          "format": "date",
+          "title": "Last Checked",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/Status",
+          "default": "draft"
+        },
+        "verified_by": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "GitHub handle of the human who verified the entry.",
+          "title": "Verified By"
+        },
+        "verified_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Verified On"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Caveats about the sources.",
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "source_urls",
+        "last_checked"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "ProviderType": {
+      "enum": [
+        "government",
+        "nonprofit",
+        "other"
+      ],
+      "title": "ProviderType",
+      "type": "string"
+    },
+    "Status": {
+      "enum": [
+        "draft",
+        "verified",
+        "needs-review"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "Steps": {
+      "additionalProperties": false,
+      "description": "Numbered steps, written in plain language. Each list is one way of doing the task.",
+      "properties": {
+        "online": {
+          "description": "Steps on a website (phone, tablet or computer).",
+          "items": {
+            "type": "string"
+          },
+          "title": "Online",
+          "type": "array"
+        },
+        "app": {
+          "description": "Steps in a mobile app.",
+          "items": {
+            "type": "string"
+          },
+          "title": "App",
+          "type": "array"
+        },
+        "call": {
+          "description": "Steps by telephone.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Call",
+          "type": "array"
+        }
+      },
+      "title": "Steps",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "One thing a resident wants to get done, such as reporting a pothole.",
+  "properties": {
+    "id": {
+      "description": "Must match the file name, without .yaml.",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "title": "Id",
+      "type": "string"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "summary": {
+      "description": "One or two plain-language sentences.",
+      "title": "Summary",
+      "type": "string"
+    },
+    "provider": {
+      "description": "Who actually runs it, e.g. 'Raleigh Water'.",
+      "title": "Provider",
+      "type": "string"
+    },
+    "provider_type": {
+      "$ref": "#/$defs/ProviderType",
+      "default": "government"
+    },
+    "category": {
+      "$ref": "#/$defs/Category"
+    },
+    "core_skill": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CoreSkill"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "aliases": {
+      "description": "Words people might use: 'trash', 'garbage', 'bin'.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Aliases",
+      "type": "array"
+    },
+    "channels": {
+      "items": {
+        "$ref": "#/$defs/Channel"
+      },
+      "minItems": 1,
+      "title": "Channels",
+      "type": "array"
+    },
+    "what_you_need": {
+      "items": {
+        "type": "string"
+      },
+      "title": "What You Need",
+      "type": "array"
+    },
+    "steps": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Steps"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "cost": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Cost"
+    },
+    "eligibility": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Eligibility"
+    },
+    "referral_only": {
+      "default": false,
+      "description": "True when we point people to it rather than teach it step by step.",
+      "title": "Referral Only",
+      "type": "boolean"
+    },
+    "related": {
+      "description": "Ids of related services.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Related",
+      "type": "array"
+    },
+    "notes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Notes",
+      "type": "array"
+    },
+    "provenance": {
+      "$ref": "#/$defs/Provenance"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "summary",
+    "provider",
+    "category",
+    "channels",
+    "provenance"
+  ],
+  "title": "Service",
+  "type": "object"
+}

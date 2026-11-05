@@ -1,0 +1,5 @@
+name: West County
+kind: county
+provenance:
+  source_urls: ["https://example.org/west"]
+  last_checked: 2026-11-01

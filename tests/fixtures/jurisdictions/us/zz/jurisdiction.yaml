@@ -1,0 +1,6 @@
+name: State of Zed
+kind: state
+aliases: [zed]
+provenance:
+  source_urls: ["https://example.org/zz"]
+  last_checked: 2026-11-01

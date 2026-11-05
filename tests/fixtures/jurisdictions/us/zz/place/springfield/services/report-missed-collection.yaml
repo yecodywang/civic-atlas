@@ -1,0 +1,19 @@
+id: report-missed-collection
+title: Report a missed trash, recycling or yard waste pickup
+summary: Tell the city when your cart was not collected on your scheduled day.
+provider: City Solid Waste
+category: fix-report
+core_skill: report-request
+aliases: [trash, garbage, missed pickup, recycling, yard waste]
+channels:
+  - type: web
+    label: City request portal
+    url: https://example.org/springfield/request
+steps:
+  online:
+    - Open the request portal.
+    - Choose "Missed collection".
+related: [report-pothole]
+provenance:
+  source_urls: ["https://example.org/springfield/trash"]
+  last_checked: 2026-11-01

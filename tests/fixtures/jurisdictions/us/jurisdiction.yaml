@@ -1,0 +1,7 @@
+name: United States
+kind: country
+emergency:
+  number: "911"
+provenance:
+  source_urls: ["https://example.org/us"]
+  last_checked: 2026-11-01

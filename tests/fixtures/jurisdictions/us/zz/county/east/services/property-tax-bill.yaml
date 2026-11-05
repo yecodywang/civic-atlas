@@ -1,0 +1,14 @@
+id: property-tax-bill
+title: Find and pay your property tax bill
+summary: East County bills and collects property tax, including the city's portion.
+provider: East County Tax Office
+category: pay-manage
+core_skill: accounts-payments
+aliases: [tax bill, property tax, real estate tax]
+channels:
+  - type: web
+    label: County tax portal
+    url: https://example.org/east/tax
+provenance:
+  source_urls: ["https://example.org/east/tax"]
+  last_checked: 2026-11-01

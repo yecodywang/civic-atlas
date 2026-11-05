@@ -1,0 +1,379 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/yecodywang/civic-atlas/schema/jurisdiction.schema.json",
+  "$defs": {
+    "Channel": {
+      "additionalProperties": false,
+      "description": "One way to reach a service: a website, phone number, app, and so on.",
+      "properties": {
+        "type": {
+          "$ref": "#/$defs/ChannelType"
+        },
+        "label": {
+          "description": "Short human label, e.g. 'Ask Raleigh website'.",
+          "title": "Label",
+          "type": "string"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "format": "uri",
+              "maxLength": 2083,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        },
+        "phone": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9+() .\\-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Phone"
+        },
+        "hours": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Hours"
+        },
+        "purpose": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "When to use this channel.",
+          "title": "Purpose"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "type",
+        "label"
+      ],
+      "title": "Channel",
+      "type": "object"
+    },
+    "ChannelType": {
+      "enum": [
+        "web",
+        "phone",
+        "text",
+        "app",
+        "email",
+        "in-person"
+      ],
+      "title": "ChannelType",
+      "type": "string"
+    },
+    "Emergency": {
+      "additionalProperties": false,
+      "description": "Emergency facts that vary by place. The emergency number itself is also hard-coded.",
+      "properties": {
+        "number": {
+          "default": "911",
+          "pattern": "^[0-9+() .\\-]+$",
+          "title": "Number",
+          "type": "string"
+        },
+        "text_to_911": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Whether texting 911 works here. Null means unknown.",
+          "title": "Text To 911"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        },
+        "source_urls": {
+          "items": {
+            "format": "uri",
+            "maxLength": 2083,
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Source Urls",
+          "type": "array"
+        }
+      },
+      "title": "Emergency",
+      "type": "object"
+    },
+    "JurisdictionKind": {
+      "enum": [
+        "country",
+        "state",
+        "county",
+        "place",
+        "district"
+      ],
+      "title": "JurisdictionKind",
+      "type": "string"
+    },
+    "Link": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "url": {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "label",
+        "url"
+      ],
+      "title": "Link",
+      "type": "object"
+    },
+    "Overlap": {
+      "additionalProperties": false,
+      "description": "Another jurisdiction this one overlaps, such as the counties a city lies in.",
+      "properties": {
+        "id": {
+          "description": "Jurisdiction id (folder path), e.g. 'us/nc/county/wake'.",
+          "title": "Id",
+          "type": "string"
+        },
+        "primary": {
+          "default": false,
+          "description": "True for the main/most common overlap.",
+          "title": "Primary",
+          "type": "boolean"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Overlap",
+      "type": "object"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "description": "Where an entry's facts came from and how fresh they are. Required on every entry.",
+      "properties": {
+        "source_urls": {
+          "description": "Official pages the facts in this entry were taken from.",
+          "items": {
+            "format": "uri",
+            "maxLength": 2083,
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Urls",
+          "type": "array"
+        },
+        "last_checked": {
+          "description": "Date someone last compared this entry against its sources (YYYY-MM-DD).",
+          "format": "date",
+          "title": "Last Checked",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/Status",
+          "default": "draft"
+        },
+        "verified_by": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "GitHub handle of the human who verified the entry.",
+          "title": "Verified By"
+        },
+        "verified_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Verified On"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Caveats about the sources.",
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "source_urls",
+        "last_checked"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "Status": {
+      "enum": [
+        "draft",
+        "verified",
+        "needs-review"
+      ],
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "A government (country, state, county, city/town, or special district).",
+  "properties": {
+    "name": {
+      "description": "Full name, e.g. 'City of Raleigh'.",
+      "title": "Name",
+      "type": "string"
+    },
+    "kind": {
+      "$ref": "#/$defs/JurisdictionKind"
+    },
+    "aliases": {
+      "description": "Short names accepted in lookups, e.g. 'raleigh'.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Aliases",
+      "type": "array"
+    },
+    "overlaps": {
+      "items": {
+        "$ref": "#/$defs/Overlap"
+      },
+      "title": "Overlaps",
+      "type": "array"
+    },
+    "websites": {
+      "items": {
+        "$ref": "#/$defs/Link"
+      },
+      "title": "Websites",
+      "type": "array"
+    },
+    "key_contacts": {
+      "description": "The 'save these on your phone' list.",
+      "items": {
+        "$ref": "#/$defs/Channel"
+      },
+      "title": "Key Contacts",
+      "type": "array"
+    },
+    "emergency": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Emergency"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "stewards": {
+      "description": "GitHub handles of the volunteers who look after it.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Stewards",
+      "type": "array"
+    },
+    "notes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Notes",
+      "type": "array"
+    },
+    "provenance": {
+      "$ref": "#/$defs/Provenance"
+    }
+  },
+  "required": [
+    "name",
+    "kind",
+    "provenance"
+  ],
+  "title": "Jurisdiction",
+  "type": "object"
+}

@@ -1,0 +1,15 @@
+name: City of Springfield
+kind: place
+aliases: [springfield]
+overlaps:
+  - id: us/zz/county/east
+    primary: true
+  - id: us/zz/county/west
+    notes: A small part of the city is in West County.
+key_contacts:
+  - type: phone
+    label: City help line
+    phone: 555-0100
+provenance:
+  source_urls: ["https://example.org/springfield"]
+  last_checked: 2026-11-01

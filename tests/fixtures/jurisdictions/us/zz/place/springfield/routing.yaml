@@ -1,0 +1,25 @@
+rules:
+  - id: trash
+    situation: Missed trash or recycling pickup
+    keywords: [trash, garbage, recycling, pickup]
+    go_to: City Solid Waste
+    jurisdiction: us/zz/place/springfield
+    service: report-missed-collection
+    explanation: The city collects trash.
+  - id: tax-bill
+    situation: Question about a property tax bill
+    keywords: [tax bill, property tax]
+    go_to: East County Tax Office
+    jurisdiction: us/zz/county/east
+    service: property-tax-bill
+    explanation: The county bills property tax for the city.
+fallback:
+  go_to: City help line
+  channel:
+    type: phone
+    label: City help line
+    phone: 555-0100
+  explanation: Not sure? The city help line can point you the right way.
+provenance:
+  source_urls: ["https://example.org/springfield/routing"]
+  last_checked: 2026-11-01

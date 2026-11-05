@@ -1,0 +1,313 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/yecodywang/civic-atlas/schema/routing.schema.json",
+  "$defs": {
+    "Channel": {
+      "additionalProperties": false,
+      "description": "One way to reach a service: a website, phone number, app, and so on.",
+      "properties": {
+        "type": {
+          "$ref": "#/$defs/ChannelType"
+        },
+        "label": {
+          "description": "Short human label, e.g. 'Ask Raleigh website'.",
+          "title": "Label",
+          "type": "string"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "format": "uri",
+              "maxLength": 2083,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        },
+        "phone": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9+() .\\-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Phone"
+        },
+        "hours": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Hours"
+        },
+        "purpose": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "When to use this channel.",
+          "title": "Purpose"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "type",
+        "label"
+      ],
+      "title": "Channel",
+      "type": "object"
+    },
+    "ChannelType": {
+      "enum": [
+        "web",
+        "phone",
+        "text",
+        "app",
+        "email",
+        "in-person"
+      ],
+      "title": "ChannelType",
+      "type": "string"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "description": "Where an entry's facts came from and how fresh they are. Required on every entry.",
+      "properties": {
+        "source_urls": {
+          "description": "Official pages the facts in this entry were taken from.",
+          "items": {
+            "format": "uri",
+            "maxLength": 2083,
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Urls",
+          "type": "array"
+        },
+        "last_checked": {
+          "description": "Date someone last compared this entry against its sources (YYYY-MM-DD).",
+          "format": "date",
+          "title": "Last Checked",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/Status",
+          "default": "draft"
+        },
+        "verified_by": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "GitHub handle of the human who verified the entry.",
+          "title": "Verified By"
+        },
+        "verified_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Verified On"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Caveats about the sources.",
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "source_urls",
+        "last_checked"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "RoutingFallback": {
+      "additionalProperties": false,
+      "properties": {
+        "go_to": {
+          "title": "Go To",
+          "type": "string"
+        },
+        "channel": {
+          "$ref": "#/$defs/Channel"
+        },
+        "explanation": {
+          "title": "Explanation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "go_to",
+        "channel",
+        "explanation"
+      ],
+      "title": "RoutingFallback",
+      "type": "object"
+    },
+    "RoutingRule": {
+      "additionalProperties": false,
+      "description": "Maps a kind of situation to the right place to go.",
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "title": "Id",
+          "type": "string"
+        },
+        "situation": {
+          "description": "Plain description, e.g. 'Question about a tax bill'.",
+          "title": "Situation",
+          "type": "string"
+        },
+        "keywords": {
+          "description": "Words or phrases that suggest this situation.",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Keywords",
+          "type": "array"
+        },
+        "go_to": {
+          "description": "Who to contact, e.g. 'Wake County Tax Administration'.",
+          "title": "Go To",
+          "type": "string"
+        },
+        "jurisdiction": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Id of the jurisdiction that handles it.",
+          "title": "Jurisdiction"
+        },
+        "service": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Id of a catalog service, if any.",
+          "title": "Service"
+        },
+        "channel": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Channel"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "explanation": {
+          "title": "Explanation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "situation",
+        "keywords",
+        "go_to",
+        "explanation"
+      ],
+      "title": "RoutingRule",
+      "type": "object"
+    },
+    "Status": {
+      "enum": [
+        "draft",
+        "verified",
+        "needs-review"
+      ],
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "The 'who do I contact?' table for one jurisdiction.",
+  "properties": {
+    "rules": {
+      "items": {
+        "$ref": "#/$defs/RoutingRule"
+      },
+      "minItems": 1,
+      "title": "Rules",
+      "type": "array"
+    },
+    "fallback": {
+      "$ref": "#/$defs/RoutingFallback"
+    },
+    "provenance": {
+      "$ref": "#/$defs/Provenance"
+    }
+  },
+  "required": [
+    "rules",
+    "fallback",
+    "provenance"
+  ],
+  "title": "Routing",
+  "type": "object"
+}

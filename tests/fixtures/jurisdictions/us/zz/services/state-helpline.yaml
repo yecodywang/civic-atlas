@@ -1,0 +1,15 @@
+id: state-helpline
+title: Find help with food, housing and bills
+summary: A statewide helpline that connects people to local assistance programs.
+provider: Zed Helpline (nonprofit)
+provider_type: nonprofit
+category: find-help
+aliases: [rent help, food assistance]
+channels:
+  - type: phone
+    label: Zed Helpline
+    phone: "211"
+referral_only: true
+provenance:
+  source_urls: ["https://example.org/zz/helpline"]
+  last_checked: 2026-11-01
