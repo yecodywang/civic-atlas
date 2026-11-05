@@ -10,6 +10,20 @@ from pathlib import Path
 from civic_atlas import __version__
 
 
+def _cmd_serve(args: argparse.Namespace) -> int:
+    from civic_atlas.catalog import Catalog, CatalogError
+    from civic_atlas.server import build_server
+
+    try:
+        catalog = Catalog.load(args.data)
+    except CatalogError as exc:
+        # stdout belongs to the MCP protocol; report problems on stderr.
+        print(f"civic-atlas: cannot start: {exc}", file=sys.stderr)
+        return 1
+    build_server(catalog, default_jurisdiction=args.jurisdiction).run()
+    return 0
+
+
 def _cmd_validate(args: argparse.Namespace) -> int:
     from civic_atlas.validate import validate
 
@@ -68,6 +82,14 @@ def build_parser() -> argparse.ArgumentParser:
         help="path to a 'jurisdictions' folder (default: bundled data or $CIVIC_ATLAS_DATA)",
     )
     sub = parser.add_subparsers(dest="command", required=True)
+
+    p = sub.add_parser("serve", help="run the MCP server over stdio")
+    p.add_argument(
+        "--jurisdiction",
+        default=None,
+        help="default jurisdiction for tools (default: $CIVIC_ATLAS_DEFAULT_JURISDICTION or raleigh)",
+    )
+    p.set_defaults(func=_cmd_serve)
 
     p = sub.add_parser("validate", help="check every catalog file and cross-reference")
     p.add_argument("--strict", action="store_true", help="treat warnings as errors")
