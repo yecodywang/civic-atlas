@@ -12,7 +12,7 @@ channels:
     label: Text 911
     phone: "911"
 steps:
-  online:
+  call:
     - Open a new text message and type 911 in the "To" field.
     - In the first message, say where you are and what kind of help you need.
     - Send it, then answer the call taker's questions and follow their directions.

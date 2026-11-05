@@ -70,6 +70,7 @@ def render_card(catalog: Catalog, svc: ServiceRecord) -> str:
             ("Steps online (phone, tablet or computer)", d.steps.online),
             ("Steps in the app", d.steps.app),
             ("Steps by phone", d.steps.call),
+            ("Steps in person", d.steps.in_person),
         ):
             if steps:
                 out += [f"## {title}", ""] + [f"{i}. {s}" for i, s in enumerate(steps, 1)] + [""]

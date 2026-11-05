@@ -17,8 +17,8 @@ steps:
   online:
     - Email fireprevention@raleighnc.gov.
     - Say you'd like a smoke alarm installed, and include your address and the best way to reach you.
-  call:
-    - Or stop by your local fire station (use the station finder) and ask in person.
+  in_person:
+    - Find your local fire station with the station finder, then stop by and ask.
 notes:
   - The Fire Department also holds neighborhood installation events with the American Red Cross. Ask about upcoming ones.
   - If you have a fire or smell smoke, get out and call 911.

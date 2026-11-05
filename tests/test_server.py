@@ -111,3 +111,22 @@ async def test_get_key_contacts_skips_partial_overlaps(server):
     assert names[0] == "City of Springfield"
     assert "West County" not in names
     assert out["emergency_number"] == "911"
+
+
+async def test_search_checks_for_emergencies_too(server):
+    out = await call(server, "search_services", {"query": "my neighbor's house is on fire"})
+    assert "911" in out["emergency"]["action"]
+    assert "911" in out["safety"]
+
+
+async def test_search_results_carry_sources(server):
+    out = await call(server, "search_services", {"query": "pothole"})
+    hit = out["results"][0]
+    assert hit["source_urls"] and hit["last_checked"]
+    assert "emergency" not in out
+    assert "911" in out["safety"]
+
+
+async def test_list_jurisdictions_carries_the_safety_line(server):
+    out = await call(server, "list_jurisdictions")
+    assert "911" in out["safety"]

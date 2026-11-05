@@ -20,7 +20,7 @@ from civic_atlas import __version__
 from civic_atlas.catalog import DISCLAIMER, Catalog, Relation
 from civic_atlas.loader import JurisdictionRecord
 from civic_atlas.models import Category
-from civic_atlas.routing import danger_line, emergency_number, who_to_contact
+from civic_atlas.routing import danger_line, emergency_block, emergency_number, who_to_contact
 
 DEFAULT_JURISDICTION_ENV = "CIVIC_ATLAS_DEFAULT_JURISDICTION"
 FALLBACK_DEFAULT = "us/nc/place/raleigh"
@@ -128,6 +128,7 @@ def build_server(
         return {
             "default_jurisdiction": default_jid,
             "jurisdictions": items,
+            "safety": danger_line(catalog.jurisdictions[default_jid].country),
             "disclaimer": DISCLAIMER,
         }
 
@@ -167,6 +168,8 @@ def build_server(
                     "category": d.category.value,
                     "referral_only": d.referral_only,
                     "status": d.provenance.status.value,
+                    "last_checked": d.provenance.last_checked.isoformat(),
+                    "source_urls": [str(u) for u in d.provenance.source_urls],
                     "scope": h.relation.value,
                     "score": h.score,
                 }
@@ -174,8 +177,13 @@ def build_server(
         out: dict[str, Any] = {
             "query": query,
             "jurisdiction": _jurisdiction_label(home),
-            "results": results,
+            "safety": danger_line(home.country),
         }
+        # People often search first, even in an emergency, so search gets the same check.
+        emergency = emergency_block(catalog, query, home.id)
+        if emergency:
+            out["emergency"] = emergency
+        out["results"] = results
         if not results:
             out["tip"] = (
                 "No catalog entry matched. Try who_to_contact with the situation, or "

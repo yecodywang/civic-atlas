@@ -247,11 +247,19 @@
           "type": "array"
         },
         "call": {
-          "description": "Steps by telephone.",
+          "description": "Steps on a phone: calling or texting.",
           "items": {
             "type": "string"
           },
           "title": "Call",
+          "type": "array"
+        },
+        "in_person": {
+          "description": "Steps in person.",
+          "items": {
+            "type": "string"
+          },
+          "title": "In Person",
           "type": "array"
         }
       },

@@ -51,6 +51,12 @@ NOT_EMERGENCIES = [
     "nonemergency",
     "not an emergency",
     "not emergency",
+    "isn t an emergency",
+    "is not an emergency",
+    "it s not an emergency",
+    "no emergency",
+    "not urgent",
+    "emergency shelter",
 ]
 
 EMERGENCY_PHRASES = [
@@ -177,6 +183,29 @@ def _text_to_911(catalog: Catalog, ref: str) -> bool | None:
     return None
 
 
+def emergency_block(
+    catalog: Catalog, text: str, jurisdiction: str, *, check: EmergencyCheck | None = None
+) -> dict[str, Any] | None:
+    """The "call 911 now" block for ``text``, or None if it doesn't look like an emergency."""
+    check = check or check_emergency(text)
+    if not check.detected:
+        return None
+    home = catalog.resolve(jurisdiction)
+    number = emergency_number(home.country) or "your local emergency number"
+    block: dict[str, Any] = {
+        "detected": True,
+        "matched_words": check.matched,
+        "action": f"This may be an emergency. Call {number} now. Do not wait for a website or form.",
+    }
+    if number == "911" and _text_to_911(catalog, home.id) is True:
+        block["text"] = (
+            "If you cannot safely speak, you can text 911 here. Calling is best when you can."
+        )
+    if check.crisis and home.country in CRISIS_LINES:
+        block["crisis_line"] = CRISIS_LINES[home.country]
+    return block
+
+
 def _rule_score(rule: RoutingRule, situation_tokens: list[str]) -> int:
     return sum(1 for kw in rule.keywords if contains_phrase(situation_tokens, tokens(kw)))
 
@@ -211,20 +240,8 @@ def who_to_contact(catalog: Catalog, situation: str, jurisdiction: str) -> dict[
         "safety": danger_line(country),
     }
 
-    if check.detected:
-        number = emergency_number(country) or "your local emergency number"
-        emergency: dict[str, Any] = {
-            "detected": True,
-            "matched_words": check.matched,
-            "action": f"This may be an emergency. Call {number} now. Do not wait for a website or form.",
-        }
-        texting = _text_to_911(catalog, home.id)
-        if number == "911" and texting is True:
-            emergency["text"] = (
-                "If you cannot safely speak, you can text 911 here. Calling is best when you can."
-            )
-        if check.crisis and country in CRISIS_LINES:
-            emergency["crisis_line"] = CRISIS_LINES[country]
+    emergency = emergency_block(catalog, situation, home.id, check=check)
+    if emergency:
         answer["emergency"] = emergency
 
     situation_tokens = tokens(situation)

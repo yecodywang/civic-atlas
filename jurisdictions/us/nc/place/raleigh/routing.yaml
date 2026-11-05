@@ -4,7 +4,7 @@
 rules:
   - id: police-non-emergency
     situation: Police help that isn't an emergency (a past crime with no danger now, suspicious activity, a question for police)
-    keywords: [police, non emergency, suspicious, stolen, theft, break in last night, police report, car broken into]
+    keywords: [police, non emergency, suspicious, stolen, theft, police report, broken into, broke into, file a report]
     go_to: Raleigh Police non-emergency line
     jurisdiction: us/nc/place/raleigh
     channel:
@@ -153,13 +153,17 @@ rules:
   - id: court-traffic
     situation: Court dates, traffic tickets or questions for the District Attorney
     keywords: [court, court date, traffic ticket, speeding ticket, district attorney]
-    go_to: Wake County court information line
-    jurisdiction: us/nc/county/wake
+    go_to: The courts in Wake County (part of the State court system, the NC Judicial Branch)
+    jurisdiction: us/nc
     channel:
-      type: phone
-      label: Number the City lists for court dates, traffic violations and District Attorney questions
-      phone: 919-755-4117
-    explanation: The Raleigh Police information desk doesn't handle court dates or traffic tickets. These are handled by the courts in Wake County.
+      type: web
+      label: NC Courts, Wake County contact directory
+      url: https://www.nccourts.gov/locations/wake-county/contact-directory
+    explanation: >-
+      North Carolina's courts are run by the State, not the City or County, even though the
+      courthouse is in Raleigh. The Raleigh Police information desk doesn't handle court dates or
+      traffic tickets. (The City's frequently called numbers page lists 919-755-4117 for these
+      questions; it hasn't been confirmed against the courts' own directory.)
 fallback:
   go_to: City of Raleigh general line ("who to call for everything else")
   channel:
@@ -173,4 +177,8 @@ provenance:
     - https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
     - https://raleighnc.gov/police
     - https://www.wake.gov/departments-government/tax-administration
+    - https://www.nccourts.gov/locations/wake-county/contact-directory
   last_checked: 2026-11-04
+  notes: >-
+    nccourts.gov blocks automated clients, so the court directory link was found by web search and
+    still needs a person to open it.

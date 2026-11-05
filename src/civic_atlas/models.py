@@ -154,7 +154,10 @@ class Steps(_Strict):
         default_factory=list, description="Steps on a website (phone, tablet or computer)."
     )
     app: list[str] = Field(default_factory=list, description="Steps in a mobile app.")
-    call: list[str] = Field(default_factory=list, description="Steps by telephone.")
+    call: list[str] = Field(
+        default_factory=list, description="Steps on a phone: calling or texting."
+    )
+    in_person: list[str] = Field(default_factory=list, description="Steps in person.")
 
 
 class Overlap(_Strict):

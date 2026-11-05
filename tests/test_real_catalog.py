@@ -89,3 +89,45 @@ def test_every_service_cites_a_source_and_is_honest_about_status(real_catalog):
         assert prov.source_urls, svc.id
         if prov.status.value == "verified":
             assert prov.verified_by, svc.id
+
+
+# Aliases that describe an emergency on purpose (text-911 is for when you can't safely talk).
+EMERGENCY_ALIAS_ALLOWLIST = {"text-911"}
+
+
+def test_catalog_wording_does_not_trip_the_emergency_matcher(real_catalog):
+    """Our own routing keywords, titles and aliases must agree with the emergency matcher.
+
+    If a routing rule's keyword or a service alias looks like an emergency, people using those
+    words get a 911-first answer that contradicts the routed answer. Fix the wording or the matcher.
+    """
+    from civic_atlas.routing import check_emergency
+
+    problems = []
+    for rec in real_catalog.jurisdictions.values():
+        if rec.routing:
+            for rule in rec.routing.rules:
+                for kw in rule.keywords:
+                    if check_emergency(kw).detected:
+                        problems.append(f"routing {rec.id}:{rule.id} keyword {kw!r}")
+    for svc in real_catalog.services.values():
+        if svc.id in EMERGENCY_ALIAS_ALLOWLIST:
+            continue
+        for text in [svc.data.title, *svc.data.aliases]:
+            if check_emergency(text).detected:
+                problems.append(f"service {svc.id}: {text!r}")
+    assert problems == []
+
+
+@pytest.mark.parametrize(
+    "situation",
+    [
+        "this isn't an emergency but my car was broken into",
+        "it's not an emergency, just a question about my water bill",
+        "not urgent: a streetlight is out",
+    ],
+)
+def test_common_non_emergency_phrasings(real_catalog, situation):
+    answer = who_to_contact(real_catalog, situation, "raleigh")
+    assert "emergency" not in answer, situation
+    assert answer["matches"]
