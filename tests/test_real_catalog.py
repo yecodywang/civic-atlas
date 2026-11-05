@@ -45,6 +45,18 @@ def test_raleigh_lies_mostly_in_wake_county(real_catalog):
         ("I don't have insurance and need a doctor", "community clinics", "Wake County"),
         ("I'm pregnant and need help buying baby formula", "WIC", "Wake County"),
         ("how do I apply for medicaid", "Medicaid", "Wake County"),
+        # From the RNC Fall 2026 services index (City vs County vs State).
+        ("there is a dead deer in the road", "dead animal", "City of Raleigh"),
+        ("my neighbor's grass is waist high", "Code Enforcement", "City of Raleigh"),
+        ("a stray dog is loose in my street", "Animal Control", "City of Raleigh"),
+        ("I lost my cat", "Wake County Animal Center", "Wake County"),
+        ("cars speed down my street", "Neighborhood Traffic", "City of Raleigh"),
+        ("pothole on the interstate", "NCDOT", "State of North Carolina"),
+        ("how do I get a copy of my birth certificate", "Register of Deeds", "Wake County"),
+        ("where do I vote", "Board of Elections", "Wake County"),
+        ("I need food stamps", "Food and Nutrition", "Wake County"),
+        ("my car tax bill", "NC DMV", "State of North Carolina"),
+        ("I need a building permit for a deck", "Planning and Development", "City of Raleigh"),
     ],
 )
 def test_routing_examples(real_catalog, situation, go_to_contains, handled_by):
@@ -73,6 +85,14 @@ def test_routing_examples(real_catalog, situation, go_to_contains, handled_by):
         ("my kid needs shots for 7th grade", "get-vaccinations"),
         ("I need a dentist", "public-health-clinics"),
         ("low cost doctor", "low-cost-primary-care"),
+        ("old tv pickup", "schedule-bulky-item-pickup"),
+        ("where can I throw away old paint", "household-hazardous-waste"),
+        ("I want to borrow a lawn mower", "raleigh-tool-share"),
+        ("when is my recycling day", "curbside-collection-rules"),
+        ("where can I get mulch", "yard-waste-center"),
+        ("register my neighborhood association", "neighborhood-registry"),
+        ("I need help using my phone", "digital-help"),
+        ("someone broke into my car last night", "report-crime-online"),
     ],
 )
 def test_search_examples(real_catalog, query, service_id):

@@ -1,0 +1,33 @@
+id: report-state-road-problem
+title: Report a problem on a State-maintained road (NCDOT)
+summary: >-
+  NCDOT maintains about 80% of North Carolina's public roads, including Interstates and U.S., N.C.
+  and secondary (SR) routes, even inside Raleigh. Report problems on those roads to NCDOT.
+provider: NC Department of Transportation
+category: fix-report
+core_skill: know-who
+aliases: [ncdot, state road, highway, interstate, us route, nc route, pothole on highway, guardrail, highway debris, who owns this road]
+channels:
+  - type: web
+    label: NCDOT Report a Problem
+    url: https://www.ncdot.gov/contact/Pages/default.aspx
+  - type: phone
+    label: NCDOT customer service
+    phone: 1-877-368-4968
+    hours: Weekdays, 8 a.m. to 5 p.m.
+  - type: web
+    label: Who maintains this road? (NCDOT Public Street Information map)
+    url: https://connect.ncdot.gov/resources/gis/Pages/Database-Map-HB620.aspx
+steps:
+  online:
+    - Not sure who maintains the road? Open NCDOT's Public Street Information map and click the road.
+    - For a State road, open NCDOT's Report a Problem page and pick the problem type (potholes, drainage, guardrail, traffic light, signs, shoulder damage, debris or dead animals).
+    - Submit, and use "Get Status on a Reported Issue" to follow it.
+notes:
+  - For City streets, report through Ask Raleigh instead.
+related: [report-pothole, report-traffic-signal-or-sign]
+provenance:
+  source_urls:
+    - https://www.ncdot.gov/contact/Pages/default.aspx
+    - https://connect.ncdot.gov/resources/gis/Pages/Database-Map-HB620.aspx
+  last_checked: 2026-11-04

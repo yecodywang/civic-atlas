@@ -1,0 +1,27 @@
+id: vehicle-property-tax
+title: Pay your vehicle property tax (with your NC registration renewal)
+summary: >-
+  In North Carolina, property tax on a registered vehicle is paid to the NC DMV together with
+  your registration renewal ("Tag & Tax Together"). Questions are split between NC DMV and Wake County.
+provider: NC DMV and Wake County Tax Administration
+category: pay-manage
+core_skill: accounts-payments
+aliases: [car tax, vehicle tax, tag and tax, registration renewal, license plate renewal, vehicle property tax]
+channels:
+  - type: phone
+    label: NC DMV (registration, fees, plates)
+    phone: 919-814-1779
+  - type: phone
+    label: Wake County Tax Administration (vehicle value, tax district)
+    phone: 919-856-5400
+  - type: web
+    label: About the combined vehicle registration and property tax notice
+    url: https://www.wake.gov/departments-government/tax-administration/motor-vehicles/nc-combined-vehicle-registration-property-tax-notices
+notes:
+  - Ask NC DMV about the registration fee, plate transfers, or a vehicle moved out of Wake County.
+  - Ask Wake County about appealing the vehicle's value, the wrong tax district within Wake County, or active-duty military exemptions.
+related: [property-tax-bill]
+provenance:
+  source_urls:
+    - https://www.wake.gov/departments-government/tax-administration/motor-vehicles/nc-combined-vehicle-registration-property-tax-notices
+  last_checked: 2026-11-04

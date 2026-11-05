@@ -1,0 +1,31 @@
+id: food-nutrition-services
+title: Apply for Food and Nutrition Services (SNAP, food stamps)
+summary: >-
+  Food and Nutrition Services (SNAP, formerly food stamps) helps low-income households buy food.
+  Wake County Health & Human Services handles applications and recertifications.
+provider: Wake County Health & Human Services (for NC FNS/SNAP)
+category: find-help
+aliases: [snap, food stamps, ebt, food assistance, food benefits, fns, food help]
+channels:
+  - type: web
+    label: Wake County Food and Nutrition Services
+    url: https://www.wake.gov/departments-government/social-services/programs-services/food-and-nutrition-services
+  - type: phone
+    label: Wake County Health & Human Services
+    phone: 919-212-7000
+  - type: email
+    label: New applications
+    email: Foodandnutrition@wake.gov
+  - type: email
+    label: Active cases and recertifications
+    email: FNSrecert@wake.gov
+notes:
+  - As of November 4, 2026, Wake County reported that USDA told states to hold November SNAP benefit files during the federal government shutdown. People could still apply and recertify. Check the page for updates.
+  - The County also reported delays in processing applications and recertifications. Watch your mail for recertification paperwork.
+  - For more food help, see wake.gov/foodsecurity or NC 211.
+related: [nc-211, wic-nutrition-program, apply-for-medicaid]
+provenance:
+  source_urls:
+    - https://www.wake.gov/departments-government/social-services/programs-services/food-and-nutrition-services
+  last_checked: 2026-11-04
+  notes: Contains time-sensitive notes from November 2026; review soon.

@@ -1,0 +1,19 @@
+id: wake-county-parks
+title: Find a Wake County park or preserve (and every park in the county)
+summary: >-
+  Wake County runs its own parks and preserves, separate from Raleigh's. The Park Locator, built
+  with the City of Raleigh, shows state, county and town parks across Wake County.
+provider: Wake County Parks, Recreation and Open Space
+category: stay-informed
+aliases: [county park, wake county park, preserve, nature preserve, state park, park locator]
+channels:
+  - type: web
+    label: Wake County Find a Park
+    url: https://www.wake.gov/find-park
+notes:
+  - For City of Raleigh parks, programs and rentals, see the City parks entries.
+related: [find-park-greenway-center]
+provenance:
+  source_urls:
+    - https://www.wake.gov/find-park
+  last_checked: 2026-11-04

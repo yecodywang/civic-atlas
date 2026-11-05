@@ -1,28 +1,37 @@
 id: request-smoke-alarm
-title: Get a free smoke alarm installed
+title: Get a free smoke alarm installed or a home fire safety check
 summary: >-
-  The Raleigh Fire Department installs smoke alarms for residents. Ask at your local fire station
-  or email the fire prevention office to schedule one.
+  Raleigh Fire installs up to two smoke alarms and does home fire safety checks for residents.
+  Request one online, by email, or at your local fire station.
 provider: Raleigh Fire Department
 category: find-help
 aliases: [smoke alarm, smoke detector, free smoke alarm, fire alarm installation, home safety check]
 channels:
+  - type: web
+    label: Request a smoke alarm and home safety check (online form)
+    url: https://raleighnc.gov/fire/services/smoke-alarms-and-home-fire-safety-checks
   - type: email
-    label: Fire prevention office
+    label: Office of the Fire Marshal
     email: fireprevention@raleighnc.gov
+  - type: phone
+    label: Office of the Fire Marshal
+    phone: 919-996-6392
   - type: in-person
     label: Your local Raleigh fire station
     url: https://raleighnc.gov/places?type=656&name=
 steps:
   online:
-    - Email fireprevention@raleighnc.gov.
-    - Say you'd like a smoke alarm installed, and include your address and the best way to reach you.
+    - Open the smoke alarm and home safety check page and scroll to the request form at the end.
+    - Say whether you have a smoke alarm now and whether it works, then give your name, phone, email and address.
+    - Pick a preferred date and submit. The Fire Department says it will call you within 24 hours to set a time.
   in_person:
     - Find your local fire station with the station finder, then stop by and ask.
 notes:
-  - The Fire Department also holds neighborhood installation events with the American Red Cross. Ask about upcoming ones.
+  - Raleigh Fire installs up to two battery smoke alarms. It doesn't service hard-wired alarms; for those, contact an electrician or your alarm company.
+  - Installations are done by firefighters or partners (the Red Cross or Raleigh CERT volunteers). The Fire Department also holds neighborhood installation events.
+related: [request-fire-education-event, report-fire-hazard]
 provenance:
   source_urls:
+    - https://raleighnc.gov/fire/services/smoke-alarms-and-home-fire-safety-checks
     - https://raleighnc.gov/fire/news/raleigh-fire-offers-free-smoke-alarm-installation
   last_checked: 2026-11-04
-  notes: The source page is a news article with no publication date. Confirm the program is still running.

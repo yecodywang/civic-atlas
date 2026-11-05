@@ -1,0 +1,32 @@
+id: drainage-assistance-program
+title: Get help with drainage problems caused by runoff from public streets
+summary: >-
+  The City's Drainage Assistance Program funds drainage projects on private property when
+  stormwater runoff comes from public streets or public property.
+provider: City of Raleigh Stormwater
+category: find-help
+aliases: [drainage assistance, yard flooding from street, runoff from street, erosion, stormwater help, drainage project]
+referral_only: true
+channels:
+  - type: web
+    label: Drainage Assistance Program application
+    url: https://survey123.arcgis.com/share/f5c8edd3dad542b98f89c34204c651e7
+  - type: phone
+    label: Stormwater drainage
+    phone: 919-996-3779
+  - type: email
+    label: Stormwater drainage
+    email: StormwaterDrainage@raleighnc.gov
+eligibility: >-
+  You must own residential, commercial or public property in Raleigh, have runoff coming onto it
+  from public streets or public property, and be willing to donate a permanent drainage easement.
+  Flooding from your own grading or landscaping, minor erosion, standing water and roof or gutter
+  problems aren't eligible.
+notes:
+  - About 10 projects are approved each year. Projects are scored and ranked; approval doesn't depend on when you apply.
+  - Allow 24 to 48 hours for a reply to calls and emails.
+related: [report-flooding-drainage, rainwater-rewards]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/stormwater/services/drainage-assistance/drainage-assistance-program
+  last_checked: 2026-11-04

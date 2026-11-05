@@ -16,15 +16,24 @@ channels:
   - type: web
     label: Video services (RTN)
     url: https://raleighnc.gov/services/communication-and-outreach/video-services
+  - type: phone
+    label: City Council office
+    phone: 919-996-3050
+  - type: email
+    label: All City Council members
+    email: citycouncilmembers@raleighnc.gov
 steps:
   online:
     - During a meeting, open the "Watch City Council live" page.
     - For past meetings, open the meeting videos page and choose a date.
 notes:
-  - Council meetings are also on RTN 11, the City's government TV channel.
+  - Council meetings are also on RTN 11, the City's government TV channel. RTN 10 carries community programming and RTN 18 carries college distance learning.
+  - Meetings are at the Raleigh Municipal Building, 2nd floor, 222 W. Hargett St. Check the Council page or the City events calendar for this week's sessions, since days and times can shift (for example, around elections).
   - Meeting agendas are posted before each meeting.
 related: [speak-at-city-council, engage-raleigh-surveys]
 provenance:
   source_urls:
     - https://raleighnc.gov/services/communication-and-outreach/video-services
+    - https://raleighnc.gov/engage-city/services/rtn-channels
+    - https://raleighnc.gov/city-council
   last_checked: 2026-11-04

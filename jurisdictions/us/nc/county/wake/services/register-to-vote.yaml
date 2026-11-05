@@ -1,0 +1,29 @@
+id: register-to-vote
+title: Register to vote, check your registration, or find your polling place
+summary: >-
+  The Wake County Board of Elections handles voter registration, voter information lookups,
+  polling places and sample ballots for Raleigh residents.
+provider: Wake County Board of Elections
+category: have-a-say
+aliases: [register to vote, voter registration, polling place, where do i vote, sample ballot, absentee ballot, early voting, am i registered, voter id]
+channels:
+  - type: web
+    label: Wake County voter information
+    url: https://www.wake.gov/departments-government/board-elections/voter-information
+  - type: web
+    label: Register to vote or update your registration
+    url: https://www.wake.gov/departments-government/board-elections/voter-information/register-vote
+  - type: web
+    label: Am I registered? (view my voter information)
+    url: https://www.wake.gov/departments-government/board-elections/voter-information/view-my-voter-information
+steps:
+  online:
+    - Open "View my voter information" to check your registration, districts, polling place and sample ballot.
+    - To register or update your name, address or party, use the register-to-vote page.
+notes:
+  - The City of Raleigh doesn't run elections. Its "Vote Local" pages explain City elections, but registration and voting go through Wake County (under the NC State Board of Elections).
+related: [watch-council-meetings]
+provenance:
+  source_urls:
+    - https://www.wake.gov/departments-government/board-elections/voter-information
+  last_checked: 2026-11-04

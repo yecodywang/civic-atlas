@@ -1,0 +1,35 @@
+id: homebuyer-assistance
+title: Get help buying your first home (City homebuyer assistance)
+summary: >-
+  The City offers zero-interest, deferred loans for down payment and closing costs to first-time
+  homebuyers earning up to 80% of area median income.
+provider: City of Raleigh Housing and Community Development
+category: find-help
+aliases: [homebuyer, first time homebuyer, down payment, closing costs, buy a house, homeownership]
+referral_only: true
+channels:
+  - type: web
+    label: Apply for Homebuyer Assistance
+    url: https://raleighnc.gov/housing/services/homebuyer-assistance
+  - type: phone
+    label: Housing and Community Development
+    phone: 919-996-4330
+  - type: email
+    label: Housing and Community Development
+    email: housing@raleighnc.gov
+  - type: phone
+    label: DHIC (required homeownership class and counseling)
+    phone: 919-832-4345
+eligibility: >-
+  First-time homebuyers at or below 80% of area median income (for example, $74,100 for one person
+  or $105,850 for a family of four, as of the last check).
+notes:
+  - The Homebuyer Assistance Program offers up to $45,000 anywhere in Raleigh. The Enhanced program offers up to $60,000 in targeted areas, with a 10-year deed restriction.
+  - "Steps: take the required homeownership class (DHIC), get pre-approved by an approved lender (the lender applies to the City for you), then find a home in Raleigh city limits."
+  - The City's page lists two different maximum purchase prices for the traditional program ($389,500 and $384,750). Confirm the current limit with your lender or the City.
+related: [home-repair-programs]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/housing/services/homebuyer-assistance
+  last_checked: 2026-11-04
+  notes: The page contradicts itself on the traditional program's maximum purchase price.

@@ -2,35 +2,57 @@ id: property-tax-bill
 title: Find and pay your property tax bill (including the City of Raleigh portion)
 summary: >-
   The City of Raleigh sets its own property tax rate, but Wake County Tax Administration sends the
-  bill and collects it. Your one Wake County bill includes a separate line for the City of Raleigh.
+  bill and collects it. Your one Wake County bill shows a separate City of Raleigh line and a
+  Wake County line.
 provider: Wake County Department of Tax Administration
 category: pay-manage
 core_skill: accounts-payments
 aliases: [property tax, tax bill, real estate tax, city tax, pay taxes, raleigh property tax, house taxes]
 channels:
   - type: web
-    label: Search tax bills
+    label: Search tax bills (by owner, business, account number or license plate)
     url: https://services.wake.gov/ptax/main/billing/
+  - type: web
+    label: Real Estate Search (search by address, then open "Tax Bill")
+    url: https://services.wake.gov/realestate/
   - type: web
     label: Pay a tax bill online
     url: https://services.wake.gov/ptax/secure/default.aspx
   - type: phone
     label: Wake County Tax Administration
     phone: 919-856-5400
+  - type: email
+    label: Wake County Tax Administration
+    email: taxhelp@wake.gov
+  - type: in-person
+    label: Tax Administration office, Wake County Justice Center, 301 S. McDowell St., Suite 3800, Raleigh
+    hours: 8:30 a.m. to 5 p.m.
 what_you_need:
   - Your name, property address, or bill/account number
-  - A bank account, debit card or credit card to pay online
+  - A bank account (eCheck, no fee), or a card or digital wallet (fees apply)
 steps:
   online:
-    - Open Wake County's tax bill search.
-    - Search by owner name, address or account number, and open your bill.
-    - Look for the line for the City of Raleigh. That is the City's portion.
+    - To search by address, open Real Estate Search, find your property, and click "Tax Bill". Or use Tax Bill Search by owner or account number.
+    - Look for the City of Raleigh line on the bill. That is the City's portion.
     - To pay, use "Pay a tax bill online" and enter your payment details yourself.
+cost: >-
+  Paying online by eCheck is free. Credit cards and digital wallets cost 2.3% (at least $1);
+  debit cards cost a flat $3.95.
 notes:
+  - "Due dates: bills go out in July and taxes are due September 1. Pay by January 5 to avoid interest (state law, G.S. 105-360). For 2026 bills, that's January 5, 2027. Interest is 2% from January 6, then 0.75% a month from February 1."
+  - Partial payments of any amount are allowed with no prior approval, as long as the bill is paid in full by the deadline. Tax Administration can also help set up short-term payment plans before a bill is overdue.
+  - "By mail: Wake County Tax Administration, P.O. Box 580084, Charlotte, NC 28258-0084. Write the account number on your check."
+  - If your mortgage company pays through escrow, you won't get a mailed bill; look it up online.
+  - "FY2027 rates per $100 of value: Wake County $0.5371 and City of Raleigh $0.3720, plus a $20 residential waste reduction fee per living unit. Special districts (such as downtown) add to the rate."
   - If your home is in the small part of Raleigh that lies in Durham County, Durham County bills your property tax instead (919-560-0300).
   - Questions about the City's tax rate are City budget questions. Questions about your bill, your home's value or payments go to Wake County.
-related: [property-tax-relief]
+related: [property-tax-relief, vehicle-property-tax, follow-city-budget]
 provenance:
   source_urls:
     - https://www.wake.gov/departments-government/tax-administration
+    - https://www.wake.gov/departments-government/tax-administration/payment-information
+    - https://www.wake.gov/departments-government/tax-administration/tax-bill-help/tax-rates-fees
+    - https://www.wake.gov/departments-government/tax-administration/tax-bill-help/2026-property-tax-bills
+    - https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_105/GS_105-360.html
   last_checked: 2026-11-04
+  notes: The separate City and County lines were confirmed by a volunteer viewing a 2026 bill in Wake County's Tax Bill Search on 2026-11-01.

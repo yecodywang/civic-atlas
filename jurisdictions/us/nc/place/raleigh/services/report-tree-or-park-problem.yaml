@@ -1,0 +1,31 @@
+id: report-tree-or-park-problem
+title: Report a problem at a park, greenway, playground, or with a City tree
+summary: >-
+  Ask Raleigh's Parks & Recreation category takes reports about parks and greenways, playgrounds,
+  and trees on park, greenway or other City property.
+provider: City of Raleigh Parks, Recreation and Cultural Resources
+category: fix-report
+core_skill: report-request
+aliases: [park problem, greenway, playground, broken swing, tree, fallen tree, tree limb, tree on city property, trail problem]
+channels:
+  - type: web
+    label: Ask Raleigh (Parks & Recreation)
+    url: https://ask.raleighnc.gov/ask
+  - type: phone
+    label: Parks, Recreation and Cultural Resources
+    phone: 919-996-3285
+steps:
+  online:
+    - Open Ask Raleigh and choose Parks & Recreation.
+    - Pick Park and Greenway Service, Playgrounds, or Tree Service.
+    - Set the location and add photos (the tree form says photos are highly desirable).
+    - Submit and save your ticket number.
+notes:
+  - Tree Service lists an estimated delivery time of 365 days, so it's for non-urgent tree care. A tree blocking a street is a different request (Transportation & Mobility, "Something in My Way").
+related: [ask-raleigh, find-park-greenway-center]
+provenance:
+  source_urls:
+    - https://ask.raleighnc.gov/ask?id=sc_category&catalog_id=-1
+    - https://raleighnc.gov/find-a-park
+  last_checked: 2026-11-04
+  notes: Request types read in the Ask Raleigh portal with a browser.

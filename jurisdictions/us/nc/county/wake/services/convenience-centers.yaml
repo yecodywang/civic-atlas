@@ -1,0 +1,26 @@
+id: convenience-centers
+title: Drop off trash, recycling and bulky items at a Wake County convenience center
+summary: >-
+  Wake County runs 11 convenience centers where county residents, including Raleigh residents, can
+  drop off their own trash, recycling, cardboard, scrap metal and more, every day of the week.
+provider: Wake County Solid Waste Management
+category: pay-manage
+aliases: [convenience center, dump, trash drop off, recycling drop off, mattress drop off, scrap metal, cardboard, take trash myself]
+channels:
+  - type: web
+    label: Wake County convenience centers (sites and accepted items)
+    url: https://www.wake.gov/departments-government/waste-recycling/facilities/convenience-centers
+  - type: phone
+    label: Wake County Solid Waste
+    phone: 919-856-7400
+notes:
+  - Open daily 7 a.m. to 7 p.m., closed on major holidays.
+  - "Raleigh-area sites include 10505 Old Stage Road, 3600 Yates Mill Pond Road, 8401 Battle Bridge Road and 9024 Deponie Drive."
+  - Only some sites take mattresses (two per day), food waste, electronics (weekends) or household construction debris. Check the list before you go.
+  - Appliances and motor oil go to multi-material drop-off facilities; paint, chemicals and batteries go to household hazardous waste facilities.
+  - Box trucks, dual-axle and enclosed trailers need a free Trash Pass first.
+related: [household-hazardous-waste, curbside-collection-rules, schedule-bulky-item-pickup]
+provenance:
+  source_urls:
+    - https://www.wake.gov/departments-government/waste-recycling/facilities/convenience-centers
+  last_checked: 2026-11-04

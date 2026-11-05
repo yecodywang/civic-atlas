@@ -1,0 +1,29 @@
+id: yard-waste-center
+title: Drop off yard waste or buy compost and mulch at the Yard Waste Center
+summary: >-
+  The City's Yard Waste Center turns yard waste into compost and mulch. You can drop off extra
+  yard waste for a fee and buy compost, mulch and wood chips.
+provider: City of Raleigh Solid Waste Services
+category: pay-manage
+aliases: [yard waste center, mulch, compost, wood chips, drop off yard waste, brush, leaves]
+channels:
+  - type: in-person
+    label: Yard Waste Center, 900 N. New Hope Road, Raleigh, NC 27610
+    url: https://raleighnc.gov/landfill-and-reuse/places/yard-waste-center
+    hours: Monday to Friday 7 a.m. to 3 p.m.; Saturday 7 a.m. to 1 p.m.
+  - type: phone
+    label: Solid Waste Services
+    phone: 919-996-3245
+what_you_need:
+  - A credit card (Visa or Mastercard) or debit card. The center is cashless.
+  - Your license plate number (asked at the scale house)
+cost: Prices vary by product and amount (for example, organic compost $10 to $30). Drop-off fees apply.
+notes:
+  - You weigh in at the scale house when you arrive. Staff can't help load or unload.
+  - No pallets, commercial loads, or loads larger than a single-axle utility trailer (5 by 8 by 2 feet).
+  - Hours can change for weather; Raleigh Reuse shows closures.
+related: [curbside-collection-rules]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/landfill-and-reuse/places/yard-waste-center
+  last_checked: 2026-11-04

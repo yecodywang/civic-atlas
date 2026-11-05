@@ -1,0 +1,32 @@
+id: housing-crisis-help
+title: Find help if you're homeless or about to lose your housing
+summary: >-
+  Start with a coordinated entry assessment at an access site. Service centers such as Oak City
+  Cares offer help with a place to stay, meals, showers and laundry.
+provider: Wake County coordinated entry partners (listed by the City of Raleigh)
+provider_type: other
+category: find-help
+aliases: [homeless, homelessness, eviction, losing my home, place to stay, homeless shelter, unhoused, oak city cares, coordinated entry]
+referral_only: true
+channels:
+  - type: web
+    label: Resources for housing crises and homelessness (City list)
+    url: https://raleighnc.gov/housing/services/resources-housing-crises-and-homelessness
+  - type: phone
+    label: Oak City Cares (walk in, or call and choose option 4)
+    phone: 984-344-9599
+  - type: in-person
+    label: Oak City Cares, 1430 S. Wilmington St., Raleigh
+    hours: Monday to Friday, 9 a.m. to 5 p.m. (weekend meals Saturday and Sunday)
+  - type: phone
+    label: City Housing and Community Development
+    phone: 919-996-4330
+notes:
+  - The City's list includes service centers, places to shower and do laundry, free clothing, and hot meals. Call ahead, since schedules change.
+  - Veterans and young people up to age 24 have specialized service sites on the list.
+  - NC 211 can also point you to help.
+related: [nc-211, homebuyer-assistance]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/housing/services/resources-housing-crises-and-homelessness
+  last_checked: 2026-11-04

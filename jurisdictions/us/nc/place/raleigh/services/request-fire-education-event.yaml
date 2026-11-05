@@ -1,0 +1,34 @@
+id: request-fire-education-event
+title: Request a fire safety program, station tour or fire truck visit
+summary: >-
+  Raleigh Fire offers safety programs (including Steps for Safety for seniors), station tours,
+  fire truck displays, and appearances at community events inside the City.
+provider: Raleigh Fire Department
+category: find-help
+aliases: [fire safety class, fire station tour, fire truck visit, fire extinguisher training, senior fire safety, community event fire truck]
+channels:
+  - type: web
+    label: Request a fire education event
+    url: https://raleighnc.gov/fire/services/request-fire-education-event
+  - type: web
+    label: Request Raleigh Fire at a community event
+    url: https://raleighnc.gov/fire/services/request-raleigh-fire-community-event
+  - type: phone
+    label: Office of the Fire Marshal
+    phone: 919-996-6392
+steps:
+  online:
+    - Open the fire education request page and choose the request form.
+    - Pick the program type (for a station tour, choose the station) and a date at least 14 days away.
+    - Submit. A request doesn't confirm availability; the Fire Department will follow up.
+eligibility: Events must be within the City of Raleigh. A 14-day notice is required.
+notes:
+  - Programs include fire station tours, fire truck displays, school programs, NFPA Steps for Safety (for seniors), workplace safety, evacuation and fire extinguisher training.
+  - A presentation does not include a fire truck unless that's specifically requested.
+  - Smoke alarm installations use a separate form; see the smoke alarm entry.
+related: [request-smoke-alarm]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/fire/services/request-fire-education-event
+    - https://raleighnc.gov/fire/services/fire-department-items-you-can-request
+  last_checked: 2026-11-04

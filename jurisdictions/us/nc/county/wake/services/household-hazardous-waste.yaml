@@ -1,0 +1,25 @@
+id: household-hazardous-waste
+title: Dispose of paint, chemicals, batteries and other household hazardous waste
+summary: >-
+  Wake County's household hazardous waste facilities take residents' paint, chemicals, batteries,
+  fuel, fluorescent bulbs and similar items that shouldn't go in the trash.
+provider: Wake County Solid Waste Management
+category: pay-manage
+aliases: [hazardous waste, paint disposal, chemicals, batteries, propane, gasoline, pesticides, fluorescent bulbs, hhw]
+channels:
+  - type: web
+    label: Household hazardous waste facilities (items and hours)
+    url: https://www.wake.gov/departments-government/waste-recycling/facilities/household-hazardous-waste-facilities
+  - type: phone
+    label: Wake County Solid Waste
+    phone: 919-856-7400
+eligibility: Wake County residents only. No business waste.
+notes:
+  - "South Wake: 6150 Old Smithfield Road, Apex (Monday to Saturday, 8 a.m. to 4 p.m.). East Wake: 5051 Wendell Blvd., Wendell (Saturday and Sunday, 8 a.m. to 4 p.m.). North Wake: 9037 Deponie Drive, Raleigh."
+  - As of November 2026, North Wake is temporarily closed after fire damage, with a collection event there every Saturday, 8 a.m. to 4 p.m.
+  - Latex paint limit is 10 gallons. Dried-out latex paint can go in regular trash.
+related: [convenience-centers]
+provenance:
+  source_urls:
+    - https://www.wake.gov/departments-government/waste-recycling/facilities/household-hazardous-waste-facilities
+  last_checked: 2026-11-04

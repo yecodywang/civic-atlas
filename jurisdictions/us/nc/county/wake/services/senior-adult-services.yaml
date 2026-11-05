@@ -1,0 +1,31 @@
+id: senior-adult-services
+title: Find help for older adults and adults with disabilities
+summary: >-
+  Wake County's Senior and Adult Services helps older adults and adults with disabilities stay
+  safely in the community, including adult day programs, in-home assistance, guardianship and
+  Adult Protective Services.
+provider: Wake County Health & Human Services (Senior and Adult Services)
+category: find-help
+aliases: [senior services, elderly, aging, adult day care, caregiver, adult protective services, aps, guardianship, special assistance, assisted living]
+referral_only: true
+channels:
+  - type: web
+    label: Senior and Adult Services
+    url: https://www.wake.gov/departments-government/social-services/senior-and-adult-services
+  - type: web
+    label: Report abuse or neglect of an adult (Wake County)
+    url: https://www.wake.gov/departments-government/social-services/report-abuse-or-neglect
+  - type: phone
+    label: Wake County Health & Human Services (main number)
+    phone: 919-212-7000
+  - type: web
+    label: Wake Network of Care (resource directory)
+    url: https://wake.nc.networkofcare.org/mh/index.aspx
+notes:
+  - Programs include Adult Protective Services, guardianship, adult day care and adult day health, the Special Assistance In-Home program, and help finding adult care homes.
+related: [apply-for-medicaid, property-tax-relief]
+provenance:
+  source_urls:
+    - https://www.wake.gov/departments-government/social-services/senior-and-adult-services
+    - https://www.wake.gov/departments-government/wake-county-human-services-agency
+  last_checked: 2026-11-04

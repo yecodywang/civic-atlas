@@ -1,0 +1,37 @@
+id: curbside-collection-rules
+title: Find your collection day and how to set out trash, recycling and yard waste
+summary: >-
+  The Raleigh Reuse web tool and app shows your household's collection calendar, sends reminders,
+  and answers "where does this go?" questions. City rules cover how and when to put carts out.
+provider: City of Raleigh Solid Waste Services
+category: stay-informed
+aliases: [collection day, trash day, recycling day, yard waste, what goes in recycling, raleigh reuse, waste wizard, holiday schedule, cart placement, recycling rules]
+channels:
+  - type: web
+    label: Raleigh Reuse web tool and app
+    url: https://raleighnc.gov/reuse
+  - type: web
+    label: Garbage, recycling and yard waste preparation
+    url: https://raleighnc.gov/landfill-and-reuse/services/garbage-recycling-and-yard-waste-preparation
+  - type: phone
+    label: Solid Waste Services
+    phone: 919-996-3245
+  - type: email
+    label: Solid Waste Services
+    email: sws@raleighnc.gov
+steps:
+  online:
+    - Open Raleigh Reuse and enter your address to see your collection calendar and set reminders.
+    - Search for an item to find out whether it goes in the recycling cart or somewhere else.
+notes:
+  - Carts go on the curb (not the street) the night before or by 6 a.m., at least 3 feet from cars, mailboxes and poles, with handles facing your house. Bring them in by 7 p.m. after collection.
+  - Dark green cart is trash (bagged). Blue cart is recycling (loose, never bagged). Bright green cart is yard waste.
+  - "Yard waste: one cart, up to 15 biodegradable paper bags (25 lbs each), and up to 5 tied bundles of sticks (5 feet long, 50 lbs each). No plastic bags. Don't put it out before noon the day before collection."
+  - Carts or yard waste put out too early or left out too long can bring a $50 citation.
+  - Residents with mobility issues may qualify for the Needs Assistance Program.
+related: [report-missed-collection, schedule-bulky-item-pickup, yard-waste-center, convenience-centers]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/landfill-and-reuse/services/garbage-recycling-and-yard-waste-preparation
+    - https://raleighnc.gov/landfill-and-reuse
+  last_checked: 2026-11-04

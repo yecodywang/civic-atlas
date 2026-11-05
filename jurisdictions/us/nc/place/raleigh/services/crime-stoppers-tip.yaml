@@ -1,0 +1,19 @@
+id: crime-stoppers-tip
+title: Give an anonymous crime tip (Raleigh Crime Stoppers)
+summary: Share information about a crime anonymously by phone or online through Raleigh Crime Stoppers.
+provider: Raleigh Crime Stoppers (with the Raleigh Police Department)
+category: contact
+core_skill: know-who
+aliases: [anonymous tip, crime tip, crime stoppers, report a tip]
+channels:
+  - type: phone
+    label: Raleigh Crime Stoppers
+    phone: 919-996-1193
+  - type: web
+    label: Online tip form (P3 Tips)
+    url: http://www.p3tips.com/897
+related: [report-crime-online]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/safety/report-crime-or-tip
+  last_checked: 2026-11-04

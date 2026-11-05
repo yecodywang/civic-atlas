@@ -1,0 +1,28 @@
+id: report-dead-animal
+title: Report a dead animal for removal
+summary: >-
+  The City collects dead animals on City streets, in the public right of way, or placed at the
+  curb at a residence. Report it through Ask Raleigh.
+provider: City of Raleigh (Ask Raleigh, Public Nuisance category)
+category: fix-report
+core_skill: report-request
+aliases: [dead animal, dead deer, dead dog, dead cat, roadkill, animal carcass]
+channels:
+  - type: web
+    label: Ask Raleigh (Public Nuisance > Dead Animal Removal)
+    url: https://ask.raleighnc.gov/ask
+steps:
+  online:
+    - Open Ask Raleigh, choose Public Nuisance, then Dead Animal Removal.
+    - Set the location with an address or a map pin, and add a photo if you can.
+    - Submit and save your ticket number.
+notes:
+  - The form lists an estimated delivery time of 5 days.
+  - If the animal is causing a traffic hazard, the form says to call the police non-emergency line, 919-829-1911.
+  - For a live animal problem (stray, injured or vicious), contact Raleigh Police Animal Control instead.
+related: [report-animal-problem, ask-raleigh]
+provenance:
+  source_urls:
+    - https://ask.raleighnc.gov/ask?id=sc_category&catalog_id=-1
+  last_checked: 2026-11-04
+  notes: Read in the Ask Raleigh portal with a browser (the portal needs JavaScript).

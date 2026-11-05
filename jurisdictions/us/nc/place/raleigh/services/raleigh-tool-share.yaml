@@ -1,0 +1,30 @@
+id: raleigh-tool-share
+title: Borrow a lawn mower, trimmer or blower for free (Raleigh Tool Share)
+summary: >-
+  Raleigh residents can borrow small battery-powered yard equipment for free for non-commercial use,
+  picked up and returned at the Raleigh Pathways Center.
+provider: City of Raleigh Community Engagement and Housing & Neighborhoods
+category: find-help
+aliases: [tool share, borrow a mower, lawn mower, string trimmer, weed eater, leaf blower, free tools]
+channels:
+  - type: web
+    label: Raleigh Tool Share (lending request form)
+    url: https://raleighnc.gov/community/services/raleigh-tool-share
+  - type: phone
+    label: Raleigh Tool Share
+    phone: 919-996-6100
+eligibility: People living within Raleigh city limits, for non-commercial use.
+what_you_need:
+  - NC-issued ID and proof of Raleigh residency (such as a utility bill with your name and address)
+steps:
+  online:
+    - Fill in the Raleigh Tool Share lending request form. A team member contacts you to arrange pickup.
+  in_person:
+    - Pick up at the Raleigh Pathways Center, 900 S. Wilmington St., Wednesday or Friday, 9 a.m. to noon.
+    - Sign the loan agreement, and return the tools the following Monday, 9 a.m. to noon.
+cost: Free.
+related: [neighborhood-registry, report-code-violation]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/community/services/raleigh-tool-share
+  last_checked: 2026-11-04

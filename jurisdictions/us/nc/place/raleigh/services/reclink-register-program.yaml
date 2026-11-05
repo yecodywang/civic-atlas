@@ -17,6 +17,9 @@ channels:
   - type: email
     label: RecLink Support
     email: RecLinkSupport@raleighnc.gov
+  - type: phone
+    label: Recreation Business Office (registration)
+    phone: 919-996-4800
 what_you_need:
   - An email address (required to create an account)
   - A payment method, for programs that cost money
@@ -28,8 +31,12 @@ steps:
     - Search for a program, choose it, and follow the steps to register and pay.
 notes:
   - No email address? Call RecLink Support at 919-996-2153 for help.
+  - Residency is based on the home address in your RecLink account. A 25% non-resident program fee replaces the flat $15 non-resident fee on December 1, 2026.
+  - To get a refund rather than a credit, cancel a class at least 14 days before it starts and email RecLink Support.
+  - The City's Digital Inclusion classes for adults are also registered through RecLink.
 related: [reserve-park-shelter, find-park-greenway-center]
 provenance:
   source_urls:
     - https://raleighnc.gov/parks/create-reclink-account
+    - https://raleighnc.gov/parks/reclink-frequently-asked-questions
   last_checked: 2026-11-04

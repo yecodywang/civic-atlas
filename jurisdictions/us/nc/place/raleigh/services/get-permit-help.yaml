@@ -1,0 +1,36 @@
+id: get-permit-help
+title: Get help with a building permit, inspection or zoning question
+summary: >-
+  For permits, inspections, zoning and development questions, use Ask Raleigh's Permits &
+  Planning category, the Permit Helpline, or the Customer Service Center. Apply for permits in
+  the Permit and Development Portal.
+provider: City of Raleigh Planning and Development
+category: pay-manage
+aliases: [permit, building permit, inspection, zoning, development, renovation permit, fence permit, deck permit, permit portal, contractor]
+channels:
+  - type: web
+    label: Ask Raleigh (Permits & Planning)
+    url: https://ask.raleighnc.gov/ask
+  - type: phone
+    label: Permit Helpline
+    phone: 919-996-2500
+    hours: Monday to Friday, 8 a.m. to 5 p.m.
+  - type: in-person
+    label: Planning and Development Customer Service Center, One Exchange Plaza, 4th Floor, Raleigh, NC 27601
+    hours: Monday to Friday, 8 a.m. to 5 p.m.
+  - type: web
+    label: Permit and Development Portal
+    url: https://permitportal.raleighnc.gov/
+  - type: web
+    label: Unified Development Ordinance (zoning rules)
+    url: https://udo.raleighnc.gov/
+notes:
+  - Ask Raleigh doesn't require an account. The City says permit questions there average 1 day to acknowledge and 3 days to resolve.
+  - If you already have a plan reviewer, contact them directly.
+  - The Permit Helpline (919-996-2500) is for permits and development, not general City questions. For those, call 919-996-3000.
+related: [look-up-property-maps, ask-raleigh]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/permits/news/how-get-assistance-your-permit-or-project
+  last_checked: 2026-11-04
+  notes: Portal and UDO addresses were confirmed to load in a browser.

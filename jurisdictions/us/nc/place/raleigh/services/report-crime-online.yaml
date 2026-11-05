@@ -1,0 +1,30 @@
+id: report-crime-online
+title: File a police report online for a minor crime
+summary: >-
+  Raleigh Police lets you file some reports online when no suspect is present, such as theft from
+  a vehicle, lost or stolen property, or minor property damage.
+provider: Raleigh Police Department
+category: fix-report
+core_skill: report-request
+aliases: [police report, file a report, online report, stolen property, theft from car, car broken into, lost property, identity theft, credit card theft, hit and run, vandalism report]
+channels:
+  - type: web
+    label: Citizens Online Police Reporting System
+    url: https://crc.raleighpd.org/
+  - type: phone
+    label: Raleigh Police non-emergency
+    phone: 919-829-1911
+    purpose: If your situation doesn't fit the online categories.
+steps:
+  online:
+    - Open the online police reporting system and choose the type of report.
+    - Fill in what happened, when and where.
+    - Submit, then print or save the temporary copy of your report.
+notes:
+  - "Online report types include credit card theft, identity theft, damage to property or vehicles, harassing phone calls, lost property, stolen property, theft from a vehicle, and hit-and-runs with damage under $1,000."
+  - The department reviews each online report before it issues a permanent report number.
+related: [crime-stoppers-tip, report-noise]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/safety/report-crime-or-tip
+  last_checked: 2026-11-04

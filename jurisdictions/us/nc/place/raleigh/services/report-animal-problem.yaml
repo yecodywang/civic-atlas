@@ -1,0 +1,25 @@
+id: report-animal-problem
+title: Report a stray, injured, vicious or abandoned animal (Animal Control)
+summary: >-
+  Raleigh Police Animal Control handles vicious animal complaints, cruelty cases, problem
+  wildlife, injured animals, barking dogs and abandoned pets inside Raleigh.
+provider: Raleigh Police Department (Animal Control)
+category: fix-report
+core_skill: know-who
+aliases: [animal control, stray dog, loose dog, injured animal, vicious dog, barking dog, wildlife, raccoon, abandoned pet, animal cruelty]
+channels:
+  - type: phone
+    label: Raleigh Police Animal Control
+    phone: 919-831-6311
+steps:
+  call:
+    - Call Animal Control at 919-831-6311.
+    - Describe the animal, what it's doing, and exactly where it is.
+notes:
+  - Animal Control tries to find a pet's owner first. Pets it can't return go to the Wake County Animal Center (County), which handles lost and found pets and adoptions.
+related: [wake-animal-center-lost-pets, report-dead-animal]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/animal-control
+    - https://raleighnc.gov/police/services/animal-control/animal-impoundment
+  last_checked: 2026-11-04

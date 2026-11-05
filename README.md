@@ -37,9 +37,9 @@ You can use the catalog in three ways:
 
 | Place | What's included |
 |---|---|
-| City of Raleigh | 23 tasks: Ask Raleigh, reporting street, sidewalk, streetlight, graffiti, trash, flooding, water and noise problems, utility bills and AutoPay, RecLink and parks, alerts, smoke alarms, housing programs, Council and boards, plus a "who do I contact?" routing table |
-| Wake County | Public health clinics, vaccines, free HIV/STI testing, WIC, Medicaid, low-cost primary care for the uninsured, ReadyWake alerts, property tax bills (including the City portion), tax relief programs. (Raleigh has no city health department; NC counties provide public health.) |
-| North Carolina | NC 211 |
+| City of Raleigh | 48 tasks: Ask Raleigh and its request types (streets, sidewalks, signals and signs, streetlights, graffiti, dead animals, code enforcement, parks and trees, noise, flooding), trash, recycling, bulky and e-waste pickups, the Yard Waste Center, water bills and AutoPay, online police reports and Crime Stoppers, Animal Control, fire safety requests, permits and maps, RecLink and park rentals, alerts, housing and homebuyer help, neighborhood programs (Registry, Tool Share, grants, volunteering, free tech help), the budget, Council and boards, plus a "who do I contact?" routing table |
+| Wake County | 18 tasks: public health clinics, vaccines, HIV/STI testing, WIC, Medicaid, low-cost primary care, Food and Nutrition Services (SNAP), Senior and Adult Services, convenience centers and household hazardous waste, the Animal Center, voter registration, birth/death/marriage records, county parks, property tax bills, vehicle tax and tax relief, ReadyWake alerts. (Raleigh has no city health department; NC counties provide public health.) |
+| North Carolina | NC 211; reporting problems on State-maintained roads (NCDOT) |
 | Durham County | Stub only (a small part of Raleigh is in Durham County) |
 
 All entries are currently **drafts**. They were compiled from official pages but haven't yet been

@@ -1,0 +1,28 @@
+id: request-traffic-calming
+title: Ask about speeding and traffic safety on your neighborhood street
+summary: >-
+  Raleigh's Neighborhood Traffic Management program looks at requests for things like speed
+  humps on neighborhood streets. Ask Raleigh also takes transportation improvement requests.
+provider: City of Raleigh Transportation
+category: fix-report
+core_skill: report-request
+aliases: [speeding, speed hump, speed bump, traffic calming, cut through traffic, unsafe street, new stop sign, crosswalk request]
+channels:
+  - type: phone
+    label: Neighborhood Traffic Management
+    phone: 919-996-4066
+  - type: web
+    label: Ask Raleigh (Transportation & Mobility > Transportation Improvement Request)
+    url: https://ask.raleighnc.gov/ask
+steps:
+  online:
+    - Open Ask Raleigh, choose Transportation & Mobility, then Transportation Improvement Request.
+    - Describe the street and the problem (for example, speeding at certain times of day).
+  call:
+    - Or call Neighborhood Traffic Management at 919-996-4066 to ask how requests are evaluated.
+related: [report-traffic-signal-or-sign]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
+    - https://ask.raleighnc.gov/ask?id=sc_category&catalog_id=-1
+  last_checked: 2026-11-04

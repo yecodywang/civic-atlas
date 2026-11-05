@@ -1,0 +1,24 @@
+id: look-up-property-maps
+title: Look up property, zoning and City maps and open data
+summary: >-
+  iMAPS shows property, zoning and parcel information for Raleigh. Open Data Raleigh publishes
+  City datasets and maps free to use.
+provider: City of Raleigh (Planning and Development; Information Technology)
+category: stay-informed
+aliases: [imaps, property map, zoning map, parcel, lot lines, open data, gis, city data]
+channels:
+  - type: web
+    label: iMAPS
+    url: https://maps.raleighnc.gov/iMAPS/
+  - type: web
+    label: Open Data Raleigh
+    url: https://data-ral.opendata.arcgis.com/
+notes:
+  - For property ownership and tax values, Wake County's Real Estate Search is the official source.
+related: [get-permit-help, property-tax-bill]
+provenance:
+  source_urls:
+    - https://maps.raleighnc.gov/iMAPS/
+    - https://data-ral.opendata.arcgis.com/
+  last_checked: 2026-11-04
+  notes: Both sites confirmed to load in a browser; listed in the RNC Fall 2026 class materials.

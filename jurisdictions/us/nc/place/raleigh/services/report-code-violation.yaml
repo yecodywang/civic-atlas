@@ -1,0 +1,35 @@
+id: report-code-violation
+title: Report overgrown grass, junk, or unsafe housing (code enforcement)
+summary: >-
+  The City's Code Enforcement Division handles public nuisances on private property, such as grass
+  over 8 inches tall or piled-up junk, and housing that may not meet the Raleigh Housing Code.
+provider: City of Raleigh Housing and Neighborhoods (Code Enforcement)
+category: fix-report
+core_skill: report-request
+aliases: [code enforcement, overgrown grass, tall grass, weeds, junk in yard, trash in yard, unsafe housing, landlord repairs, housing code, public nuisance, cart left at curb]
+channels:
+  - type: web
+    label: Ask Raleigh (Public Nuisance)
+    url: https://ask.raleighnc.gov/ask
+  - type: phone
+    label: Code Enforcement Division
+    phone: 919-996-2444
+  - type: email
+    label: Code Enforcement Division
+    email: housing.inspections@raleighnc.gov
+steps:
+  online:
+    - Open Ask Raleigh and choose Public Nuisance.
+    - Pick the closest match, such as Public Nuisance (private property), Unsafe or Unfit Housing Conditions, or Solid Waste Code Enforcement (carts left at the curb).
+    - Give the address and describe what you see. Add photos if you can take them from a public place.
+    - Submit and save your ticket number.
+notes:
+  - Common nuisances include grass or weeds over 8 inches tall; piles of combustibles, junk or litter; and appliances or furniture stored outside.
+  - The Unsafe or Unfit Housing Conditions form lists an estimated delivery time of 60 days.
+  - Noise complaints go to the Raleigh Police non-emergency line instead.
+related: [report-abandoned-vehicle, report-noise, ask-raleigh]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/housing/public-nuisances
+    - https://ask.raleighnc.gov/ask?id=sc_category&catalog_id=-1
+  last_checked: 2026-11-04

@@ -1,34 +1,43 @@
 id: schedule-bulky-item-pickup
-title: Schedule a bulky item pickup (furniture, mattresses)
+title: Schedule a bulky, special or e-waste pickup (furniture, appliances, electronics)
 summary: >-
-  Schedule a curbside pickup for household items that don't fit in your City garbage cart, such as
-  furniture and mattresses. There is a fee, added to your next utility bill.
+  Schedule a curbside pickup for household items that don't fit in your City cart. Bulky loads
+  (furniture, mattresses) and special loads (appliances, extra bags) have a fee on your utility
+  bill. E-waste pickup is free.
 provider: City of Raleigh Solid Waste Services
 category: fix-report
 core_skill: report-request
-aliases: [bulky item, bulky load, furniture, mattress, couch, sofa, large item, big trash, junk pickup, appliance]
+aliases: [bulky item, bulky load, special load, furniture, mattress, couch, sofa, large item, big trash, junk pickup, appliance, refrigerator, washer, e-waste, electronics, tv, old computer, extra trash bags]
 channels:
   - type: phone
     label: Customer Support
     phone: 919-996-3245
-cost: $35 per Bulky Load, starting April 1, 2026 (Special Load is $70). The charge appears on your next utility bill.
+  - type: email
+    label: Solid Waste Services
+    email: sws@raleighnc.gov
+cost: >-
+  Bulky Load $35 (since April 1, 2026). Special Load $70. E-waste free (up to 4 items a week).
+  Charges appear on your next utility bill.
 eligibility: Residents who get City curbside garbage collection. Businesses are not eligible.
 what_you_need:
   - Your name, property address and phone number
   - A description of the items
 steps:
   call:
-    - Call Customer Support at 919-996-3245 to schedule.
+    - Call Customer Support at 919-996-3245 to schedule. These pickups are booked by phone only.
     - Give your name, address, phone number and a list of the items.
-    - On your scheduled day, put the items at the curb on flat ground, not in the street.
+    - On your scheduled day, put the items at the curb on flat ground, not in the street or an alley.
     - Keep them 5 feet away from mailboxes, light poles and cars, and don't block them in.
 notes:
+  - "Bulky Load: household items that don't fit in a cart, such as furniture, mattresses and box springs, bed frames, bicycles (no tires), grills (propane tank removed), rugs, and push mowers (fuel emptied)."
+  - "Special Load: appliances (refrigerators, washers, dryers, ranges), large exercise equipment, and extra bags of garbage or yard waste. The City's page gives two different bag limits (15 and 24), so confirm when you call."
+  - "E-waste: small plug-in appliances and electronics such as TVs, monitors, microwaves, toasters, lamps and vacuums. Collected on Mondays only since October 26, 2026."
   - One load is up to 4 cubic yards, or 6 feet long by 3 feet wide by 4 feet high.
-  - Appliances, exercise equipment, extra yard waste and extra bags of garbage are a Special Load, not a Bulky Load.
-  - Items in alleys are not collected; use the main street in front of your home.
-  - The City page describes scheduling by phone only.
-related: [report-missed-collection]
+  - To get a refund, cancel before noon on the business day before your pickup.
+related: [report-missed-collection, curbside-collection-rules, convenience-centers]
 provenance:
   source_urls:
+    - https://raleighnc.gov/landfill-and-reuse/services/bulky-special-and-e-waste-collection
     - https://raleighnc.gov/trash-recycling-and-clean/special-garbage-collection
   last_checked: 2026-11-04
+  notes: The City's bulky/special page lists both 15 and 24 as the Special Load bag limit.

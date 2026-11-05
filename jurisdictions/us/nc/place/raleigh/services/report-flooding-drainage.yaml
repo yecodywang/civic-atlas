@@ -12,6 +12,10 @@ channels:
     label: Drainage problems on streets
     phone: 919-996-6446
   - type: web
+    label: Ask Raleigh (Stormwater & Water > Flooding, Drainage, or Runoff)
+    url: https://ask.raleighnc.gov/ask
+    purpose: Also has a form for waterway spills and pollution.
+  - type: web
     label: Storm drainage problem form (streets)
     url: https://survey123.arcgis.com/share/4f18a64993044b938dd9dec587a9c541
   - type: phone
@@ -34,8 +38,9 @@ steps:
     - For a sewer backup or water main break, call Raleigh Water at 919-996-3245 at any time.
 notes:
   - Never drive or walk through flooded roads.
-related: [report-pothole, ask-raleigh]
+related: [report-pothole, ask-raleigh, drainage-assistance-program, rainwater-rewards]
 provenance:
   source_urls:
     - https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
+    - https://ask.raleighnc.gov/ask?id=sc_category&catalog_id=-1
   last_checked: 2026-11-04

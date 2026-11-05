@@ -1,0 +1,34 @@
+id: report-fire-hazard
+title: Report a fire hazard or fire code violation (non-urgent)
+summary: >-
+  Report a non-urgent fire hazard, or a fire code violation at a business, to the Raleigh Fire
+  Department's Office of the Fire Marshal.
+provider: Raleigh Fire Department (Office of the Fire Marshal)
+category: fix-report
+core_skill: report-request
+aliases: [fire hazard, fire code, blocked exit, fire code violation, overcrowding, fire marshal, fire inspection]
+channels:
+  - type: web
+    label: Fire hazard and fire code violation report form
+    url: https://survey123.arcgis.com/share/ea841a9f56784cae8b1166a5ff7441f0
+  - type: phone
+    label: Office of the Fire Marshal
+    phone: 919-996-6392
+  - type: email
+    label: Office of the Fire Marshal
+    email: fireprevention@raleighnc.gov
+  - type: phone
+    label: Fire Investigation office (possible arson)
+    phone: 919-996-5188
+steps:
+  online:
+    - Open the report form (linked from the City's "Report a Fire Violation" page).
+    - Give the address and describe the hazard or violation, then submit.
+notes:
+  - The Fire Department's general non-emergency line is 919-996-6115.
+related: [request-smoke-alarm, request-fire-education-event]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/fire/services/report-fire-violation
+    - https://raleighnc.gov/fire/services/fire-department-items-you-can-request
+  last_checked: 2026-11-04

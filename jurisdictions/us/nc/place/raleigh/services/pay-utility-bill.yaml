@@ -18,6 +18,9 @@ channels:
   - type: phone
     label: Customer care and billing
     phone: 919-996-3245
+  - type: email
+    label: Customer care and billing
+    email: customercare@raleighnc.gov
   - type: in-person
     label: Utility bill payment locations
     url: https://raleighnc.gov/water-and-sewer/services/utilities-customer-service/utility-bill-payment-locations

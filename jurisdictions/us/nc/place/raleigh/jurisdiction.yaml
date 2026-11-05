@@ -21,6 +21,13 @@ key_contacts:
     label: Raleigh Police non-emergency
     phone: 919-829-1911
     purpose: Police help that is not an emergency.
+    notes: Raleigh Fire's contact page also lists 919-996-3335 as "Police (non-emergencies)".
+  - type: phone
+    label: Raleigh Fire non-emergency (Fire Administration)
+    phone: 919-996-6115
+  - type: phone
+    label: Raleigh Police Animal Control
+    phone: 919-831-6311
   - type: phone
     label: City of Raleigh general line ("who to call for everything else")
     phone: 919-996-3000
@@ -44,6 +51,8 @@ provenance:
   source_urls:
     - https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
     - https://raleighnc.gov/police
+    - https://raleighnc.gov/fire/services/emergency-contacts-and-faq
+    - https://raleighnc.gov/animal-control
     - https://raleighnc.gov/government/news/ask-raleigh-launches-july-1
     - https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_130A/GS_130A-34.html
   last_checked: 2026-11-04

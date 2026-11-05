@@ -1,0 +1,35 @@
+id: rainwater-rewards
+title: Get help paying for a rain garden, cistern or other green stormwater project
+summary: >-
+  Raleigh Rainwater Rewards pays most of the cost of projects that soak up or slow down rainwater
+  on your property, such as rain gardens, cisterns, and disconnecting downspouts.
+provider: City of Raleigh Stormwater
+category: find-help
+aliases: [rainwater rewards, rain garden, cistern, rain barrel, green roof, permeable pavement, downspout, stormwater grant]
+channels:
+  - type: web
+    label: About Raleigh Rainwater Rewards
+    url: https://raleighnc.gov/stormwater/services/apply-raleigh-rainwater-rewards
+  - type: email
+    label: Rainwater Rewards
+    email: rainwaterrewards@raleighnc.gov
+  - type: phone
+    label: Rainwater Rewards
+    phone: 919-996-3965
+cost: >-
+  The City pays 90% of project costs (you pay 10%). Owners in potentially underserved
+  communities, nonprofits and places of worship may qualify for 100%.
+eligibility: >-
+  Properties inside Raleigh city limits that pay stormwater fees. You must agree to a 5- or
+  10-year maintenance agreement with yearly maintenance reports.
+steps:
+  online:
+    - Open the Rainwater Rewards page and fill in the consultation request form linked there.
+    - City staff call you within 5 business days to talk through your project.
+notes:
+  - After approval you have one year to complete the project.
+related: [drainage-assistance-program]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/stormwater/services/apply-raleigh-rainwater-rewards
+  last_checked: 2026-11-04

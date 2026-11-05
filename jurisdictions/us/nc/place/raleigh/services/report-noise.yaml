@@ -11,6 +11,10 @@ channels:
   - type: phone
     label: Raleigh Police non-emergency
     phone: 919-829-1911
+  - type: web
+    label: Ask Raleigh (Noise Feedback)
+    url: https://ask.raleighnc.gov/ask
+    purpose: Non-urgent noise feedback, including a separate form for bars, restaurants and clubs.
 what_you_need:
   - The address the noise is coming from
   - What kind of noise it is and how long it has been going on
@@ -24,6 +28,7 @@ related: [report-abandoned-vehicle]
 provenance:
   source_urls:
     - https://raleighnc.gov/police
+    - https://ask.raleighnc.gov/ask?id=sc_category&catalog_id=-1
     - https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
   last_checked: 2026-11-04
   notes: The non-emergency number is from the Police page. Ordinance details were not verified against the City Code.

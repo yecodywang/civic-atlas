@@ -1,0 +1,29 @@
+id: neighborhood-registry
+title: Register your neighborhood group (Raleigh Neighborhood Registry)
+summary: >-
+  Neighborhood and homeowners associations, block clubs, community watch and garden clubs can
+  join the Raleigh Neighborhood Registry for free equipment rentals, funding eligibility, and a
+  City contact.
+provider: City of Raleigh Community Engagement
+category: have-a-say
+aliases: [neighborhood registry, neighborhood association, hoa, block club, community watch, garden club, equipment rental, popcorn machine]
+channels:
+  - type: web
+    label: Raleigh Neighborhood Registry
+    url: https://raleighnc.gov/community/services/raleigh-neighborhood-registry
+  - type: phone
+    label: Neighborhood Registry
+    phone: 919-996-6100
+  - type: email
+    label: Neighborhood Registry
+    email: RNR@raleighnc.gov
+eligibility: >-
+  The group must have a defined boundary with at least 48 homes, meet at least once a year, and be
+  nonpartisan.
+notes:
+  - "Benefits: free festival equipment rentals (such as popcorn machines and outdoor movie equipment), eligibility for neighborhood funds, an assigned Community Relations Analyst, a one-time free printed flyer or mailer, and up to four meetings a year in City facilities."
+related: [neighborhood-funding, raleigh-tool-share]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/community/services/raleigh-neighborhood-registry
+  last_checked: 2026-11-04

@@ -2,8 +2,8 @@ id: ask-raleigh
 title: Use Ask Raleigh to report a problem or request a City service
 summary: >-
   Ask Raleigh is the City of Raleigh's online portal for reporting problems (like potholes or
-  graffiti), requesting services, and asking questions. You can follow the progress of your
-  request after you submit it.
+  graffiti), requesting services, and asking questions. No account is needed, and every request
+  gets a ticket you can follow.
 provider: City of Raleigh
 category: contact
 core_skill: report-request
@@ -17,24 +17,28 @@ channels:
     phone: 919-996-3000
     purpose: If you can't use the website, call and staff can point you to the right department.
 what_you_need:
-  - The address or location of the problem (a nearby street corner works too)
+  - The address or location of the problem (you can drop a pin on a map)
   - A photo, if you can safely take one
-  - An email address, so you can get updates on your request
+  - Your name, phone and email, so the City can update you (an account is optional)
 steps:
   online:
-    - Go to the Ask Raleigh portal.
-    - Search for or choose the kind of problem or request (for example, pothole or missed collection).
-    - Enter the location. Add a short description and a photo if you have one.
-    - Submit the request. Write down or save the request number you are given.
-    - Come back to the portal to check its progress.
+    - Go to the Ask Raleigh portal and choose a category, or search for the kind of request.
+    - Pick the request type. Each form says what it's for and what to use instead if it doesn't fit.
+    - Set the location, describe the problem, and add a photo if you have one.
+    - Submit the request. Write down or save the ticket number.
+    - Come back to the portal to check its progress. An account adds tracking and messaging.
 notes:
-  - Ask Raleigh replaced the City's earlier SeeClickFix tool.
+  - "Categories: Buses; Customer Experience (including \"Request not found\" for anything not listed); Noise Feedback; Parking Service; Parks & Recreation; Permits & Planning; Public Nuisance; Solid Waste Services; Stormwater & Water; Transportation & Mobility."
+  - Each form shows an estimated delivery time (for example, 30 days for potholes, 180 days for signs and signals).
+  - Not in the portal - bulky, special and e-waste pickups and water or sewer problems are handled by phone at 919-996-3245.
+  - Ask Raleigh replaced the City's earlier SeeClickFix tool in July 2025. It's a website; no separate app was found.
   - Only report real problems. Practice or test requests create work for City staff.
   - Ask Raleigh is for non-emergency requests.
-related: [report-pothole, report-missed-collection, report-graffiti]
+related: [report-pothole, report-missed-collection, report-graffiti, report-code-violation, report-dead-animal]
 provenance:
   source_urls:
+    - https://ask.raleighnc.gov/ask?id=sc_category&catalog_id=-1
     - https://raleighnc.gov/government/news/ask-raleigh-launches-july-1
-    - https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
+    - https://raleighnc.gov/permits/news/how-get-assistance-your-permit-or-project
   last_checked: 2026-11-04
-  notes: The portal itself (ask.raleighnc.gov) needs JavaScript, so facts were taken from the City pages that describe it.
+  notes: Categories and forms were read in the portal with a browser (the portal needs JavaScript).

@@ -4,9 +4,10 @@ Rough priorities, not promises. Open an issue to discuss any of these.
 
 ## Now (pilot)
 
-- [ ] Human verification of the 27 Raleigh, Wake and NC draft entries
+- [ ] Human verification of the 68 Raleigh, Wake and NC draft entries
 - [ ] Publish the repository; enable GitHub private vulnerability reporting
 - [ ] Try the MCP server and printed cards with the *Raleigh at Your Fingertips* pilot
+- [ ] Follow up on the "not ingested" items in [docs/research/rnc-fall-2026-index-coverage.md](research/rnc-fall-2026-index-coverage.md)
 - [ ] Spanish translations of cards (fields for translated titles and steps)
 
 ## Next

@@ -29,11 +29,18 @@ rules:
     explanation: The City collects household trash, recycling and yard waste.
   - id: bulky-items
     situation: Getting rid of furniture, a mattress or other large items
-    keywords: [bulky, furniture, mattress, couch, sofa, large item, appliance, junk]
+    keywords: [bulky, furniture, mattress, couch, sofa, large item, appliance, tv, television, electronics, e waste]
     go_to: City of Raleigh Solid Waste Services
     jurisdiction: us/nc/place/raleigh
     service: schedule-bulky-item-pickup
     explanation: The City picks up bulky items by appointment for a fee.
+  - id: state-road
+    situation: A problem on a highway, Interstate, or other State-maintained road
+    keywords: [highway, interstate, ncdot, state road, i-40, i-440, guardrail, us 1, capital boulevard]
+    go_to: NC Department of Transportation (NCDOT)
+    jurisdiction: us/nc
+    service: report-state-road-problem
+    explanation: NCDOT maintains Interstates and U.S., N.C. and SR routes, even inside Raleigh.
   - id: streets
     situation: A pothole or damaged street
     keywords: [pothole, street damage, road, pavement, damaged street]
@@ -111,7 +118,7 @@ rules:
     explanation: Wake County runs the State's property tax relief programs for qualifying homeowners.
   - id: help-with-needs
     situation: Help with food, rent, utilities or other basic needs
-    keywords: [food, rent, eviction, utility assistance, homeless shelter, place to stay, help paying, assistance, homeless]
+    keywords: [food, rent, utility assistance, help paying, assistance]
     go_to: NC 211 (United Way of North Carolina)
     jurisdiction: us/nc
     service: nc-211
@@ -160,10 +167,157 @@ rules:
     jurisdiction: us/nc/county/wake
     service: apply-for-medicaid
     explanation: Wake County Health & Human Services handles Medicaid applications for the State's program.
+  - id: dead-animal
+    situation: A dead animal on a street, in the right of way, or at the curb
+    keywords: [dead, dead animal, dead deer, roadkill, carcass]
+    go_to: City of Raleigh (Ask Raleigh dead animal removal)
+    jurisdiction: us/nc/place/raleigh
+    service: report-dead-animal
+    explanation: The City collects dead animals on City streets and at the curb.
+  - id: animal-control
+    situation: A stray, injured, vicious or abandoned animal, or problem wildlife
+    keywords: [stray, loose dog, injured animal, vicious, barking dog, wildlife, raccoon, animal control, animal cruelty]
+    go_to: Raleigh Police Animal Control
+    jurisdiction: us/nc/place/raleigh
+    service: report-animal-problem
+    explanation: Animal Control is part of the Raleigh Police Department.
+  - id: lost-pet
+    situation: A lost or found pet, or adopting a pet
+    keywords: [lost pet, lost dog, lost cat, missing pet, missing dog, missing cat, found dog, found cat, adopt, animal shelter, pet, cat]
+    go_to: Wake County Animal Center
+    jurisdiction: us/nc/county/wake
+    service: wake-animal-center-lost-pets
+    explanation: Wake County runs the animal shelter, where unclaimed pets picked up in Raleigh go.
+  - id: code-enforcement
+    situation: Overgrown grass, junk in a yard, or unsafe rental housing
+    keywords: [overgrown, grass, tall grass, weeds, junk, unsafe housing, landlord, housing code, code enforcement, nuisance]
+    go_to: City of Raleigh Code Enforcement
+    jurisdiction: us/nc/place/raleigh
+    service: report-code-violation
+    explanation: The City's Code Enforcement Division handles public nuisances and housing code complaints.
+  - id: traffic-signals-signs
+    situation: A broken traffic light, a downed or missing street sign, or faded markings
+    keywords: [traffic light, traffic signal, signal out, stop sign, street sign, faded, crosswalk]
+    go_to: City of Raleigh Transportation
+    jurisdiction: us/nc/place/raleigh
+    service: report-traffic-signal-or-sign
+    explanation: The City maintains signals and signs on City streets; NCDOT handles State roads.
+  - id: speeding
+    situation: Speeding or cut-through traffic on a neighborhood street
+    keywords: [speeding, speed, speeder, speed hump, speed bump, traffic calming, cut through]
+    go_to: City of Raleigh Neighborhood Traffic Management
+    jurisdiction: us/nc/place/raleigh
+    service: request-traffic-calming
+    explanation: The City's Neighborhood Traffic Management program reviews these requests.
+  - id: online-police-report
+    situation: Filing a police report for a minor crime with no suspect present
+    keywords: [file a report, police report, stolen, theft, broken into, lost property, identity theft, hit and run]
+    go_to: Raleigh Police online reporting
+    jurisdiction: us/nc/place/raleigh
+    service: report-crime-online
+    explanation: Raleigh Police takes some reports online; others go through the non-emergency line.
+  - id: fire-hazard
+    situation: A non-urgent fire hazard or fire code violation, or a fire safety program request
+    keywords: [fire hazard, fire code, blocked exit, fire marshal, fire station tour, fire safety class]
+    go_to: Raleigh Fire, Office of the Fire Marshal
+    jurisdiction: us/nc/place/raleigh
+    service: report-fire-hazard
+    explanation: The Office of the Fire Marshal handles fire hazards, code violations and safety education.
+  - id: permits-zoning
+    situation: Building permits, inspections, zoning or development questions
+    keywords: [permit, building permit, inspection, zoning, rezoning, development, contractor]
+    go_to: City of Raleigh Planning and Development (Permit Helpline)
+    jurisdiction: us/nc/place/raleigh
+    service: get-permit-help
+    explanation: Planning and Development handles permits, inspections and zoning inside Raleigh.
+  - id: public-records
+    situation: Requesting City records
+    keywords: [public records, records request, foia, city documents]
+    go_to: City of Raleigh Public Records Portal
+    jurisdiction: us/nc/place/raleigh
+    service: request-public-records
+    explanation: City records are requested through the City's portal.
+  - id: vital-records
+    situation: Birth, death or marriage certificates, marriage licenses, or deeds
+    keywords: [birth certificate, death certificate, marriage, deed, vital records]
+    go_to: Wake County Register of Deeds
+    jurisdiction: us/nc/county/wake
+    service: birth-death-marriage-certificates
+    explanation: These records are kept by the County, not the City.
+  - id: voting
+    situation: Registering to vote, finding a polling place, or voting by mail
+    keywords: [vote, voting, register to vote, polling place, ballot, election]
+    go_to: Wake County Board of Elections
+    jurisdiction: us/nc/county/wake
+    service: register-to-vote
+    explanation: Elections are run by the County Board of Elections, not the City.
+  - id: snap
+    situation: Food benefits (SNAP or food stamps)
+    keywords: [snap, food stamp, stamp, ebt, food benefit, snap benefit]
+    go_to: Wake County Health & Human Services (Food and Nutrition Services)
+    jurisdiction: us/nc/county/wake
+    service: food-nutrition-services
+    explanation: Wake County handles Food and Nutrition Services applications.
+  - id: seniors
+    situation: Help for an older adult or an adult with a disability
+    keywords: [elderly, aging parent, adult day, caregiver, adult protective, guardianship]
+    go_to: Wake County Senior and Adult Services
+    jurisdiction: us/nc/county/wake
+    service: senior-adult-services
+    explanation: Wake County provides services for older adults and adults with disabilities.
+  - id: drop-off-trash
+    situation: Taking trash, recycling or hazardous waste somewhere yourself
+    keywords: [convenience center, dump, drop off, hazardous waste, paint, chemicals, batteries, take my trash]
+    go_to: Wake County convenience centers and household hazardous waste sites
+    jurisdiction: us/nc/county/wake
+    service: convenience-centers
+    explanation: Wake County runs drop-off sites that Raleigh residents can use.
+  - id: car-tax
+    situation: Vehicle property tax or registration renewal
+    keywords: [car, car tax, vehicle tax, tag and tax, registration renewal, license plate]
+    go_to: NC DMV and Wake County Tax Administration
+    jurisdiction: us/nc
+    service: vehicle-property-tax
+    explanation: Vehicle property tax is paid to NC DMV with your registration renewal.
+  - id: neighborhood-groups
+    situation: Neighborhood groups, grants, borrowing tools, or volunteering
+    keywords: [neighborhood association, hoa, neighborhood grant, tool share, borrow, volunteer]
+    go_to: City of Raleigh Community Engagement
+    jurisdiction: us/nc/place/raleigh
+    service: neighborhood-registry
+    explanation: Community Engagement runs the Neighborhood Registry, neighborhood funds, Tool Share and Volunteer Raleigh.
+  - id: tech-help
+    situation: Free help using a phone, tablet or computer
+    keywords: [computer help, phone help, tech help, device, digital, smartphone, using my phone, help using, tablet]
+    go_to: City of Raleigh Digital Impact (Advice About Your Device) and Parks Digital Inclusion classes
+    jurisdiction: us/nc/place/raleigh
+    service: digital-help
+    explanation: The City offers free drop-in device help and computer classes.
+  - id: homeless
+    situation: Homelessness or losing your housing
+    keywords: [homeless, homelessness, eviction, evicted, evict, losing my home, place to stay, homeless shelter]
+    go_to: Coordinated entry access sites and service centers such as Oak City Cares
+    jurisdiction: us/nc/place/raleigh
+    service: housing-crisis-help
+    explanation: The City lists service centers, meals, showers and the coordinated entry process.
+  - id: green-stormwater
+    situation: A rain garden, cistern or other project to manage rainwater on your property
+    keywords: [rain garden, cistern, rain barrel, rainwater, green roof, downspout, permeable]
+    go_to: City of Raleigh Stormwater (Raleigh Rainwater Rewards)
+    jurisdiction: us/nc/place/raleigh
+    service: rainwater-rewards
+    explanation: Raleigh Rainwater Rewards pays most of the cost of eligible projects.
+  - id: mulch-compost
+    situation: Buying mulch or compost, or dropping off extra yard waste
+    keywords: [mulch, compost, wood chips, yard waste center, drop off yard waste]
+    go_to: City of Raleigh Yard Waste Center
+    jurisdiction: us/nc/place/raleigh
+    service: yard-waste-center
+    explanation: The City's Yard Waste Center sells compost and mulch and takes yard waste for a fee.
   - id: home-repair
     situation: Help paying for home repairs, or buying a first home
     keywords: [home repair, roof, repair loan, homebuyer, down payment, buy a house]
-    go_to: City of Raleigh Housing and Neighborhoods
+    go_to: City of Raleigh Housing and Community Development
     jurisdiction: us/nc/place/raleigh
     service: home-repair-programs
     explanation: The City has income-qualified repair and homebuyer programs that open and close during the year.

@@ -1,0 +1,23 @@
+id: volunteer-raleigh
+title: Volunteer with the City of Raleigh
+summary: >-
+  Volunteer Raleigh connects adults 18+ with volunteer opportunities in City departments and
+  City-funded organizations.
+provider: City of Raleigh Community Engagement
+category: have-a-say
+aliases: [volunteer, volunteering, give back, community service, volunteer raleigh]
+channels:
+  - type: web
+    label: Volunteer Raleigh
+    url: https://raleighnc.gov/community/services/volunteer-raleigh
+  - type: email
+    label: Volunteer Raleigh
+    email: volunteer.raleigh@raleighnc.gov
+eligibility: Ages 18 and older. Some sites require training or a background check.
+notes:
+  - As of November 2026, volunteer sign-up is on hold while the City updates its registration system. You can sign up on the page to be told when it resumes.
+related: [serve-on-board-or-commission]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/community/services/volunteer-raleigh
+  last_checked: 2026-11-04

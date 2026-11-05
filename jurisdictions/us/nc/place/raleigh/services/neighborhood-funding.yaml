@@ -1,0 +1,31 @@
+id: neighborhood-funding
+title: Get small grants for neighborhood, arts or climate projects
+summary: >-
+  Neighborhood Services Funds pay for projects neighbors plan together: enrichment projects, arts
+  projects, and climate action projects. Up to $250 for any group of neighbors, or up to $1,000
+  for groups on the Neighborhood Registry.
+provider: City of Raleigh Community Engagement
+category: have-a-say
+aliases: [neighborhood grant, neighborhood funding, enrichment fund, arts fund, climate action fund, community garden grant, block party funding]
+channels:
+  - type: web
+    label: Funding for Neighborhoods
+    url: https://raleighnc.gov/grants-funding-and-relief/services/funding-neighborhoods
+  - type: email
+    label: Community Engagement
+    email: community.engagement@raleighnc.gov
+  - type: phone
+    label: Community Engagement
+    phone: 919-996-6100
+eligibility: >-
+  Level One (up to $250, no match): neighborhood organizations and groups of neighbors. Level Two
+  (up to $1,000, at least 50% match in cash, donations or volunteer time): Neighborhood Registry
+  organizations only. Projects must be free and open to the community and inside Raleigh or its ETJ.
+notes:
+  - Funding runs July 1 to June 30, first come, first served. Apply at least six weeks before your project starts.
+  - Funds include Neighborhood Enrichment, Neighborhood Arts and Neighborhood Climate Action.
+related: [neighborhood-registry]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/grants-funding-and-relief/services/funding-neighborhoods
+  last_checked: 2026-11-04

@@ -1,0 +1,26 @@
+id: follow-city-budget
+title: Learn about and comment on the City budget
+summary: >-
+  The City's Budget and Management Services office publishes the adopted budget, a plain-language
+  Budget in Brief, and a resident-friendly report, and runs budget surveys and engagement each year.
+provider: City of Raleigh Budget and Management Services
+category: have-a-say
+aliases: [budget, city budget, taxes, how money is spent, budget survey, budget hearing]
+channels:
+  - type: web
+    label: Budget and Management Services
+    url: https://raleighnc.gov/budget-and-management-services
+  - type: phone
+    label: Budget and Management Services
+    phone: 919-996-4270
+  - type: web
+    label: Engage Raleigh (budget surveys)
+    url: https://engage.raleighnc.gov/
+notes:
+  - The budget page also links a comparison of City, County and State services, which helps explain who handles what.
+  - City Council holds a public hearing on the proposed budget before adopting it each June. Watch the budget page and Engage Raleigh for this year's dates.
+related: [engage-raleigh-surveys, speak-at-city-council, property-tax-bill]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/budget-and-management-services
+  last_checked: 2026-11-04

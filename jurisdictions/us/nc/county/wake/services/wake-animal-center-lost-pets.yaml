@@ -1,0 +1,25 @@
+id: wake-animal-center-lost-pets
+title: Find a lost pet or adopt one (Wake County Animal Center)
+summary: >-
+  The Wake County Animal Center is the county's shelter. Pets picked up by Raleigh Animal Control
+  that can't be returned go there. It handles lost and found pets and adoptions.
+provider: Wake County Animal Services
+category: find-help
+aliases: [lost pet, lost dog, lost cat, found pet, animal shelter, adopt a pet, adoption, animal center, pound]
+channels:
+  - type: phone
+    label: Wake County Animal Center
+    phone: 919-212-7387
+  - type: in-person
+    label: Wake County Animal Center, 820 Beacon Lake Drive, Raleigh
+    hours: "Adoption floor: noon to 6 p.m., seven days a week"
+  - type: web
+    label: Lost and found pets
+    url: https://www.wake.gov/departments-government/animal-services/lost-found-pets
+notes:
+  - Visitors under 18 aren't allowed on the adoption floor, even with an adult.
+related: [report-animal-problem]
+provenance:
+  source_urls:
+    - https://www.wake.gov/departments-government/animal-services
+  last_checked: 2026-11-04

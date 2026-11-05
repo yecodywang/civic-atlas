@@ -1,0 +1,35 @@
+id: report-traffic-signal-or-sign
+title: Report a broken traffic signal, damaged street sign, or faded road markings
+summary: >-
+  Report traffic signals that are out or malfunctioning, knocked-down or missing street signs,
+  and streetlights through Ask Raleigh's Signs and Signals form, or call Transportation.
+provider: City of Raleigh Transportation
+category: fix-report
+core_skill: report-request
+aliases: [traffic light, traffic signal, signal out, stop sign down, street sign, missing sign, faded crosswalk, lane lines, road markings]
+channels:
+  - type: web
+    label: Ask Raleigh (Transportation & Mobility > Signs and Signals)
+    url: https://ask.raleighnc.gov/ask
+  - type: phone
+    label: Traffic signal malfunction
+    phone: 919-996-6020
+  - type: phone
+    label: Missing or damaged street signs
+    phone: 919-996-6608
+steps:
+  online:
+    - Open Ask Raleigh, choose Transportation & Mobility, then Signs and Signals (or Faded Markings for crosswalks and lane lines).
+    - Set the location, describe the problem, and add a photo if it's safe.
+    - Submit and save your ticket number.
+  call:
+    - For a traffic signal that is out or malfunctioning, call 919-996-6020.
+    - For a missing or damaged street sign, call 919-996-6608.
+notes:
+  - On State-maintained roads, NCDOT handles signals and signs; see the NCDOT entry.
+related: [report-streetlight-out, report-state-road-problem, request-traffic-calming]
+provenance:
+  source_urls:
+    - https://ask.raleighnc.gov/ask?id=sc_category&catalog_id=-1
+    - https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
+  last_checked: 2026-11-04

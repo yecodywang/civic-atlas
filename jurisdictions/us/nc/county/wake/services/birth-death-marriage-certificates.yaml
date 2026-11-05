@@ -1,0 +1,27 @@
+id: birth-death-marriage-certificates
+title: Get a birth, death or marriage certificate, or a marriage license
+summary: >-
+  The Wake County Register of Deeds supplies certified copies of birth and death certificates,
+  issues marriage licenses, and keeps deeds and other real estate records.
+provider: Wake County Register of Deeds
+category: pay-manage
+aliases: [birth certificate, death certificate, marriage certificate, marriage license, vital records, deed, register of deeds]
+channels:
+  - type: web
+    label: Birth, marriage or death certificates
+    url: https://www.wake.gov/departments-government/register-deeds/vital-records/birth-death-marriage-certificates
+  - type: web
+    label: Apply for a marriage license
+    url: https://www.wake.gov/departments-government/register-deeds/apply-marriage-license
+  - type: phone
+    label: Wake County Register of Deeds
+    phone: 919-856-5460
+    hours: Monday to Friday, 8:30 a.m. to 5 p.m.
+notes:
+  - As of November 4, 2026, online ordering of certified copies was down for maintenance until Monday, November 9.
+  - The Register of Deeds warns against paying unnecessary fees to third-party sites for official property documents.
+related: [request-public-records]
+provenance:
+  source_urls:
+    - https://www.wake.gov/departments-government/register-deeds
+  last_checked: 2026-11-04

@@ -1,8 +1,8 @@
 id: reserve-park-shelter
-title: Reserve a park picnic shelter
+title: Reserve a park shelter, room, field or event venue
 summary: >-
-  Request a picnic shelter at a City park through RecLink. Requests are approved by staff, and you
-  pay to confirm the reservation.
+  Request a picnic shelter, community center room, athletic field or special event venue through
+  RecLink, at least 14 days ahead. Staff approve requests, and you pay to confirm the reservation.
 provider: City of Raleigh Parks, Recreation and Cultural Resources
 category: pay-manage
 core_skill: accounts-payments
@@ -12,8 +12,14 @@ channels:
     label: Picnic shelters (list, fees and link to RecLink)
     url: https://raleighnc.gov/services/parks/picnic-shelter
   - type: web
+    label: Parks rentals and venues
+    url: https://raleighnc.gov/services/parks-rentals
+  - type: web
     label: RecLink
     url: https://reclink.raleighnc.gov/
+  - type: phone
+    label: Parks, Recreation and Cultural Resources
+    phone: 919-996-3285
 what_you_need:
   - A RecLink account
   - Your preferred park, date and times (including setup and cleanup time)
@@ -28,10 +34,14 @@ cost: >-
   Hourly fees vary by shelter, with a 2-hour minimum. Non-residents pay 25% more on the hourly
   rate. Going past your reserved time costs twice the hourly rate.
 notes:
+  - RecLink doesn't take reservations fewer than 14 days ahead.
+  - "Other rental fees can include a $15 application fee (indoor spaces, amphitheaters, fields), a $100 or $250 administrative deposit, and a $100 alcohol permit. Non-residents pay 25% more on most rentals (50% at a few historic sites)."
   - The time you request must include setup and breakdown.
   - Check the City's refund policy before you book.
 related: [reclink-register-program, find-park-greenway-center]
 provenance:
   source_urls:
     - https://raleighnc.gov/services/parks/picnic-shelter
+    - https://raleighnc.gov/services/parks-rentals
+    - https://raleighnc.gov/parks/reclink-frequently-asked-questions
   last_checked: 2026-11-04

@@ -1,11 +1,11 @@
 id: home-repair-programs
-title: Learn about City home repair and homebuyer programs
+title: Learn about City home repair programs
 summary: >-
-  The City's Housing and Neighborhoods Department offers repair loans for income-qualified
-  homeowners and assistance for homebuyers. Programs open and close, so check current status.
+  The City offers repair loans for income-qualified homeowners. Programs open and close, so check
+  current status.
 provider: City of Raleigh Housing and Neighborhoods (some programs run with Preserving Home)
 category: find-help
-aliases: [home repair, house repair, roof repair, rehab, homebuyer, down payment, first time homebuyer, housing help, limited repair]
+aliases: [home repair, house repair, roof repair, rehab, housing help, limited repair, home revitalization]
 referral_only: true
 channels:
   - type: web
@@ -26,8 +26,7 @@ eligibility: >-
 notes:
   - As of the last check, the Substantial Rehabilitation Program (for homeowners 62 or older or with a disability) was not taking new applications.
   - The Limited Repair and Home Revitalization programs are run by Preserving Home, a partner organization.
-  - For homebuyer help, follow the "Apply for Homebuyer Assistance" link on the City's housing pages.
-related: [property-tax-relief, nc-211]
+related: [homebuyer-assistance, property-tax-relief, nc-211]
 provenance:
   source_urls:
     - https://raleighnc.gov/housing/homeowner-rehab-and-repair-programs

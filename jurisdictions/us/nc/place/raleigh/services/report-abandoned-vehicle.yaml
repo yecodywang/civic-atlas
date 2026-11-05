@@ -16,6 +16,9 @@ channels:
   - type: phone
     label: Public nuisances (including vehicles on private property)
     phone: 919-996-2444
+  - type: web
+    label: Ask Raleigh (Public Nuisance > Vehicle(s) Abandoned, Parked in Yard)
+    url: https://ask.raleighnc.gov/ask
 what_you_need:
   - The address or nearest intersection
   - The vehicle's make, model, color and license plate, if you can see them
@@ -31,4 +34,6 @@ related: [report-noise]
 provenance:
   source_urls:
     - https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
+    - https://ask.raleighnc.gov/ask?id=sc_category&catalog_id=-1
+    - https://raleighnc.gov/housing/public-nuisances
   last_checked: 2026-11-04

@@ -9,7 +9,7 @@ core_skill: report-request
 aliases: [pothole, potholes, hole in the road, street damage, damaged street, road repair, cracked pavement]
 channels:
   - type: web
-    label: Ask Raleigh (Pothole Repair Request)
+    label: Ask Raleigh (Transportation & Mobility > Potholes, Sinkholes & Pavement)
     url: https://ask.raleighnc.gov/ask
   - type: phone
     label: Street maintenance
@@ -32,9 +32,13 @@ steps:
     - Give the address or nearest intersection and describe the problem.
 notes:
   - Don't stop in traffic to take a photo.
-related: [ask-raleigh, report-sidewalk-damage, report-flooding-drainage]
+  - The Ask Raleigh form lists an estimated delivery time of 30 days. A worn-out street that needs repaving is a separate request (Street Resurfacing); a gravel or dirt street is "Unpaved Street".
+  - If a road is actively collapsing or a sinkhole is large or growing, the form says to call the non-emergency number, 919-829-1911, right away.
+  - Interstates and U.S., N.C. and SR routes are maintained by NCDOT even inside Raleigh. See the NCDOT entry.
+related: [ask-raleigh, report-sidewalk-damage, report-flooding-drainage, report-state-road-problem]
 provenance:
   source_urls:
     - https://raleighnc.gov/fix-it-report-it-request-it/streets-maintenance-and-repairs
     - https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
+    - https://ask.raleighnc.gov/ask?id=sc_category&catalog_id=-1
   last_checked: 2026-11-04

@@ -1,0 +1,28 @@
+id: request-public-records
+title: Request City of Raleigh public records
+summary: >-
+  Ask for City records through the City's Public Records Portal. First check whether the record
+  is already online.
+provider: City of Raleigh
+category: contact
+aliases: [public records, records request, foia, open records, city documents]
+channels:
+  - type: web
+    label: City of Raleigh Public Records Portal
+    url: https://raleighnc.nextrequest.com/
+  - type: web
+    label: About public records requests
+    url: https://raleighnc.gov/ask-raleigh-fix-report-request/services/records-request
+steps:
+  online:
+    - Check whether the record is already published online.
+    - Read the portal's FAQ for tips on a clear, complete request.
+    - Submit your request in the portal and watch for updates there.
+notes:
+  - Requests are handled in the order received. Complex requests or ones needing legal review can take longer.
+  - Records held by Wake County (deeds, birth, death and marriage records) come from the Wake County Register of Deeds instead.
+related: [birth-death-marriage-certificates]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/ask-raleigh-fix-report-request/services/records-request
+  last_checked: 2026-11-04

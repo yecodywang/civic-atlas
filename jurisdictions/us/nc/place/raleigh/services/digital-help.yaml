@@ -1,0 +1,30 @@
+id: digital-help
+title: Get free help with your phone, tablet or computer
+summary: >-
+  The City's Digital Impact programs offer free drop-in help ("Advice About Your Device") and free
+  computer classes for working adults ("Learn & Earn"). Parks and Recreation also offers Digital
+  Inclusion classes through RecLink.
+provider: City of Raleigh Community Engagement (Digital Impact) and Parks, Recreation and Cultural Resources
+category: find-help
+aliases: [computer help, phone help, tech help, device help, advice about your device, digital inclusion, computer class, learn to use smartphone, digital literacy]
+channels:
+  - type: web
+    label: Digital Impact Programs
+    url: https://raleighnc.gov/community/services/digital-impact-programs
+  - type: email
+    label: Digital Impact
+    email: Digital.Impact@raleighnc.gov
+  - type: web
+    label: Digital Inclusion classes for adults (register in RecLink)
+    url: https://raleighnc.gov/parks-and-recreation/services/active-adult-program/digital-inclusion-programs
+what_you_need:
+  - Your device (and its charger), for drop-in help
+notes:
+  - Advice About Your Device sessions are free, one-on-one help from youth Digital Ambassadors, usually Saturdays 1 to 3 p.m. at Green Road or Sanderford Road community centers. Check the page for dates.
+  - Learn & Earn computer courses are free, with free childcare. Fall 2026 applications have closed; check for the spring cohort.
+  - Teens in grades 9 to 12 who live in Raleigh can apply to be Digital Connectors (interest form for Fall 2027 opens January 2027).
+related: [reclink-register-program]
+provenance:
+  source_urls:
+    - https://raleighnc.gov/community/services/digital-impact-programs
+  last_checked: 2026-11-04
