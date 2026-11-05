@@ -1,0 +1,37 @@
+id: hiv-sti-testing
+title: Get free, confidential HIV, STI and hepatitis C testing
+summary: >-
+  Wake County Public Health offers free, confidential testing for HIV, syphilis, chlamydia,
+  gonorrhea and hepatitis C at the Public Health Center, including a walk-in evening clinic.
+  Treatment, including PrEP, is also available.
+provider: Wake County Public Health (HIV, STI and Hep C Community Health)
+category: find-help
+aliases: [hiv test, std test, sti test, std clinic, syphilis, chlamydia, gonorrhea, hepatitis c, hep c, prep, sexual health, free testing]
+channels:
+  - type: phone
+    label: Wake County Public Health (appointments)
+    phone: 919-250-1120
+    hours: Monday, Tuesday, Thursday and Friday, 8:15 a.m. to 4:15 p.m.
+  - type: in-person
+    label: Evening walk-in clinic, Public Health Center, 200 Swinburne Street, Raleigh
+    hours: Tuesday and Thursday, 5:30 to 7:30 p.m. No appointment needed.
+  - type: email
+    label: HIV/STI program questions
+    email: std.program@wake.gov
+  - type: web
+    label: HIV, hepatitis C and STI information
+    url: https://www.wake.gov/departments-government/public-health/hiv-hepatitis-c-and-sexually-transmitted-disease-std-information
+steps:
+  call:
+    - Call 919-250-1120 to schedule a daytime appointment. Walk-ins are accepted, but appointments are strongly encouraged.
+  in_person:
+    - Without an appointment, go to the evening clinic at the Public Health Center on a Tuesday or Thursday between 5:30 and 7:30 p.m.
+    - Follow-up results from the evening clinic are given on site between 7:30 and 8 p.m.
+cost: Free and confidential.
+notes:
+  - A hepatitis C clinic is available by program referral.
+related: [public-health-clinics]
+provenance:
+  source_urls:
+    - https://www.wake.gov/departments-government/public-health/hiv-hepatitis-c-and-sexually-transmitted-disease-std-information
+  last_checked: 2026-11-04

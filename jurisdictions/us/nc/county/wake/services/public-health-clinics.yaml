@@ -1,0 +1,40 @@
+id: public-health-clinics
+title: Get care at a Wake County Public Health clinic
+summary: >-
+  Wake County Public Health runs clinics for children and adults at the Public Health Center in
+  Raleigh, including child health, family planning, prenatal care, immunizations, dental care and a
+  pharmacy. Some services are also offered at regional centers around the county.
+provider: Wake County Public Health
+category: find-help
+aliases: [health department, public health, health clinic, clinic, doctor, child health, well child, family planning, birth control, prenatal, pregnancy care, dental clinic, dentist, pharmacy, tuberculosis, tb test, refugee health, county clinic]
+channels:
+  - type: phone
+    label: Wake County Public Health (appointments)
+    phone: 919-250-1120
+    hours: Monday to Friday, 8 a.m. to 5 p.m. (clinic hours may vary)
+  - type: in-person
+    label: Wake County Public Health Center, 200 Swinburne Street, Raleigh, NC 27610
+    url: https://www.wake.gov/departments-government/health-human-services/health-human-services-locations/wake-county-public-health-center
+  - type: web
+    label: List of Wake County health clinics
+    url: https://www.wake.gov/departments-government/public-health/health-clinics
+what_you_need:
+  - Insurance or Medicaid card, if you have one (ask about costs when you call)
+steps:
+  call:
+    - Call Wake County Public Health at 919-250-1120.
+    - Say which clinic or kind of care you need, and ask about costs and what to bring.
+    - Write down your appointment date, time and clinic.
+  in_person:
+    - Go to the Public Health Center at 200 Swinburne Street in Raleigh at your appointment time.
+notes:
+  - "Clinics at the Public Health Center include: child health, tuberculosis and refugee health, sexually transmitted infections, immunizations, infectious disease, family planning, prenatal and dental, plus a pharmacy."
+  - "Pharmacy hours: Monday to Friday, 8:30 a.m. to 5 p.m. The pharmacy fills prescriptions from Wake County Public Health clinic providers."
+  - The Public Health Center is closed on major holidays.
+  - Looking for a regular doctor if you don't have insurance? See the low-cost primary care entry.
+related: [low-cost-primary-care, get-vaccinations, hiv-sti-testing, wic-nutrition-program, apply-for-medicaid]
+provenance:
+  source_urls:
+    - https://www.wake.gov/departments-government/public-health/health-clinics
+    - https://www.wake.gov/departments-government/health-human-services/health-human-services-locations/wake-county-public-health-center
+  last_checked: 2026-11-04

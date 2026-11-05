@@ -39,6 +39,12 @@ def test_raleigh_lies_mostly_in_wake_county(real_catalog):
         ("I need help paying rent", "NC 211", "State of North Carolina"),
         ("loud party next door", "Police non-emergency", "City of Raleigh"),
         ("reserve a picnic shelter", "Parks", "City of Raleigh"),
+        # Health: the City has no health department; the County provides public health.
+        ("does Raleigh have a health department", "Wake County Public Health", "Wake County"),
+        ("I need a flu shot", "Wake County Public Health", "Wake County"),
+        ("I don't have insurance and need a doctor", "community clinics", "Wake County"),
+        ("I'm pregnant and need help buying baby formula", "WIC", "Wake County"),
+        ("how do I apply for medicaid", "Medicaid", "Wake County"),
     ],
 )
 def test_routing_examples(real_catalog, situation, go_to_contains, handled_by):
@@ -63,6 +69,10 @@ def test_routing_examples(real_catalog, situation, go_to_contains, handled_by):
         ("free smoke alarm", "request-smoke-alarm"),
         ("sign up for a class", "reclink-register-program"),
         ("a fire hydrant is leaking", "report-water-sewer-problem"),
+        ("where can I get an STD test", "hiv-sti-testing"),
+        ("my kid needs shots for 7th grade", "get-vaccinations"),
+        ("I need a dentist", "public-health-clinics"),
+        ("low cost doctor", "low-cost-primary-care"),
     ],
 )
 def test_search_examples(real_catalog, query, service_id):

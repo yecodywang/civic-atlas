@@ -34,10 +34,16 @@ key_contacts:
     label: Ask Raleigh
     url: https://ask.raleighnc.gov/ask
     purpose: Report a problem or request a City service online, and track it.
+notes:
+  - >-
+    The City of Raleigh does not run a health department. In North Carolina, counties provide
+    public health services (N.C.G.S. 130A-34), so Raleigh residents use Wake County Public Health
+    (or Durham County's, in the Durham County part of the city).
 stewards: [yecodywang]
 provenance:
   source_urls:
     - https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
     - https://raleighnc.gov/police
     - https://raleighnc.gov/government/news/ask-raleigh-launches-july-1
+    - https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_130A/GS_130A-34.html
   last_checked: 2026-11-04

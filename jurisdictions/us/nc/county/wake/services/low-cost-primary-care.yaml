@@ -1,0 +1,36 @@
+id: low-cost-primary-care
+title: Find a low-cost doctor or clinic if you're uninsured
+summary: >-
+  Wake County Public Health keeps a list of nonprofit and community clinics that serve people who
+  are uninsured, many also taking Medicaid and Medicare. A referral line can help you choose one.
+provider: Nonprofit and community clinics listed by Wake County Public Health
+provider_type: other
+category: find-help
+aliases: [no insurance, uninsured, free clinic, low cost doctor, cheap doctor, primary care, sliding scale, find a doctor, community health center, medical care]
+referral_only: true
+channels:
+  - type: phone
+    label: Capital Care Collaborative referral line
+    phone: 919-792-3676
+  - type: web
+    label: Community and nonprofit primary care providers (Wake County list)
+    url: https://www.wake.gov/departments-government/public-health/health-clinics
+steps:
+  call:
+    - Call the Capital Care Collaborative referral line at 919-792-3676, or call a clinic below directly.
+    - Ask whether they're taking new patients, what it costs, and what to bring.
+notes:
+  - "Alliance Medical Ministry, 101 Donald Ross Drive, Raleigh, 919-250-3320: working uninsured adults 18+, appointment only."
+  - "Open Door Clinic, 1390 Capital Blvd., Raleigh, 919-832-0820: uninsured adults, appointment only."
+  - "Mariam Clinic, 3126 Blue Ridge Road, Raleigh, 919-824-4672: uninsured adults 18+ with at least one employed household member, appointment only."
+  - "SouthLight Healthcare, 2101 Garner Road, Suite 107, Raleigh, 919-832-1400: uninsured, Medicaid, Medicare and private insurance; walk-ins weekday mornings."
+  - "People's Medical Care, 5720 Creedmoor Road, Suite 200, Raleigh, 919-277-0345: uninsured; walk-ins weekdays."
+  - "NeighborHealth Center, 2605 Blue Ridge Road, Suite 225, Raleigh, 984-222-8000: adult, children's and women's health, prenatal care."
+  - "New Bern Ridge Pediatrics and Dental Center, 2620 New Bern Ave., Raleigh: children only; pediatrics 919-231-3180, dental 919-250-2930."
+  - "Rock Quarry Road Family Medicine, 1001 Rock Quarry Road, Raleigh, 919-833-3111: uninsured, Medicaid, Medicare and private insurance."
+  - The Wake County list also includes clinics in Zebulon, Fuquay-Varina and Apex, with bus routes for each.
+related: [public-health-clinics, apply-for-medicaid, nc-211]
+provenance:
+  source_urls:
+    - https://www.wake.gov/departments-government/public-health/health-clinics
+  last_checked: 2026-11-04

@@ -1,0 +1,43 @@
+id: apply-for-medicaid
+title: Apply for Medicaid (health coverage)
+summary: >-
+  Medicaid is health coverage for eligible children, adults and families, with no monthly fee and
+  copays of no more than $4. In Wake County you apply online through the State's ePASS site or
+  through Wake County Health & Human Services.
+provider: Wake County Health & Human Services (for NC Medicaid)
+category: find-help
+aliases: [medicaid, health insurance, health coverage, insurance, nc medicaid, medicaid expansion, epass]
+channels:
+  - type: web
+    label: ePASS (apply online)
+    url: https://epass.nc.gov/
+  - type: phone
+    label: Wake County Health & Human Services
+    phone: 919-212-7000
+    hours: Monday to Friday, 8 a.m. to 5:15 p.m.
+  - type: web
+    label: NC Medicaid eligibility
+    url: https://medicaid.ncdhhs.gov/eligibility
+  - type: web
+    label: Wake County Medicaid page
+    url: https://www.wake.gov/departments-government/social-services/programs-services/medicaid
+what_you_need:
+  - Information about your household and income. Ask what documents to send when you apply.
+steps:
+  online:
+    - Check the NC Medicaid eligibility page to see if you might qualify.
+    - Apply online at ePASS, creating an account and entering your own information.
+  call:
+    - Or call Wake County Health & Human Services at 919-212-7000 for help applying.
+eligibility: >-
+  Depends on age, household size, income and other factors. Many adults ages 19 to 64 qualify
+  since NC expanded Medicaid. Check current limits on the NC Medicaid eligibility page.
+notes:
+  - If you already have Medicaid, report changes and choose a Medicaid managed care plan through the links on the Wake County Medicaid page.
+  - The NC Medicaid Ombudsman gives free, confidential help to people with Medicaid.
+related: [low-cost-primary-care, public-health-clinics, wic-nutrition-program]
+provenance:
+  source_urls:
+    - https://www.wake.gov/departments-government/social-services/programs-services/medicaid
+  last_checked: 2026-11-04
+  notes: Income limits were left out on purpose because federal changes are affecting Medicaid; the eligibility page is the source of truth.

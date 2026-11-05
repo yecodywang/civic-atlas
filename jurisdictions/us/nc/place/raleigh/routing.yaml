@@ -116,6 +116,50 @@ rules:
     jurisdiction: us/nc
     service: nc-211
     explanation: NC 211 connects people with health and human services near them. It's free and confidential.
+  - id: public-health
+    situation: Health care from the public health department (clinics, family planning, prenatal, dental)
+    keywords: [health department, public health, health clinic, clinic, family planning, birth control, prenatal, dental, dentist, tb test, well child]
+    go_to: Wake County Public Health
+    jurisdiction: us/nc/county/wake
+    service: public-health-clinics
+    explanation: >-
+      The City of Raleigh has no health department. In North Carolina, counties run public health,
+      so Wake County Public Health serves Raleigh.
+  - id: low-cost-doctor
+    situation: Finding a doctor without insurance
+    keywords: [no insurance, uninsured, free clinic, low cost, find a doctor, doctor, primary care, sliding scale]
+    go_to: Nonprofit and community clinics (Wake County's list and referral line)
+    jurisdiction: us/nc/county/wake
+    service: low-cost-primary-care
+    explanation: Wake County Public Health lists nonprofit and community clinics that serve uninsured patients.
+  - id: vaccines
+    situation: Vaccines or shots, including school-required shots and flu shots
+    keywords: [vaccine, vaccination, immunization, shot, flu shot, shot record]
+    go_to: Wake County Public Health
+    jurisdiction: us/nc/county/wake
+    service: get-vaccinations
+    explanation: Wake County Public Health gives vaccines for children and adults.
+  - id: sexual-health-testing
+    situation: HIV, STI or hepatitis C testing
+    keywords: [hiv, std, sti, syphilis, chlamydia, gonorrhea, hepatitis, prep]
+    go_to: Wake County Public Health
+    jurisdiction: us/nc/county/wake
+    service: hiv-sti-testing
+    explanation: Wake County Public Health offers free, confidential testing.
+  - id: wic
+    situation: Food and nutrition help for pregnant women, new mothers and young children
+    keywords: [wic, formula, breastfeeding, pregnant, baby food]
+    go_to: Wake County WIC
+    jurisdiction: us/nc/county/wake
+    service: wic-nutrition-program
+    explanation: Wake County Public Health runs the WIC program.
+  - id: medicaid
+    situation: Health coverage through Medicaid
+    keywords: [medicaid, health insurance, health coverage]
+    go_to: Wake County Health & Human Services (NC Medicaid)
+    jurisdiction: us/nc/county/wake
+    service: apply-for-medicaid
+    explanation: Wake County Health & Human Services handles Medicaid applications for the State's program.
   - id: home-repair
     situation: Help paying for home repairs, or buying a first home
     keywords: [home repair, roof, repair loan, homebuyer, down payment, buy a house]

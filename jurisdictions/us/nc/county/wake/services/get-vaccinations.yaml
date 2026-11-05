@@ -1,0 +1,43 @@
+id: get-vaccinations
+title: Get vaccines (shots) for children and adults
+summary: >-
+  Wake County Public Health gives state-required and recommended vaccines for children and adults,
+  including flu shots, at the Public Health Center and regional centers. It also offers travel
+  vaccines by appointment.
+provider: Wake County Public Health
+category: find-help
+aliases: [vaccine, vaccines, vaccination, immunization, shot, shots, flu shot, school shots, shot record, tdap, meningitis vaccine, travel vaccine]
+channels:
+  - type: phone
+    label: Wake County Public Health Center, Raleigh (appointments)
+    phone: 919-250-1120
+  - type: phone
+    label: Departure Regional Center, 5809 Departure Drive, Raleigh (appointments)
+    phone: 919-431-4000
+  - type: phone
+    label: Eastern Regional Center, 1002 Dogwood Drive, Zebulon (appointments)
+    phone: 919-404-3900
+  - type: phone
+    label: Travel vaccines (appointment only)
+    phone: 919-250-3900
+  - type: web
+    label: Immunizations and vaccinations
+    url: https://www.wake.gov/departments-government/public-health/immunizations-vaccinations
+what_you_need:
+  - Your or your child's shot record, if you have it
+  - Insurance or Medicaid card, if you have one
+steps:
+  call:
+    - Call the location closest to you to make an appointment.
+    - Say which vaccines you or your child need (for example, the school-required shots for 7th grade).
+    - Ask what it will cost and whether you qualify for a lower-cost program.
+cost: There is a charge for most adult vaccines. Ask about costs and lower-cost programs for children when you book.
+notes:
+  - "North Carolina requires a Tdap booster and a meningococcal vaccine before 7th grade, and a meningococcal booster before 12th grade. Schools need a copy of the shot record."
+  - Wake County Public Health runs walk-in flu clinics each fall; check the immunizations page for this year's dates. Questions go to immunizationoutreach@wake.gov or 919-250-4646.
+  - Vaccines needed for immigration require a visit to a civil surgeon first.
+related: [public-health-clinics]
+provenance:
+  source_urls:
+    - https://www.wake.gov/departments-government/public-health/immunizations-vaccinations
+  last_checked: 2026-11-04

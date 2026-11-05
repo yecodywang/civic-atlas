@@ -1,7 +1,7 @@
 # ADR 0003: Non-emergency services only; no emergency detection or routing
 
 - Status: accepted (replaces the emergency-first routing described in earlier drafts)
-- Date: 2026-11-05
+- Date: 2026-11-04
 
 ## Context
 

@@ -11,6 +11,14 @@ key_contacts:
     label: Wake County Tax Administration
     phone: 919-856-5400
     purpose: Property tax bills, values and tax relief programs.
+  - type: phone
+    label: Wake County Public Health
+    phone: 919-250-1120
+    purpose: Clinic appointments, vaccines and testing at the Public Health Center.
+  - type: phone
+    label: Wake County Health & Human Services
+    phone: 919-212-7000
+    purpose: Medicaid, food assistance and other benefits.
   - type: web
     label: ReadyWake Alerts sign-up
     url: https://readywake.com/readywake-alerts
@@ -18,5 +26,7 @@ key_contacts:
 provenance:
   source_urls:
     - https://www.wake.gov/departments-government/tax-administration
+    - https://www.wake.gov/departments-government/public-health
+    - https://www.wake.gov/departments-government/wake-county-human-services-agency
     - https://www.wake.gov/departments-government/fire-services-emergency-management/emergency-management/alerts-notifications-and-warnings
   last_checked: 2026-11-04

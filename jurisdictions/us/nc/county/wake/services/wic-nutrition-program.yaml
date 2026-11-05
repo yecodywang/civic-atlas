@@ -1,0 +1,45 @@
+id: wic-nutrition-program
+title: Apply for WIC (food and nutrition help for families with young children)
+summary: >-
+  WIC provides healthy foods, nutrition and breastfeeding support, and referrals for pregnant
+  women, new mothers, babies and children up to age 5. Wake County Public Health runs WIC here.
+provider: Wake County Public Health (WIC)
+category: find-help
+aliases: [wic, baby formula, formula, pregnant, new mom, breastfeeding, food for kids, nutrition, ewic]
+channels:
+  - type: phone
+    label: Wake County WIC
+    phone: 919-250-4720
+    hours: Monday to Friday, 9 a.m. to 5 p.m.
+  - type: web
+    label: Start a WIC application online
+    url: https://form.jotform.com/222756068725160
+  - type: web
+    label: USDA WIC eligibility pre-screening tool
+    url: https://www.fns.usda.gov/wic/eligibility-tool
+  - type: phone
+    label: eWIC card customer service (balance, PIN, replacement)
+    phone: 1-844-230-0813
+eligibility: >-
+  Infants, children up to age 5, pregnant women and women who recently had a baby. Caretakers,
+  foster parents of children under 5, and families of all types can apply. Income must be under
+  185% of the federal poverty guidelines, or the family must get help from another qualifying
+  program.
+what_you_need:
+  - Proof of income or of another program you're in (such as Medicaid), and ID. Ask when you apply.
+steps:
+  online:
+    - Use the USDA pre-screening tool to see if you might qualify.
+    - Start your application with Wake County's online form, or call 919-250-4720.
+  call:
+    - On your appointment day, WIC calls you between 9 a.m. and 4 p.m. (not at a set time).
+    - They ask about eligibility, diet and health, and you get an eWIC card for buying healthy food.
+notes:
+  - You can upload documents through the state's MyNCWIC portal (myncwic.ncdhhs.gov).
+  - Changes to your Medicaid don't automatically stop your WIC.
+  - The online application form is hosted on JotForm, a form service Wake County links to.
+related: [apply-for-medicaid, public-health-clinics, nc-211]
+provenance:
+  source_urls:
+    - https://www.wake.gov/departments-government/public-health/wic-program
+  last_checked: 2026-11-04
