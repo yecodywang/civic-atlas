@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "civic-atlas": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/yecodywang/civic-atlas",
+        "civic-atlas",
+        "serve"
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+# Template for a service. Copy to services/<id>.yaml; `id` must match the file name.
+# Files starting with "_" are ignored. Write steps in your own words. Never copy page text.
+id: report-missed-collection
+title: Report a missed garbage or recycling pickup
+summary: One or two plain sentences on what this is and who it's for.
+provider: Example City Solid Waste Services
+provider_type: government        # government | nonprofit | other
+category: fix-report             # fix-report | pay-manage | stay-informed | find-help | have-a-say | contact
+core_skill: report-request       # know-who | report-request | stay-informed | accounts-payments
+aliases: [trash, garbage, missed pickup]   # words people actually use
+channels:
+  - type: web                    # web | phone | text | app | email | in-person
+    label: Online request form
+    url: https://example.gov/missed-pickup
+  - type: phone
+    label: Customer service
+    phone: 555-555-0100
+    hours: Mon-Fri 8 a.m. to 5 p.m.
+what_you_need:
+  - Your street address
+steps:
+  online:
+    - Open the online request form.
+    - Enter your address and choose what was missed.
+  call:
+    - Call 555-555-0100 and give your address.
+cost: Free
+notes:
+  - Report by noon the day after your pickup day.
+related: []
+referral_only: false             # true = we point people there rather than teach the steps
+provenance:
+  source_urls:
+    - https://example.gov/missed-pickup
+  last_checked: 2026-01-01
+  status: draft

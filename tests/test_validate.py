@@ -22,3 +22,14 @@ def test_future_dates_are_errors():
 
 def test_generated_schema_files_are_in_sync():
     assert check_schemas() == []
+
+
+def test_templates_are_valid_examples():
+    from civic_atlas.loader import read_yaml
+    from civic_atlas.models import Jurisdiction, Routing, Service
+    from tests.conftest import REPO_DATA
+
+    template = REPO_DATA / "_template"
+    Jurisdiction.model_validate(read_yaml(template / "jurisdiction.yaml"))
+    Routing.model_validate(read_yaml(template / "routing.yaml"))
+    Service.model_validate(read_yaml(template / "services" / "_example-service.yaml"))

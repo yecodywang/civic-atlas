@@ -13,7 +13,7 @@ from civic_atlas.text import contains_phrase, tokens
 
 DISCLAIMER = (
     "civic-atlas is an independent volunteer project, not an official government source. "
-    "Confirm details on the official site linked in source_urls before relying on them."
+    "Confirm details with the official sources linked here before relying on them."
 )
 
 

@@ -1,0 +1,10 @@
+{
+  "yaml.schemas": {
+    "./schema/jurisdiction.schema.json": "jurisdictions/**/jurisdiction.yaml",
+    "./schema/service.schema.json": "jurisdictions/**/services/*.yaml",
+    "./schema/routing.schema.json": "jurisdictions/**/routing.yaml"
+  },
+  "files.associations": {
+    "*.yaml": "yaml"
+  }
+}

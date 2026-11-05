@@ -1,0 +1,15 @@
+{
+  "name": "civic-atlas",
+  "description": "Plugins from the civic-atlas project: an open, community-maintained guide to local government services.",
+  "owner": {
+    "name": "civic-atlas contributors",
+    "url": "https://github.com/yecodywang/civic-atlas"
+  },
+  "plugins": [
+    {
+      "name": "civic-atlas",
+      "source": "./plugins/civic-atlas",
+      "description": "Who to contact and how to use local government services, starting with Raleigh, NC. Offline, read-only MCP server plus guidance for answering residents safely."
+    }
+  ]
+}

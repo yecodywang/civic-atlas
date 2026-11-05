@@ -1,0 +1,26 @@
+# Template for a new jurisdiction. Copy this folder to the right place, for example:
+#   jurisdictions/us/<state>/place/<city>/      (a city or town)
+#   jurisdictions/us/<state>/county/<county>/   (a county)
+# The folder path is the jurisdiction's id; it is not written in this file.
+# Folders whose names start with "_" (like this one) are ignored.
+# See docs/adding-a-jurisdiction.md.
+name: City of Example
+kind: place                # country | state | county | place | district
+aliases: [example]         # short names people can use in lookups
+overlaps:                  # counties (or other governments) this place lies in
+  - id: us/xx/county/example
+    primary: true
+websites:
+  - label: City of Example
+    url: https://example.gov/
+key_contacts:              # the "save these on your phone" list
+  - type: phone
+    label: City general information line
+    phone: 555-555-0100
+    purpose: Not sure who to call? Start here.
+stewards: []               # GitHub handles of volunteers who look after this place
+provenance:
+  source_urls:
+    - https://example.gov/contact
+  last_checked: 2026-01-01
+  status: draft            # draft | verified | needs-review

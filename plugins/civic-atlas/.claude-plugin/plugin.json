@@ -1,0 +1,14 @@
+{
+  "name": "civic-atlas",
+  "displayName": "civic-atlas (unofficial local government services guide)",
+  "version": "0.1.0",
+  "description": "Find out who to contact and how to use local government services, starting with Raleigh, NC. Independent volunteer project; offline, read-only MCP server.",
+  "author": {
+    "name": "civic-atlas contributors",
+    "url": "https://github.com/yecodywang/civic-atlas"
+  },
+  "homepage": "https://github.com/yecodywang/civic-atlas",
+  "repository": "https://github.com/yecodywang/civic-atlas",
+  "license": "MIT",
+  "keywords": ["civic", "local-government", "city-services", "raleigh", "mcp"]
+}

@@ -1,0 +1,20 @@
+# Optional "who do I contact?" table. Emergencies are handled in code before these rules run.
+rules:
+  - id: trash-recycling
+    situation: Missed trash or recycling pickup
+    keywords: [trash, garbage, recycling, missed pickup]
+    go_to: City solid waste department
+    jurisdiction: us/xx/place/example
+    service: report-missed-collection   # or give a `channel:` instead
+    explanation: The city collects household trash and recycling.
+fallback:
+  go_to: City general information line
+  channel:
+    type: phone
+    label: City general information line
+    phone: 555-555-0100
+  explanation: Not sure who handles it? The city's general line can point you the right way.
+provenance:
+  source_urls:
+    - https://example.gov/contact
+  last_checked: 2026-01-01

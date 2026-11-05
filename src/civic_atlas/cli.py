@@ -59,6 +59,35 @@ def _cmd_schema(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_render(args: argparse.Namespace) -> int:
+    from civic_atlas.catalog import Catalog
+    from civic_atlas.render import render_all
+
+    catalog = Catalog.load(args.data)
+    written = render_all(catalog, args.jurisdiction, args.out)
+    print(f"wrote {len(written)} files to {written[0].parent}")
+    return 0
+
+
+def _cmd_check_links(args: argparse.Namespace) -> int:
+    from civic_atlas.catalog import Catalog
+    from civic_atlas.linkcheck import check_links
+
+    catalog = Catalog.load(args.data)
+    results = check_links(catalog, delay=args.delay, limit=args.limit)
+    counts = Counter(r.outcome for r in results)
+    for r in results:
+        if r.outcome != "ok" or args.verbose:
+            print(
+                f"{r.outcome.upper():<13} {r.url}\n              {r.detail}; used by {', '.join(r.used_by)}"
+            )
+    print(
+        f"\n{len(results)} links: {counts['ok']} ok, {counts['unverifiable']} unverifiable, "
+        f"{counts['broken']} broken."
+    )
+    return 1 if counts["broken"] else 0
+
+
 def _cmd_list(args: argparse.Namespace) -> int:
     from civic_atlas.catalog import Catalog
 
@@ -100,6 +129,17 @@ def build_parser() -> argparse.ArgumentParser:
     p = sub.add_parser("schema", help="regenerate schema/*.schema.json from the models")
     p.add_argument("--check", action="store_true", help="fail if the files are out of date")
     p.set_defaults(func=_cmd_schema)
+
+    p = sub.add_parser("render", help="write printable Markdown task cards for a jurisdiction")
+    p.add_argument("--jurisdiction", default="raleigh", help="jurisdiction id or short name")
+    p.add_argument("--out", type=Path, default=Path("build/cards"), help="output folder")
+    p.set_defaults(func=_cmd_render)
+
+    p = sub.add_parser("check-links", help="check catalog URLs (slow and polite; uses the network)")
+    p.add_argument("--delay", type=float, default=1.0, help="seconds between requests")
+    p.add_argument("--limit", type=int, default=None, help="only check the first N URLs")
+    p.add_argument("--verbose", action="store_true", help="also list links that are ok")
+    p.set_defaults(func=_cmd_check_links)
 
     p = sub.add_parser("list", help="list jurisdictions and service counts")
     p.set_defaults(func=_cmd_list)
