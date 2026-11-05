@@ -33,7 +33,7 @@ body:
     attributes:
       label: How serious is it?
       options:
-        - Wrong phone number, safety or emergency information
+        - Wrong phone number, or it sends people to the wrong place
         - Wrong instructions, link, fee or eligibility
         - Unclear wording or minor detail
     validations:

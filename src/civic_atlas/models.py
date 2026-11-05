@@ -28,14 +28,14 @@ EMAIL_PATTERN = r"^[^@\s]+@[^@\s]+\.[a-zA-Z]{2,}$"
 
 
 def _number_to_text(value: Any) -> Any:
-    """YAML reads bare 211, 311 or 911 as numbers; accept them wherever text is expected."""
+    """YAML reads bare numbers such as 211 or 311 as integers; accept them as text."""
     if isinstance(value, int) and not isinstance(value, bool):
         return str(value)
     return value
 
 
 Text = Annotated[str, BeforeValidator(_number_to_text)]
-"""A string that also accepts a bare YAML number, such as ``911``."""
+"""A string that also accepts a bare YAML number, such as ``211``."""
 
 
 class _Strict(BaseModel):
@@ -168,17 +168,6 @@ class Overlap(_Strict):
     notes: str | None = None
 
 
-class Emergency(_Strict):
-    """Emergency facts that vary by place. The emergency number itself is also hard-coded."""
-
-    number: Text = Field(default="911", pattern=PHONE_PATTERN)
-    text_to_911: bool | None = Field(
-        default=None, description="Whether texting 911 works here. Null means unknown."
-    )
-    notes: str | None = None
-    source_urls: list[HttpUrl] = Field(default_factory=list)
-
-
 class Jurisdiction(_Strict):
     """A government (country, state, county, city/town, or special district)."""
 
@@ -192,7 +181,6 @@ class Jurisdiction(_Strict):
     key_contacts: list[Channel] = Field(
         default_factory=list, description="The 'save these on your phone' list."
     )
-    emergency: Emergency | None = None
     stewards: list[str] = Field(
         default_factory=list, description="GitHub handles of the volunteers who look after it."
     )

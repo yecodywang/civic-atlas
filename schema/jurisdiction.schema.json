@@ -111,55 +111,6 @@
       "title": "ChannelType",
       "type": "string"
     },
-    "Emergency": {
-      "additionalProperties": false,
-      "description": "Emergency facts that vary by place. The emergency number itself is also hard-coded.",
-      "properties": {
-        "number": {
-          "default": "911",
-          "pattern": "^[0-9+() .\\-]+$",
-          "title": "Number",
-          "type": "string"
-        },
-        "text_to_911": {
-          "anyOf": [
-            {
-              "type": "boolean"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "description": "Whether texting 911 works here. Null means unknown.",
-          "title": "Text To 911"
-        },
-        "notes": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "title": "Notes"
-        },
-        "source_urls": {
-          "items": {
-            "format": "uri",
-            "maxLength": 2083,
-            "minLength": 1,
-            "type": "string"
-          },
-          "title": "Source Urls",
-          "type": "array"
-        }
-      },
-      "title": "Emergency",
-      "type": "object"
-    },
     "JurisdictionKind": {
       "enum": [
         "country",
@@ -350,17 +301,6 @@
       },
       "title": "Key Contacts",
       "type": "array"
-    },
-    "emergency": {
-      "anyOf": [
-        {
-          "$ref": "#/$defs/Emergency"
-        },
-        {
-          "type": "null"
-        }
-      ],
-      "default": null
     },
     "stewards": {
       "description": "GitHub handles of the volunteers who look after it.",

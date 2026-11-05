@@ -5,7 +5,7 @@ civic-atlas is a **data project with a small reference server**, not a web servi
 ```
  jurisdictions/**/*.yaml ──► loader.py ──► Catalog (in memory) ──┬─► server.py   MCP tools (stdio)
    (CC0 data, PRs)            ruamel.yaml   catalog.py search     ├─► render.py   task cards (Markdown)
-                              + models.py   routing.py 911-first  ├─► validate.py CI checks
+                              + models.py   routing.py tables     ├─► validate.py CI checks
                               (Pydantic)                          └─► linkcheck.py weekly, polite
 ```
 
@@ -16,7 +16,7 @@ civic-atlas is a **data project with a small reference server**, not a web servi
 | `models.py` | Pydantic models for the three file kinds (jurisdiction, service, routing). The single source of truth; `schema/*.json` is generated from them. |
 | `loader.py` | Finds the data folder, walks it, and turns folder paths into jurisdiction ids and OCD ids. Collects every problem instead of stopping at the first. |
 | `catalog.py` | In-memory index: resolve a place by id, alias or OCD id; compute its *scope* (itself, the counties it overlaps, its ancestors); keyword search. |
-| `routing.py` | `who_to_contact`: a hard-coded emergency check, then the routing tables in scope, then a fallback help line. |
+| `routing.py` | `who_to_contact`: matches non-emergency situations against the routing tables in scope, then falls back to a general help line. |
 | `server.py` | The MCP server (official MCP Python SDK, `MCPServer`, stdio). Five read-only tools. |
 | `render.py` | Printable task menu, task cards, key-contacts sheet and routing chart. |
 | `validate.py` | Cross-file checks (references, overlaps, duplicate ids, staleness) and schema drift. |
@@ -46,7 +46,7 @@ Search and routing use this scope, and every result says which government provid
   access, no writes, and no personal data.
 - **Few dependencies**: `mcp`, `pydantic` and `ruamel.yaml`. Search is plain Python, so it's easy
   for students to read and change.
-- **Safety in code, not data** ([legal-and-safety.md](legal-and-safety.md)). The emergency check,
-  the danger line and the disclaimer can't be removed by editing YAML.
+- **Non-emergency scope** ([ADR 0003](adr/0003-non-emergency-scope.md)). No emergency detection
+  or routing; the validator rejects emergency numbers in the data.
 - **Multi-place from day one.** Nothing in the code is Raleigh-specific except the default
   jurisdiction for the server.

@@ -3,6 +3,3 @@ contact_links:
   - name: Security problem or Code of Conduct report
     url: https://github.com/yecodywang/civic-atlas/security/advisories/new
     about: Report privately to the maintainers. Please don't open a public issue.
-  - name: Emergency? Call 911
-    url: https://raleighnc.gov/safety/services/911-call-when-you-can-text-if-you-cant
-    about: This project is not an emergency service. If anyone is in danger, call 911.

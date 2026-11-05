@@ -17,15 +17,18 @@ from mcp.types import ToolAnnotations
 from pydantic import Field
 
 from civic_atlas import __version__
-from civic_atlas.catalog import DISCLAIMER, Catalog, Relation
+from civic_atlas.catalog import DISCLAIMER, SCOPE_NOTE, Catalog, Relation
 from civic_atlas.loader import JurisdictionRecord
 from civic_atlas.models import Category
-from civic_atlas.routing import danger_line, emergency_block, emergency_number, who_to_contact
+from civic_atlas.routing import who_to_contact
 
 DEFAULT_JURISDICTION_ENV = "CIVIC_ATLAS_DEFAULT_JURISDICTION"
 FALLBACK_DEFAULT = "us/nc/place/raleigh"
 
-INSTRUCTIONS = """\
+INSTRUCTIONS = f"""\
+{SCOPE_NOTE} It can point people to non-emergency lines (such as the police non-emergency
+number) and to City or County services such as health clinics.
+
 civic-atlas helps people find and use local government services: who to contact, which website
 or phone line to use, what to bring, and the steps to follow. Coverage starts with Raleigh, North
 Carolina, together with Wake County and North Carolina services.
@@ -36,8 +39,6 @@ How to use these tools:
 - get_key_contacts gives the short list of numbers and sites worth saving on a phone.
 
 Rules for answering people:
-- Safety first. If anything suggests an emergency or that someone is in danger, tell them to call
-  911 right away, before anything else.
 - This is an independent volunteer catalog, not an official government source. Say so when it
   matters, cite the source_urls, and tell people to confirm details on the official site,
   especially for payments, deadlines and eligibility.
@@ -128,7 +129,6 @@ def build_server(
         return {
             "default_jurisdiction": default_jid,
             "jurisdictions": items,
-            "safety": danger_line(catalog.jurisdictions[default_jid].country),
             "disclaimer": DISCLAIMER,
         }
 
@@ -177,13 +177,8 @@ def build_server(
         out: dict[str, Any] = {
             "query": query,
             "jurisdiction": _jurisdiction_label(home),
-            "safety": danger_line(home.country),
+            "results": results,
         }
-        # People often search first, even in an emergency, so search gets the same check.
-        emergency = emergency_block(catalog, query, home.id)
-        if emergency:
-            out["emergency"] = emergency
-        out["results"] = results
         if not results:
             out["tip"] = (
                 "No catalog entry matched. Try who_to_contact with the situation, or "
@@ -208,7 +203,6 @@ def build_server(
             **body,
             "provided_by": _jurisdiction_label(rec),
             "provenance": _provenance(svc.data.provenance),
-            "safety": danger_line(rec.country),
             "reminder": (
                 "The person should do each step themselves on the official site, app or phone "
                 "line. Do not submit anything for them or ask for passwords or account numbers."
@@ -224,10 +218,10 @@ def build_server(
         ],
         jurisdiction: JurisdictionArg = None,
     ) -> dict[str, Any]:
-        """Decide where to go: 911, a non-emergency line, the city, the county, or the state.
+        """Decide where to go for a non-emergency: the city, the county, the state, or a nonprofit.
 
-        Always checks for emergencies first. Returns the best matching routes, or a general help
-        line when nothing matches.
+        Returns the best matching routes, or a general help line when nothing matches. Does not
+        handle emergencies.
         """
         home = resolve(jurisdiction)
         return who_to_contact(catalog, situation, home.id)
@@ -254,8 +248,6 @@ def build_server(
             )
         return {
             "jurisdiction": _jurisdiction_label(home),
-            "emergency_number": emergency_number(home.country),
-            "safety": danger_line(home.country),
             "groups": groups,
             "disclaimer": DISCLAIMER,
         }

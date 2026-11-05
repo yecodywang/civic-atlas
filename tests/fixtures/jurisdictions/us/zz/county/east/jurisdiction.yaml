@@ -1,7 +1,5 @@
 name: East County
 kind: county
-emergency:
-  text_to_911: true
 provenance:
   source_urls: ["https://example.org/east"]
   last_checked: 2026-11-01

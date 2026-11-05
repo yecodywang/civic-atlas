@@ -7,7 +7,9 @@ any other government or organization it describes.
 - **Not an official source.** Every catalog entry links to the official page it was compiled from.
   Services, phone numbers, hours and rules change. Always confirm with the official source before
   you rely on something, and especially before you pay a bill, miss a deadline or skip a step.
-- **Emergencies:** if anyone is in danger, call **911**. This project is not an emergency service.
+- **Non-emergency services only.** civic-atlas does not detect, classify or route emergencies,
+  and its catalog contains no emergency numbers. In an emergency, contact emergency services
+  directly.
 - **No submissions on your behalf.** The civic-atlas software never contacts government systems,
   never files requests and never makes payments. You always complete each step yourself, on the
   official website, app or phone line.

@@ -33,3 +33,20 @@ def test_templates_are_valid_examples():
     Jurisdiction.model_validate(read_yaml(template / "jurisdiction.yaml"))
     Routing.model_validate(read_yaml(template / "routing.yaml"))
     Service.model_validate(read_yaml(template / "services" / "_example-service.yaml"))
+
+
+def test_emergency_numbers_are_rejected(tmp_path):
+    import shutil
+
+    from civic_atlas.validate import scope_issues
+
+    shutil.copytree(FIXTURES, tmp_path / "j")
+    svc = tmp_path / "j/us/zz/place/springfield/services/report-pothole.yaml"
+    svc.write_text(
+        svc.read_text().replace(
+            "channels:\n", 'channels:\n  - type: phone\n    label: Emergency\n    phone: "911"\n'
+        )
+    )
+    issues = scope_issues(load(tmp_path / "j"))
+    assert len(issues) == 1
+    assert "out of scope" in issues[0].message

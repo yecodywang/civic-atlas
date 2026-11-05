@@ -6,9 +6,10 @@ It adds:
 
 - **An MCP server** (`civic-atlas serve`, installed with `uvx`) with read-only tools:
   `who_to_contact`, `search_services`, `get_service`, `get_key_contacts`, `list_jurisdictions`.
-- **A skill** (`city-services`) with guidelines for answering residents safely: put emergencies
-  first, name who provides each service, cite official sources, and never act on the person's
-  behalf.
+- **A skill** (`city-services`) with guidelines for answering residents: name who provides each
+  service, cite official sources, and never act on the person's behalf.
+
+Non-emergency services only: civic-atlas does not detect or route emergencies.
 
 ## Install
 

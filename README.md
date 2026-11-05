@@ -25,14 +25,19 @@ You can use the catalog in three ways:
 
 > **Independent and unofficial.** civic-atlas is a volunteer project. It is not affiliated with
 > or endorsed by the City of Raleigh, Wake County, the State of North Carolina, or any other
-> government. Always confirm details on the official site. **If anyone is in danger, call 911.**
-> See [NOTICE.md](NOTICE.md).
+> government. Always confirm details on the official site. See [NOTICE.md](NOTICE.md).
+
+> **Not for emergencies.** civic-atlas covers non-emergency services only. It does not detect,
+> classify or route emergencies. In an emergency, contact emergency services directly. It *does*
+> point people to non-emergency lines (such as the police non-emergency number) and to City or
+> County services such as health clinics. See
+> [docs/adr/0003-non-emergency-scope.md](docs/adr/0003-non-emergency-scope.md).
 
 ## What's covered
 
 | Place | What's included |
 |---|---|
-| City of Raleigh | 24 tasks: Ask Raleigh, reporting street, sidewalk, streetlight, graffiti, trash, flooding, water and noise problems, utility bills and AutoPay, RecLink and parks, alerts, smoke alarms, housing programs, Council and boards, text-to-911, plus a "who do I contact?" routing table |
+| City of Raleigh | 23 tasks: Ask Raleigh, reporting street, sidewalk, streetlight, graffiti, trash, flooding, water and noise problems, utility bills and AutoPay, RecLink and parks, alerts, smoke alarms, housing programs, Council and boards, plus a "who do I contact?" routing table |
 | Wake County | ReadyWake alerts, property tax bills (including the City portion), tax relief programs |
 | North Carolina | NC 211 |
 | Durham County | Stub only (a small part of Raleigh is in Durham County) |
@@ -79,7 +84,7 @@ For Claude Desktop, VS Code, Cursor and other clients, see
 
 | Tool | What it does |
 |---|---|
-| `who_to_contact(situation)` | Routes a situation to 911, a non-emergency line, the City, the County or the State. Emergencies always come first. |
+| `who_to_contact(situation)` | Routes a non-emergency situation to the right office: the City, the County, the State, a nonprofit, or a non-emergency line |
 | `search_services(query)` | Finds tasks across the city, its county and the state, and says who provides each one |
 | `get_service(service_id)` | Ways to do it, what you need, steps, cost, notes and sources |
 | `get_key_contacts()` | The short list of numbers and sites worth saving on a phone |
@@ -87,7 +92,8 @@ For Claude Desktop, VS Code, Cursor and other clients, see
 
 The server is **offline and read-only**. It answers from the YAML bundled with the package,
 makes no network requests, never submits anything for anyone, and never asks for personal
-information. Answers always include the emergency line, sources and a disclaimer.
+information. Answers include sources and a disclaimer, and the server's instructions state its
+non-emergency scope.
 
 ### Print the task cards
 
@@ -99,7 +105,7 @@ uv run civic-atlas render --jurisdiction raleigh     # writes build/cards/us-nc-
 
 ```
 jurisdictions/                 the catalog (CC0). Folders mirror Open Civic Data ids
-  us/                          United States: 911, 988
+  us/                          United States
     nc/                        North Carolina: NC 211
       county/wake/             Wake County: services/, jurisdiction.yaml
       county/durham/           Durham County (stub)

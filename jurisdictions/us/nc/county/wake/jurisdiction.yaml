@@ -1,15 +1,6 @@
 name: Wake County
 kind: county
 aliases: [wake]
-emergency:
-  number: "911"
-  text_to_911: true
-  notes: >-
-    The Raleigh-Wake Emergency Communications Center accepts texts to 911, including photos and
-    video on carriers that support them. Call when you can; text when you can't. Texting does not
-    work while roaming and needs a text or data plan.
-  source_urls:
-    - https://raleighnc.gov/safety/services/911-call-when-you-can-text-if-you-cant
 websites:
   - label: Wake County Government
     url: https://www.wake.gov/

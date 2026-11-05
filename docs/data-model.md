@@ -27,8 +27,8 @@ example, Pennsylvania has many "Franklin Township"s, so one becomes
 
 Each jurisdiction folder holds:
 
-- `jurisdiction.yaml`: name, kind, aliases, overlaps, websites, key contacts, emergency facts
-  (such as whether text-to-911 works), stewards, and provenance
+- `jurisdiction.yaml`: name, kind, aliases, overlaps, websites, key contacts, stewards, and
+  provenance
 - `services/<id>.yaml`: one file per task
 - `routing.yaml` (optional): the "who do I contact?" table
 
@@ -68,5 +68,5 @@ Each rule has a `situation`, `keywords`, `go_to`, the `jurisdiction` that handle
 `service` id or a `channel`, plus an `explanation`. A rule ranks higher when more of its keywords
 appear in the person's words. The `fallback` is used when nothing matches.
 
-Emergencies are **not** in routing tables. They are handled in code first; see
-[legal-and-safety.md](legal-and-safety.md).
+The catalog covers non-emergency services only. Routing tables, key contacts and channels must
+not use emergency or crisis numbers; see [ADR 0003](adr/0003-non-emergency-scope.md).

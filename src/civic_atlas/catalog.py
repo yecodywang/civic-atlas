@@ -11,6 +11,12 @@ from civic_atlas.loader import JurisdictionRecord, LoadResult, ServiceRecord, lo
 from civic_atlas.models import Category
 from civic_atlas.text import contains_phrase, tokens
 
+SCOPE_NOTE = (
+    "civic-atlas covers non-emergency services only. It does not detect or route emergencies; "
+    "for an emergency, contact emergency services directly."
+)
+"""The one-line scope statement used in server instructions and printed cards (ADR 0003)."""
+
 DISCLAIMER = (
     "civic-atlas is an independent volunteer project, not an official government source. "
     "Confirm details with the official sources linked here before relying on them."

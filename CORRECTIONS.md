@@ -18,7 +18,7 @@ issue on your behalf, and the take-home guides point readers here.
 
 | Situation | Target response |
 |---|---|
-| Wrong emergency, safety or phone information | Fix or remove the entry as soon as a maintainer sees it |
+| Wrong phone number, or information that could send someone to the wrong place | Fix or remove the entry as soon as a maintainer sees it |
 | Wrong instructions, link or eligibility details | Fix within a few days, or mark `needs-review` right away |
 | Report from government staff about their own service | Treated as a strong source; fixed on the same priority as above |
 | Disagreement about wording or scope | Discussed in the issue |

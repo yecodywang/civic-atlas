@@ -1,4 +1,4 @@
-# Optional "who do I contact?" table. Emergencies are handled in code before these rules run.
+# Optional "who do I contact?" table, for non-emergency situations only.
 rules:
   - id: trash-recycling
     situation: Missed trash or recycling pickup

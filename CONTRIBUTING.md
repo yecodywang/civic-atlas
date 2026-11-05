@@ -13,6 +13,14 @@ student, a neighbor who noticed a wrong phone number, a developer, or government
 | Add a new city or county | See [docs/adding-a-jurisdiction.md](docs/adding-a-jurisdiction.md) |
 | Improve the code or MCP server | See "Working on the code" below |
 
+## Scope: non-emergency services only
+
+civic-atlas does **not** handle emergencies. It doesn't detect them or route them, and the catalog
+holds no emergency or crisis numbers such as 911 or 988 (`civic-atlas validate` rejects them).
+Non-emergency lines, utility service lines, and City or County services such as health clinics
+and medical or social services are all in scope. See
+[docs/adr/0003-non-emergency-scope.md](docs/adr/0003-non-emergency-scope.md).
+
 ## Ground rules for catalog data
 
 These protect the people who rely on the catalog. Reviewers will check every one.
@@ -69,8 +77,8 @@ uv run civic-atlas serve         # run the MCP server on stdio
 - The MCP server must stay offline and read-only. See
   [docs/legal-and-safety.md](docs/legal-and-safety.md) and
   [docs/adr/0001-offline-static-catalog.md](docs/adr/0001-offline-static-catalog.md).
-- Changes to emergency handling in `routing.py` need tests for both missed emergencies and
-  false alarms.
+- The project covers non-emergency services only. Don't add emergency detection or emergency
+  numbers ([ADR 0003](docs/adr/0003-non-emergency-scope.md)).
 
 ## Sign your commits (DCO)
 

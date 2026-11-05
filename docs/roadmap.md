@@ -4,7 +4,7 @@ Rough priorities, not promises. Open an issue to discuss any of these.
 
 ## Now (pilot)
 
-- [ ] Human verification of the 28 Raleigh, Wake and NC draft entries
+- [ ] Human verification of the 27 Raleigh, Wake and NC draft entries
 - [ ] Publish the repository; enable GitHub private vulnerability reporting
 - [ ] Try the MCP server and printed cards with the *Raleigh at Your Fingertips* pilot
 - [ ] Spanish translations of cards (fields for translated titles and steps)
@@ -15,7 +15,7 @@ Rough priorities, not promises. Open an issue to discuss any of these.
 - [ ] MCP Bundle (`.mcpb`) for one-click install in Claude Desktop
 - [ ] Printable PDF or HTML output from `render`, with large-print styling
 - [ ] Neighboring places: Cary, Garner, Durham (the city), Wake County towns
-- [ ] More Wake County and State services (courts, voter registration, health)
+- [ ] More Wake County and State services: health clinics and medical services, social services, courts, voter registration
 
 ## Later
 

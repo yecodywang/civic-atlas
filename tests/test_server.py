@@ -32,9 +32,12 @@ async def test_tools_are_listed_and_read_only(server):
         assert tool.description
 
 
-def test_instructions_carry_the_safety_rules(server):
+def test_instructions_state_the_non_emergency_scope(server):
+    from civic_atlas.catalog import SCOPE_NOTE
+
     text = server.instructions
-    assert "911" in text
+    assert text.startswith(SCOPE_NOTE)
+    assert "non-emergency" in text
     assert "not an official" in text
     assert "Never offer" in text
 
@@ -75,7 +78,6 @@ async def test_get_service_includes_steps_sources_and_reminder(server):
     assert out["steps"]["online"]
     assert out["provenance"]["source_urls"]
     assert out["provided_by"]["id"] == "us/zz/place/springfield"
-    assert "911" in out["safety"]
     assert "Do not submit" in out["reminder"]
 
 
@@ -86,15 +88,9 @@ async def test_get_service_unknown_id_is_a_tool_error(server):
     assert "search_services" in result.content[0].text
 
 
-async def test_who_to_contact_emergency(server):
-    out = await call(server, "who_to_contact", {"situation": "my house is on fire"})
-    assert "911" in out["emergency"]["action"]
-
-
 async def test_who_to_contact_routes(server):
     out = await call(server, "who_to_contact", {"situation": "nobody picked up my garbage"})
     assert out["matches"][0]["service_id"] == "report-missed-collection"
-    assert out["safety"]
 
 
 async def test_unknown_jurisdiction_is_a_tool_error(server):
@@ -110,23 +106,23 @@ async def test_get_key_contacts_skips_partial_overlaps(server):
     names = [g["name"] for g in out["groups"]]
     assert names[0] == "City of Springfield"
     assert "West County" not in names
-    assert out["emergency_number"] == "911"
-
-
-async def test_search_checks_for_emergencies_too(server):
-    out = await call(server, "search_services", {"query": "my neighbor's house is on fire"})
-    assert "911" in out["emergency"]["action"]
-    assert "911" in out["safety"]
 
 
 async def test_search_results_carry_sources(server):
     out = await call(server, "search_services", {"query": "pothole"})
     hit = out["results"][0]
     assert hit["source_urls"] and hit["last_checked"]
-    assert "emergency" not in out
-    assert "911" in out["safety"]
 
 
-async def test_list_jurisdictions_carries_the_safety_line(server):
-    out = await call(server, "list_jurisdictions")
-    assert "911" in out["safety"]
+async def test_no_tool_returns_emergency_fields(server):
+    """Emergencies are out of scope (ADR 0003)."""
+    calls = [
+        ("list_jurisdictions", {}),
+        ("search_services", {"query": "my house is on fire"}),
+        ("get_service", {"service_id": "report-pothole"}),
+        ("who_to_contact", {"situation": "my house is on fire"}),
+        ("get_key_contacts", {}),
+    ]
+    for name, args in calls:
+        out = await call(server, name, args)
+        assert not {"emergency", "safety", "emergency_number"} & set(out), name

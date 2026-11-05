@@ -50,9 +50,6 @@ def collect_urls(catalog: Catalog) -> dict[str, set[str]]:
             add(w.url, where)
         for c in rec.data.key_contacts:
             add(c.url, where)
-        if rec.data.emergency:
-            for u in rec.data.emergency.source_urls:
-                add(u, where)
         if rec.routing:
             rwhere = f"{rec.id}/routing.yaml"
             for u in rec.routing.provenance.source_urls:

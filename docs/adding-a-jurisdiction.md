@@ -26,14 +26,15 @@ name, a website and provenance is enough) so the city can list them under `overl
 - `name`, `kind` (must match the folder: `place` under `place/`, and so on), `aliases`
 - `overlaps`: the counties the place lies in, with the main one marked `primary: true`
 - `key_contacts`: the general information line, police non-emergency line, utility billing, and so on
-- `emergency.text_to_911`: only if you found an official source. Otherwise leave it out.
+- Not emergency numbers. The catalog is non-emergency only
+  ([ADR 0003](adr/0003-non-emergency-scope.md)).
 - `stewards`: your GitHub handle
 
 ## 4. Add services
 
 Start with the most common tasks, roughly in this order: the general help line, reporting a
 problem (the city's 311 or service-request system), missed trash pickup, paying the water or
-utility bill, emergency alerts, property tax (often billed by the county), and finding help.
+utility bill, alert sign-ups, property tax (often billed by the county), and finding help.
 Copy the template service for each one.
 
 ## 5. Add a `routing.yaml`
@@ -54,6 +55,4 @@ Then open a pull request.
 ## Outside the United States
 
 Add your country code to `SUBDIVISION_TYPE` in `src/civic_atlas/loader.py` if its first-level
-subdivision isn't called a "state" in OCD ids. Add its emergency number to `EMERGENCY_NUMBERS` in
-`src/civic_atlas/routing.py`. Until you do, answers say "call your local emergency number". Both
-need tests.
+subdivision isn't called a "state" in OCD ids. Add a test for the new layout.

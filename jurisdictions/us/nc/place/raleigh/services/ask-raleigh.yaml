@@ -30,7 +30,7 @@ steps:
 notes:
   - Ask Raleigh replaced the City's earlier SeeClickFix tool.
   - Only report real problems. Practice or test requests create work for City staff.
-  - Ask Raleigh is not for emergencies. If anyone is in danger, call 911.
+  - Ask Raleigh is for non-emergency requests.
 related: [report-pothole, report-missed-collection, report-graffiti]
 provenance:
   source_urls:

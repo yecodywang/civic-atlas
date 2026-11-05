@@ -1,9 +1,10 @@
 # "Who do I contact?" for the City of Raleigh.
-# Emergencies are handled in code before these rules run (see src/civic_atlas/routing.py).
+# Non-emergency situations only: civic-atlas does not route emergencies
+# (docs/adr/0003-non-emergency-scope.md).
 # Rules are matched by keyword; more keyword hits rank higher. Keep keywords short and plain.
 rules:
   - id: police-non-emergency
-    situation: Police help that isn't an emergency (a past crime with no danger now, suspicious activity, a question for police)
+    situation: Non-emergency police help (reporting a past crime, suspicious activity, a question for police)
     keywords: [police, non emergency, suspicious, stolen, theft, police report, broken into, broke into, file a report]
     go_to: Raleigh Police non-emergency line
     jurisdiction: us/nc/place/raleigh
@@ -11,7 +12,7 @@ rules:
       type: phone
       label: Raleigh Police non-emergency
       phone: 919-829-1911
-    explanation: For police matters where no one is in danger right now. If it's happening now or anyone is at risk, call 911.
+    explanation: The Raleigh Police non-emergency line handles police matters that aren't emergencies.
   - id: noise
     situation: Loud music, a party, or other noise
     keywords: [noise, loud, music, party, barking, amplified sound]

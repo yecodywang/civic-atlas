@@ -5,7 +5,7 @@ def test_card_has_steps_safety_status_and_sources(fixture_catalog):
     card = render_card(fixture_catalog, fixture_catalog.services["report-missed-collection"])
     assert card.startswith("# Report a missed trash")
     assert "1. Open the request portal." in card
-    assert "call 911" in card
+    assert "non-emergency services only" in card
     assert "Draft:" in card
     assert "https://example.org/springfield/trash" in card
     assert "[Report a pothole](report-pothole.md)" in card

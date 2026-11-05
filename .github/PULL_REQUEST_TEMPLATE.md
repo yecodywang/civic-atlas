@@ -16,4 +16,4 @@ For everyone:
 
 - [ ] `uv run civic-atlas validate` and `uv run pytest` pass
 - [ ] My commits are signed off (`git commit -s`, see [DCO](../DCO))
-- [ ] If I changed emergency handling or safety text, I added tests for both missed emergencies and false alarms
+- [ ] I didn't add emergency detection or emergency numbers (non-emergency scope, see ADR 0003)

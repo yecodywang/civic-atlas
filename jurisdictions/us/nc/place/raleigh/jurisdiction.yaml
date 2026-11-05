@@ -18,10 +18,6 @@ websites:
     url: https://raleighnc.gov/ask-raleigh-fix-report-request/services/frequently-called-numbers
 key_contacts:
   - type: phone
-    label: Emergency (police, fire, medical)
-    phone: "911"
-    purpose: Someone is in danger or a crime is happening now.
-  - type: phone
     label: Raleigh Police non-emergency
     phone: 919-829-1911
     purpose: Police help that is not an emergency.

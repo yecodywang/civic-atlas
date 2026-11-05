@@ -17,10 +17,9 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from civic_atlas.catalog import DISCLAIMER, Catalog, Relation
+from civic_atlas.catalog import DISCLAIMER, SCOPE_NOTE, Catalog, Relation
 from civic_atlas.loader import ServiceRecord
 from civic_atlas.models import Category, Channel, Status
-from civic_atlas.routing import danger_line
 
 CATEGORY_TITLES = {
     Category.FIX_REPORT: "Fix & report",
@@ -94,7 +93,7 @@ def render_card(catalog: Catalog, svc: ServiceRecord) -> str:
     out += [
         "---",
         "",
-        f"> {danger_line(rec.country)}",
+        f"> {SCOPE_NOTE}",
         ">",
         f"> {STATUS_TEXT[prov.status]} Last checked {prov.last_checked.isoformat()}.",
         "> Sources: " + ", ".join(f"<{u}>" for u in prov.source_urls),
@@ -133,7 +132,7 @@ def render_index(catalog: Catalog, jurisdiction: str) -> str:
         "Also: [Key contacts to save on your phone](key-contacts.md) and "
         "[Who do I contact?](who-to-contact.md)",
         "",
-        f"> {danger_line(home.country)} {DISCLAIMER}",
+        f"> {SCOPE_NOTE} {DISCLAIMER}",
         "",
     ]
     return "\n".join(out)
@@ -158,7 +157,7 @@ def render_routing(catalog: Catalog, jurisdiction: str) -> str:
     out = [
         f"# Who do I contact? ({home.name})",
         "",
-        f"**{danger_line(home.country)}**",
+        f"*{SCOPE_NOTE}*",
         "",
         "| Situation | Who handles it | How to reach them |",
         "|---|---|---|",

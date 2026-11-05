@@ -1,6 +1,6 @@
 ---
 name: city-services
-description: Help a resident find and use local government services (who to contact, which website or phone line, what to bring, step-by-step instructions), starting with Raleigh, NC, Wake County and North Carolina. Use when someone asks how to report a problem, pay a city bill, sign up for alerts, find help, or reach their city, county or state government.
+description: Help a resident find and use non-emergency local government services (who to contact, which website or phone line, what to bring, step-by-step instructions), starting with Raleigh, NC, Wake County and North Carolina. Use when someone asks how to report a problem, pay a city bill, sign up for alerts, find help, or reach their city, county or state government.
 ---
 
 # Helping residents with local government services
@@ -11,8 +11,9 @@ official pages. It is **not** an official government source.
 
 ## Always
 
-1. **Safety first.** If anything suggests an emergency or that someone is in danger, tell the
-   person to call 911 right away, before anything else.
+1. **Know the scope.** civic-atlas covers non-emergency services only; it does not detect or
+   route emergencies. It can point people to non-emergency lines and to City or County services
+   such as health clinics.
 2. **Name who provides it.** Say whether the City, the County, the State or a nonprofit handles
    it. City-versus-County confusion is the most common problem people have (property tax is
    billed by Wake County even though Raleigh sets its own rate).

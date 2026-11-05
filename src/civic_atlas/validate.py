@@ -51,6 +51,36 @@ def check_schemas(out_dir: Path | None = None) -> list[Issue]:
     return issues
 
 
+# civic-atlas covers non-emergency services only (docs/adr/0003-non-emergency-scope.md).
+OUT_OF_SCOPE_NUMBERS = frozenset({"911", "988"})
+
+
+def _is_emergency_number(phone: str | None) -> bool:
+    return bool(phone) and "".join(ch for ch in phone if ch.isdigit()) in OUT_OF_SCOPE_NUMBERS
+
+
+def scope_issues(result: LoadResult) -> list[Issue]:
+    """Emergency and crisis numbers are out of scope; channels must not route to them."""
+    issues: list[Issue] = []
+    msg = "emergency numbers are out of scope (see docs/adr/0003-non-emergency-scope.md)"
+    for rec in result.jurisdictions.values():
+        for ch in rec.data.key_contacts:
+            if _is_emergency_number(ch.phone):
+                issues.append(Issue("error", f"{rec.id}/jurisdiction.yaml", f"{ch.label!r}: {msg}"))
+        if rec.routing:
+            channels = [r.channel for r in rec.routing.rules if r.channel]
+            channels.append(rec.routing.fallback.channel)
+            for ch in channels:
+                if _is_emergency_number(ch.phone):
+                    issues.append(Issue("error", f"{rec.id}/routing.yaml", f"{ch.label!r}: {msg}"))
+    for svc in result.services.values():
+        for ch in svc.data.channels:
+            if _is_emergency_number(ch.phone):
+                where = svc.path.relative_to(result.root).as_posix()
+                issues.append(Issue("error", where, f"{ch.label!r}: {msg}"))
+    return issues
+
+
 def cross_reference_issues(result: LoadResult) -> list[Issue]:
     issues: list[Issue] = []
     jids = result.jurisdictions
@@ -157,6 +187,7 @@ def validate(
     result = load(root)
     issues = list(result.issues)
     issues += cross_reference_issues(result)
+    issues += scope_issues(result)
     issues += freshness_issues(result, today or date.today())
     if check_schema_files:
         issues += check_schemas()

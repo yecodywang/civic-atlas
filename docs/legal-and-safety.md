@@ -13,12 +13,13 @@ partnerships.
    agents never to act on a user's behalf or ask for passwords, account numbers or card numbers.
    This matches the course proposal: learners do every step on their own devices, and no
    practice requests are submitted.
-3. **Emergency first, in code.** `routing.py` checks every `who_to_contact` situation for
-   emergency language before anything else and leads with 911. Crisis language adds 988. Every
-   answer, including the fallback, carries "if anyone is in danger, call 911", because keyword
-   matching will always miss some emergencies. These rules live in code with tests, so no data
-   edit can weaken them. Text-to-911 depends on the local dispatch center, so it is a sourced
-   data field (`emergency.text_to_911`), not an assumption.
+3. **Non-emergency scope.** civic-atlas does not detect, classify or route emergencies, and the
+   catalog holds no emergency or crisis numbers; the validator rejects 911 and 988. The scope is
+   stated in one line at the top of the server instructions, on printed cards, and in the
+   README, NOTICE and AGENTS.md. *Why:* keyword detection misses real emergencies and fires on
+   routine requests, and a tool that only sometimes flags emergencies invites misplaced reliance.
+   Recognizing an emergency is better left to the person and the AI client. See
+   [ADR 0003](adr/0003-non-emergency-scope.md).
 4. **Accuracy and provenance.** Every file needs `source_urls` and `last_checked`. Entries are
    `draft` until a named person verifies them. Validation warns after 180 days. Answers and cards
    show status and sources. Corrections take priority ([CORRECTIONS.md](../CORRECTIONS.md)).
@@ -38,6 +39,7 @@ partnerships.
 |---|---|---|
 | Out-of-date or wrong information causes harm (a missed deadline, a wrong number) | Highest | Rules 3 and 4, the corrections policy, the warranty disclaimers in both licenses |
 | The project is mistaken for an official source | Medium | Rule 5 |
+| Someone relies on the tool in an emergency | Low | Rule 3: the scope is stated plainly, and the tool gives no emergency answers to rely on |
 | Copying official page content | Low | Rule 6 |
 | Load on government websites ("accidental DDoS") | Very low | Rule 1 (the server never calls out), rule 7 |
 | Agents filing bogus service requests | Low | Rules 1 and 2 |

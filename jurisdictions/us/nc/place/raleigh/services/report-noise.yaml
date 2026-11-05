@@ -1,8 +1,8 @@
 id: report-noise
 title: Report a noise problem
 summary: >-
-  Noise complaints, such as a loud party or music, are handled by the Raleigh Police Department.
-  Use the non-emergency line unless someone is in danger.
+  Noise complaints, such as a loud party or music, are handled by the Raleigh Police Department
+  through its non-emergency line.
 provider: Raleigh Police Department
 category: fix-report
 core_skill: know-who
@@ -11,10 +11,6 @@ channels:
   - type: phone
     label: Raleigh Police non-emergency
     phone: 919-829-1911
-  - type: phone
-    label: Emergency
-    phone: "911"
-    purpose: Only if someone is in danger or there is a threat of violence.
 what_you_need:
   - The address the noise is coming from
   - What kind of noise it is and how long it has been going on

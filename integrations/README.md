@@ -100,4 +100,4 @@ tag so updates are deliberate and reviewable.
 
 Open an issue first, describing the client and how it would be installed. New integrations must
 keep the safety rules in [docs/legal-and-safety.md](../docs/legal-and-safety.md): offline,
-read-only, the emergency line in every answer, no acting on a user's behalf, no personal data.
+read-only, non-emergency scope, no acting on a user's behalf, no personal data.
