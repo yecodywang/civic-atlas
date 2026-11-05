@@ -1,0 +1,46 @@
+name: Report inaccurate info
+description: Something in the catalog is wrong, out of date or unclear.
+title: "Inaccurate: "
+labels: ["data", "correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you! Corrections are our top priority. You don't need to know how the project works.
+  - type: input
+    id: entry
+    attributes:
+      label: Which entry?
+      description: The service title, file name, or what you asked the assistant.
+      placeholder: "Report a missed garbage pickup (report-missed-collection)"
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What's wrong?
+      placeholder: "The phone hours changed. It now closes at 4:30 p.m."
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official page that shows the correct information
+      description: A link to the government's own page, if you have one.
+      placeholder: https://raleighnc.gov/...
+  - type: dropdown
+    id: severity
+    attributes:
+      label: How serious is it?
+      options:
+        - Wrong phone number, safety or emergency information
+        - Wrong instructions, link, fee or eligibility
+        - Unclear wording or minor detail
+    validations:
+      required: true
+  - type: checkboxes
+    id: staff
+    attributes:
+      label: About you (optional)
+      options:
+        - label: I work for the government that provides this service

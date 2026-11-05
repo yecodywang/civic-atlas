@@ -1,0 +1,31 @@
+name: Add a new place
+description: Propose a new city, town, county or district.
+title: "New place: "
+labels: ["data", "new-jurisdiction"]
+body:
+  - type: input
+    id: place
+    attributes:
+      label: Which place?
+      placeholder: "Town of Cary, NC"
+    validations:
+      required: true
+  - type: input
+    id: folder
+    attributes:
+      label: Proposed folder
+      description: See docs/data-model.md.
+      placeholder: jurisdictions/us/nc/place/cary
+  - type: textarea
+    id: overlaps
+    attributes:
+      label: Which counties (or other governments) does it lie in?
+      placeholder: "Mostly Wake County; a small part is in Chatham County."
+  - type: input
+    id: steward
+    attributes:
+      label: Who will look after it (GitHub handle)?
+  - type: textarea
+    id: first
+    attributes:
+      label: First services you plan to add

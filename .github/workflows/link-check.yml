@@ -1,0 +1,21 @@
+name: Link check
+
+# Weekly, slow and polite: one request at a time with a pause between them.
+# Sites that block automated clients are reported as "unverifiable" for a human to check.
+on:
+  schedule:
+    - cron: "17 9 * * 1"   # Mondays 09:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked
+      - name: Check catalog links
+        run: uv run civic-atlas check-links --delay 2

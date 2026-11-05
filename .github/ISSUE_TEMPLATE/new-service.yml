@@ -1,0 +1,30 @@
+name: Suggest a service
+description: A task people need help with that the catalog doesn't cover yet.
+title: "New service: "
+labels: ["data", "new-service"]
+body:
+  - type: input
+    id: place
+    attributes:
+      label: Where?
+      placeholder: City of Raleigh / Wake County / North Carolina
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: What do people want to get done?
+      placeholder: "Request a recycling cart replacement"
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Official pages about it
+      description: Links to the government's own pages.
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Can you help?
+      options:
+        - label: I'd like to write this entry myself
