@@ -9,3 +9,6 @@ dist/
 .coverage
 htmlcov/
 .mcpb-cache/
+site/cards/
+site/docs/
+_site/

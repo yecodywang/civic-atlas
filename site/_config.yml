@@ -1,0 +1,7 @@
+title: civic-atlas
+description: An open, community-maintained guide to non-emergency local government services, starting with Raleigh, NC. Independent and unofficial.
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: false
