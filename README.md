@@ -7,7 +7,7 @@ City services are spread across many departments, websites and phone numbers, an
 have to tell City services apart from County and State ones. civic-atlas collects the answers to
 everyday questions in one open catalog:
 
-- *Who do I contact?* 911, the police non-emergency line, the City, Wake County, or the State
+- *Who do I contact?* The police non-emergency line, the City, Wake County, the State, or a nonprofit
 - *How do I do it?* Which website or phone line to use, what to have ready, and step-by-step
   instructions
 - *Where did this come from?* Every entry links to the official page it was compiled from and
